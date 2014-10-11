@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mparty</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+   </script>
+    <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+  	$("#large-image").html("<img src="+$(".carousel-inner .item .row .col-sm-3").eq(0).find('img').attr('src')+">");
+  	 $(".carousel-inner a").click(function(e){
+  	$("#large-image").html("<img src="+$(this).find('img').attr('src')+">");
+
+  });
+
+	$('#myCarousel').carousel({
+	interval: 0
+	})
+    
+    $('#myCarousel').on('slid.bs.carousel', function() {
+    	//alert("slid");
+	});
+    
+    
+});
+
+ 
+  </script>
+  <style type="text/css">
+
+.carousel-control {
+  padding-top:10%;
+  width:5%;
+}
+  </style>
+  <body>
+  	<div id="large-image"></div>
+  	<div class="container">
+    <div class="col-md-12">
+        <div class="well">
+            <div id="myCarousel" class="carousel slide">
+                
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-sm-3"><a href="#x"><img src="img/image-slider-1.jpg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x"><img src="img/image-slider-2.jpg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x"><img src="img/image-slider-4.jpg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x"><img src="img/image-slider-5.jpg" alt="Image" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/item-->
+                </div>
+                <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+            </div>
+            <!--/myCarousel-->
+        </div>
+        <!--/well-->
+    </div>
+</div>
+  	
+   
+  </body>
+</html>
