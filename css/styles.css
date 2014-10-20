@@ -127,7 +127,7 @@ border-radius: 4px;
 /*########################################create event##################################################################*/
 .create_event{
 	width: 874px;
-	height: 752px;
+	height: auto;
 	background-color: #f9fafa;
 	border: 2px solid #ecece4;
 	border-radius:10px; 
@@ -285,7 +285,8 @@ padding: 6px;
 }
 /*########################################index end##################################################################*/
 /*########################################Wishlist##################################################################*/
-.wishlist{
+
+.wishlist,.wishlist_mai{
 width: 799px;
 height: 170px;
 background-color: white;
