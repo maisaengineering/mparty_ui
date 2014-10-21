@@ -9,21 +9,14 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/ >
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.datetimepicker.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/js-image-slider.js" type="text/javascript"></script>
     <script type="text/javascript">
-        function populateSlider() {
-            //Note: If the slider container has been set as invisible(e.g. display:none;), make sure set it visible before reload the imageSlider
-            setSliderMarkup();
-            imageSlider.reload();
-        }
-        function setSliderMarkup() {
-            var sliderFrame = document.getElementById("sliderFrame");
-            sliderFrame.innerHTML = '<div id="slider"><img src="img/image-slider-1.jpg" />' +
-            '<img src="img/image-slider-2.jpg" /><img src="img/image-slider-3.jpg" alt="" />' +
-            '<img src="img/image-slider-4.jpg" alt="#htmlcaption" /><img src="img/image-slider-5.jpg" /></div>';
-        }
+      $(document).ready(function() {
+         $('.datetimepicker').datetimepicker();
+      });
     </script>
   </head>
   <body>
@@ -106,33 +99,24 @@
           </div>
       </div>
       <div class="row">    
-          <div class="start_event">
-          <div class="form_ce_left start_event_lw">
-            <label>Start Date*</label>
-            <input type="date" class="form-control glyphicon glyphicon-calendar" id="exampleInputEmail1" style="width:230px" required>
+          <div class="form_ce_left">
+            <label>Start Date* / Start Time*</label>
+            <input type="text" class="form-control glyphicon glyphicon-calendar datetimepicker" required>
           </div>
-          <div class="form_ce_right start_event_rw">
-            <label>Start Time*</label>
-            <input type="time" class="form-control glyphicon glyphicon-time" id="exampleInputEmail1" style="width:120px" required>
-          </div>
-          </div>
-          <div class="end_event">
-          <div class="form_ce_left start_event_lw">
-            <label>End Date*</label>
-            <input type="date" class="form-control glyphicon glyphicon-calendar" id="exampleInputEmail1" style="width:230px">
-          </div>
-          <div class="form_ce_right start_event_rw">
-            <label>End Time</label>
-            <input type="time" class="form-control glyphicon glyphicon-time" id="exampleInputEmail1" style="width:120px">
-          </div>
+          <div class="form_ce_right">
+            <label>End Date* / End Time</label>
+            <input type="text" class="form-control glyphicon glyphicon-calendar datetimepicker">
           </div>
       </div>
-           <div class="form_ce_left">
+      <div class="row">
+          <div class="form_ce_left">
             <input type="checkbox"><label>Is Private</label>
           </div>
           <div class="checkbox form_ce_right">
           <button on type="submit" class="btn_l btn_l-login"><a href="invitations.html">Create</a></button>
         </div>
+      </div>
+    </div>       
       </form>    
      </div>
   </div>
