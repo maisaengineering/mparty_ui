@@ -11,27 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
    </script>
     <script src="js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-  $(document).ready(function() {
-  	$("#large-image").html("<img src="+$(".carousel-inner .item .row .col-sm-3").eq(0).find('img').attr('src')+">");
-  	 $(".carousel-inner a").click(function(e){
-  	$("#large-image").html("<img src="+$(this).find('img').attr('src')+">");
-
-  });
-
-	$('#myCarousel').carousel({
-	interval: 0
-	})
-    
-    $('#myCarousel').on('slid.bs.carousel', function() {
-    	//alert("slid");
-	});
-    
-    
-});
-
- 
-  </script>
+    <script src="js/extra.js"></script>
   <style type="text/css">
 
 .carousel-control {
@@ -41,23 +21,26 @@
   </style>
   <body>
   	<div id="large-image"></div>
-  	<div class="container">
+    <div class="container">
     <div class="col-md-12">
         <div class="well">
             <div id="myCarousel" class="carousel slide">
                 
                 <!-- Carousel items -->
                 <div class="carousel-inner">
+                   
                     <div class="item active">
                         <div class="row">
-                            <div class="col-sm-3"><a href="#x"><img src="img/image-slider-1.jpg" alt="Image" class="img-responsive"></a>
+
+                            <div class="col-sm-3"><a href="#x"> <div class="design_1"></div><img src="img/event3.png" alt="Image" class="img-responsive"></a>
                             </div>
-                            <div class="col-sm-3"><a href="#x"><img src="img/image-slider-2.jpg" alt="Image" class="img-responsive"></a>
+                            <div class="col-sm-3"><a href="#x"><img src="img/event2.png" alt="Image" class="img-responsive"></a>
                             </div>
-                            <div class="col-sm-3"><a href="#x"><img src="img/image-slider-4.jpg" alt="Image" class="img-responsive"></a>
+                            <div class="col-sm-3"><a href="#x"><img src="img/event1.png" alt="Image" class="img-responsive"></a>
                             </div>
-                            <div class="col-sm-3"><a href="#x"><img src="img/image-slider-5.jpg" alt="Image" class="img-responsive"></a>
+                            <div class="col-sm-3"><a href="#x"><img src="img/1.png" alt="Image" class="img-responsive"></a>
                             </div>
+
                         </div>
                         <!--/row-->
                     </div>

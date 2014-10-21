@@ -13,7 +13,9 @@
     <script src="js/jquery.js"></script>
     <script src="js/jquery.datetimepicker.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/extra.js"></script>
     <script type="text/javascript">
+
       $(document).ready(function() {
          $('.datetimepicker').datetimepicker();
       });
@@ -35,7 +37,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.html">What's Up?</a></li>
-            <li><a href="events.html">Events</a></li>
+            <li><a href="events_all.html">Events</a></li>
             <li><a href="#contact">Venues</a></li>
             <li><a href="#contact">Organizers</a></li>
             <li><a href="#contact">My Calendar</a></li>
@@ -45,10 +47,47 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-  <div class="container-fluide"> 
-   <img src="img/1.png" width="100%">
-   <br>
-   <div id="sliderFrame"></div>
+  <div class="container design_position"> 
+    
+   <div class="event_design_name" id="event_output"></div>
+   <div id="large-image">
+          
+   </div>
+ 
+    <div class="container">
+    <div class="col-md-12">
+        <div class="well">
+            <div id="myCarousel" class="carousel slide">
+                
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                   
+                    <div class="item active">
+                        <div class="row">
+
+                            <div class="col-sm-3"><a href="#x"><img src="img/event3.png" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x"><img src="img/event2.png" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x"><img src="img/event1.png" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x"><img src="img/1.png" alt="Image" class="img-responsive"></a>
+                            </div>
+
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/item-->
+                </div>
+                <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+            </div>
+            <!--/myCarousel-->
+        </div>
+        <!--/well-->
+    </div>
+</div>
   </div>
   <br>
   <div class="container"> 
@@ -57,13 +96,13 @@
       <div class="row">
       <h2 class="event_details">Enter Details</h2>
   <!--     <button class="btn_cs btn_cs_change" onclick="populateSlider()"> Change Design</button> -->
-      <button class="btn_cs btn_cs_change"> Change Design</button>
+      <!-- <button class="btn_cs btn_cs_change"> Change Design</button> -->
       </div>
       <form role="form" class="form_margin">
         <div class="row">
           <div class="form_ce_left">
             <label>Event Name*</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Event Name" required>
+            <input type="text" class="form-control" onkeypress="ontext()"  onkeyup="ontext()" id="testeventname" placeholder="Event Name" required>
           </div>
           <div class="form_ce_right">
             <label>Event Type*</label>
