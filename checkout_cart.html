@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mparty</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/ >
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.datetimepicker.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+         $('.datetimepicker').datetimepicker();
+      });
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Mparty</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">What's Up?</a></li>
+            <li><a href="events_all.html">Events</a></li>
+            <li><a href="#contact">Venues</a></li>
+            <li><a href="#contact">Organizers</a></li>
+            <li><a href="#contact">My Calendar</a></li>
+            <li><a href="#contact">|</a></li>
+            <li><a href="login.html">My Account</a></li>
+            <li><a href="login.html">Logout</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  <div class="container"> 
+
+    <br>
+     <div class="create_event">
+      <div class="row">
+  <div class="col-md-1 cart_header active_ad">1.Address</div>
+  <div class="col-md-1 cart_header">2.Delivery</div>
+  <div class="col-md-1 cart_header">3.Payment</div>
+  <div class="col-md-1 cart_header">4.Complete</div>
+</div>
+      <div class="row">
+      <h2 class="event_details">Billing Address</h2>
+  <!--     <button class="btn_cs btn_cs_change" onclick="populateSlider()"> Change Design</button> -->
+     
+      </div>
+      <form role="form" class="form_margin">
+        <div class="row">
+          <div class="form_ce_left">
+            <label>First Name*</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="First Name" required>
+          </div>
+          <div class="form_ce_right">
+            <label>Last Name*</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Last Name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form_ce_left">
+            <label>Street Address*</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
+          </div>
+          <div class="form_ce_right">
+            <label>Street Address (cont'd)</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form_ce_left">
+            <label>City*</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
+          </div>
+          <div class="form_ce_right">
+            <label>State*</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form_ce_left">
+            <label>Country*</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
+          </div>
+          <div class="form_ce_right">
+            <label>Zipcode*</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
+          </div>
+        </div>
+        <div class="row"> 
+          <div class="form_ce_left">
+            <label>Phone Number*</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required>
+          </div>
+          <button on type="submit" class="btn_l btn_l-login shipping_add_btn"><a href="invitations.html">Save & Continue</a></button>
+        </div>
+        <div class="wlist_check">
+            <input type="checkbox"><label> save my address</label>
+          </div> 
+        <hr>  
+        <div class="row">
+        <h3>Order Summary</h3>
+        <div class="total_order_text">Item Total: Rs. 1000/-</div><br>
+        <div class="total_order_text">Order Total: Rs. 1000/-</div>
+
+        </div>
+    </div>       
+      </form>    
+     </div>
+  </div>
+  </body>
+</html>
