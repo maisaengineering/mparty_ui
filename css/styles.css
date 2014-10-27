@@ -7,9 +7,14 @@ background-color: #585858;
 }
 
 /*################################login########################################################*/
+.fblogin{
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
 .login{
 	width: 448px;
-	height: 399px;
+	height: auto;
 	background-color: #f9fafa;
 	border: 2px solid #ecece4;
 	margin: 0 auto;
@@ -104,6 +109,9 @@ border-radius: 4px;
   .btn_l{
   	float: right;
   	font-size: 16px;
+  }
+  .fblogin img{
+  	width: 180px;
   }
 }
 /*########################################login end##################################################################*/
