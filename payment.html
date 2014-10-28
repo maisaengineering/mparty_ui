@@ -11,6 +11,7 @@
     <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/ >
     <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.min.js"></script>
     <script src="js/jquery.datetimepicker.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
@@ -18,6 +19,12 @@
          $('.datetimepicker').datetimepicker();
       });
     </script>
+     <script>
+  $(function() {
+    $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+  });
+  </script>
   </head>
   <body>
     <nav class="navbar navbar-default" role="navigation">
@@ -62,7 +69,88 @@
       </div>
       <form role="form" class="form_margin">
         <div class="row">
-        
+        <div id="tabs">
+          <h4>Select Payment Method</h4>
+          <br>
+  <ul class="payment_mthd">
+    <li><a href="#tabs-1">Saved Card</a></li>
+    <li><a href="#tabs-2">Credit Card</a></li>
+    <li><a href="#tabs-3">Debit Card</a></li>
+    <li><a href="#tabs-4">Net Banking</a></li>
+
+  </ul>
+  <div id="tabs-1">
+    <div class="row">
+
+          <div class="row">
+            <img src="img/creditcard.gif">
+            <div class="radio del_radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                5858 XXXXXXXXXXXXX 4786
+              </label>
+            </div>
+            </div>
+          <div class="form_ce_left card_input">
+            <label>CVV Number*</label>
+            <input type="text" class="form-control card_input_cvv" id="exampleInputEmail1" required>
+          </div>
+          <div class="form_ce_right">
+           <div class="card_btn">Proceed Securely</div>
+          </div>
+      </div>
+  </div>
+  <div id="tabs-2">
+    <div class="row">
+      <img src="img/creditcard.gif">
+         <div class="form_ce_left card_input">
+                <label>Name on card*</label>
+                <input type="phone" class="form-control" id="exampleInputEmail1"  required>
+         </div><br>
+         <div class="form_ce_left card_input">
+                <label>Card Number*</label>
+                <input type="phone" class="form-control" id="exampleInputEmail1"  required>
+         </div>
+         <div class="form_ce_left card_input">
+                <label>Expiration Date*</label>
+                <input type="phone" class="form-control" id="exampleInputEmail1" placeholder="MM / YY" required>
+         </div>
+         <div class="form_ce_left card_input">
+            <label>CVV Number*</label> <a href="#">(Whats This)</a>
+            <input type="text" class="form-control card_input_cvv" id="exampleInputEmail1" required>
+          </div>
+          <div class="form_ce_right">
+           <div class="card_btn">Proceed Securely</div>
+          </div>
+    </div>
+    
+  </div>
+  <div id="tabs-3">
+        <div class="row">
+      <img src="img/creditcard.gif">
+         <div class="form_ce_left card_input">
+                <label>Name on card*</label>
+                <input type="phone" class="form-control" id="exampleInputEmail1"  required>
+         </div><br>
+         <div class="form_ce_left card_input">
+                <label>Card Number*</label>
+                <input type="phone" class="form-control" id="exampleInputEmail1"  required>
+         </div>
+         <div class="form_ce_left card_input">
+                <label>Expiration Date*</label>
+                <input type="phone" class="form-control" id="exampleInputEmail1" placeholder="MM / YY" required>
+         </div>
+         <div class="form_ce_left card_input">
+            <label>CVV Number*</label> <a href="#">(Whats This)</a>
+            <input type="text" class="form-control card_input_cvv" id="exampleInputEmail1" required>
+          </div>
+          <div class="form_ce_right">
+           <div class="card_btn">Proceed Securely</div>
+          </div>
+    </div>
+  </div>
+</div>
+</div>
           <hr>  
         <div class="row">
         <h3>Order Summary</h3>

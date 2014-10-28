@@ -673,3 +673,47 @@ margin-top: 20px;
 	float: left;
    margin-left: 40px;
 }
+
+/*################################################payment form##########################################*/
+
+ .ui-tabs-vertical { width: 55em; }
+  .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+  .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; margin: 0 -1px 2.2em 0; border: 1px solid #c1c1c1;border-radius: 3px;font-size: 18px;height: 50px;
+text-align: center;
+padding: 12px;background: #c1c1c1; }
+  .ui-tabs-vertical .ui-tabs-nav li a { color: #ffffff; text-decoration: none; border: none; }
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { background: #00aeef;border: none; }
+  .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;margin-top: 0px;border: 1px solid #00aeef;border-radius: 6px;}
+
+.payment_mthd{
+	list-style-type: none;
+}
+.card_input{
+	margin-left: 18px;
+} 
+
+.card_input_cvv {
+width: 150px;
+}
+.card_btn{
+	height: 54px;
+background: #7ab55c;
+width: 200px;
+font-size: 20px;
+color: #ffffff;
+text-align: center;
+padding: 10px;
+border-radius: 6px;
+margin-top: -54px;
+}
+
+.palce_order_tlt{
+	float: right;
+margin-right: 30px;
+}
+
+.place_order_add{
+	font-size: 16px;
+	color: #585858;
+	
+}
