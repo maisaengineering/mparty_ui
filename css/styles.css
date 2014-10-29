@@ -604,13 +604,14 @@ margin-top: 40px;
 .addcart_btn{
 	width: 129px;
 height: 28px;
-padding: 4px;
+padding: 3px;
 float: right;
 background-color: #00AEEF;
 color: #ffffff;
 text-align: center;
 font-size: 18px;
 margin-right: 18px;
+border: none;
 }
 .addcart_btn a{
 	text-decoration: none;
