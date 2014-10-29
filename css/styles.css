@@ -612,6 +612,10 @@ text-align: center;
 font-size: 18px;
 margin-right: 18px;
 }
+.addcart_btn a{
+	text-decoration: none;
+	color: #ffffff;
+}
 .addcart_main{
 	margin-left: 50px;
 }
@@ -709,6 +713,10 @@ text-align: center;
 padding: 10px;
 border-radius: 6px;
 margin-top: -54px;
+}
+.card_btn a{
+	text-decoration: none;
+	color: #ffffff;
 }
 
 .palce_order_tlt{
