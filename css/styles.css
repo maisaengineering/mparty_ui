@@ -1,3 +1,6 @@
+
+
+
 .footer{
 	position: absolute;
 bottom: 0;
@@ -505,6 +508,7 @@ padding-bottom: 8px;
 .comment_img{
 	width: 85px;
 height: 100px;
+margin-left: 15px;
 }
 .comment_box textarea{
 	width: 758px;
@@ -844,4 +848,76 @@ border-radius: 6px;
 width: 100px;
 height: 28px;
 }
+
+
+.myac_order p {
+	font-size: 20px;
+	color: #585858;
+	font-family: bold;
 }
+.myac_event a {
+	text-decoration: none;
+	color: #fff
+}
+
+/*######################################################uplodae image########################*/
+
+#pictures {
+margin-left: -12px;
+margin-right: -12px;
+}
+
+.pictures_block {
+
+ width:874px;
+
+ margin:0 auto;
+
+ height:auto;
+ overflow: hidden;
+
+}
+
+.picture {
+
+ width:100px;
+
+ margin:5px 14px;
+
+ height:auto;
+
+ float:left;
+ margin-bottom: 25px;
+ }
+.picture img {
+border-radius:10px;
+ -moz-border-radius:10px;
+   -webkit-border-radius:10px;
+   }
+   
+  .actions {
+  text-align: center;
+   } 
+   .actions a {
+   color: #ffffff;
+ 
+   }
+   
+   .actions  a:hover {
+     text-decoration: none;   
+   }
+   .name {
+   font-size: 12px;
+   padding: 3px 0;
+   text-align: center;
+   }
+   
+   .btn-success {
+   border-radius:50px;
+   -moz-border-radius:50px;
+   -webkit-border-radius:50px;
+   }
+   textarea {
+   text-indent: 5px;
+   padding-top: 4px;
+   }
