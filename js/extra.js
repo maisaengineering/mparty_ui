@@ -15,14 +15,3 @@ $(document).ready(function() {
 
     
 });
-
-function ontext() {
- 
-
-var myeventfield = document.getElementById("testeventname").value;
-
-var myeventoutput = document.getElementById("event_output");
-
-myeventoutput.innerHTML=myeventfield; 
-
-}

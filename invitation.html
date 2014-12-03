@@ -26,15 +26,10 @@
     
     <!-- Collect the nav links, forms, and other content for toggling --> <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="top-nav nav navbar-nav navbar-right">
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Maisa Solutions<img src="images/bg_pic.jpg" class="img-rounded bg_img"> <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Myaccount</a></li>
-            <li><a href="#">Orders</a></li>
-            <li><a href="#">Settings</a></li>
-            <li class="divider"></li>
-            <li><a href="index.html">Logout</a></li>
-          </ul>
-        </li>
+        <li><a href="signup.html" data-toggle="modal" data-target="#signup_modal">SignUp</a></li>
+        <li><a href="login.html" data-toggle="modal" data-target="#login_modal">LogIn</a></li>
+      </ul>
+      </li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -44,14 +39,94 @@
 <div class="navbar-collapse navbar-default_2 collapse">
   <div class="container">
     <ul class="main-nav nav navbar-nav">
-      <li	><a href="whatsup.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
-      <li class="active"><a href="events.html"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
+      <li><a href="index.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
       <li><a href="venues.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp Venues</a></li>
       <li><a href="organizers.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp Organizers</a></li>
       <li><a href="mycalendar.html"><span class="glyphicon glyphicon-calendar"></span>&nbsp My Calendar</a></li>
     </ul>
   </div>
 </div>
+
+<!--add to wishlist modal box-->
+    <div class="modal fade" id="yourfriendwishlist" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal5">
+        <div class="modal-content modal_wishlist_bg"> <a href="/"><span class="glyphicon glyphicon-remove pull-right modal_wishlist_x" data-dismiss="modal"></span></a> <br>
+          <div class="modal-header">
+            <div class="title_trending rec_addlist_title_top">
+              <div class="title_bg"></div>
+              <div class="model_box_name rec_addlist_title">Your friend likes following gifts</div>
+            </div>
+          </div>
+          <div class="modal-body">
+           <div class="row wishlist_popup_header event_rec_wishlist_block no_margin">
+              <div class="col-md-2"></div>
+              <div class="col-md-2">DESCRIPTION</div>
+              <div class="col-md-2">REQUESTED QUANTITY</div>
+              <div class="col-md-2">PURCHASED QUANTITY</div>
+               <div class="col-md-2">SELECT QUANTITY</div>
+              <div class="col-md-1">PRICE</div>
+            </div>
+           <div class="row wishlist_popup_center event_rec_wishlist_block">
+              <div class="col-md-2">
+                <div class="wishlist_img_block"><img src="images/product1.png"></div>
+              </div>
+              <div class="col-md-2">
+                <h4>Maisa Mug</h4>
+                <p>MAisa mug descriptions</p>
+              </div>
+              <div class="col-md-2">
+                <p>8</p>
+              </div>
+              <div class="col-md-2">
+                <p>0</p>
+              </div>
+              <div class="col-md-2">
+                <select>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+              </div>
+              <div class="col-md-1"><p>Rs.500/-</p></div>
+            </div>
+             <div class="row wishlist_popup_center event_rec_wishlist_block">
+              <div class="col-md-2">
+                <div class="wishlist_img_block"><img src="images/product2.png"></div>
+              </div>
+              <div class="col-md-2">
+                <h4>Maisa Bagg</h4>
+                <p>MAisa mug descriptions</p>
+              </div>
+              <div class="col-md-2">
+                <p>8</p>
+              </div>
+              <div class="col-md-2">
+                <p>0</p>
+              </div>
+              <div class="col-md-2">
+                <select>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+              </div>
+              <div class="col-md-1"><p>Rs.500/-</p></div>
+            </div>
+             <div class="row wishlist_popup_footer">
+              <div class="col-md-4"></div>
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <a href="shopping_cart.html"><button type="submit" class="btn btn-lg btn-primary btn-block btn_addtocart pull-right">ADD TO CART</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer"> </div>
+        </div>
+      </div>
+    </div>
+    <!--modalbox end--> 
+    
 <div class="container-fluid">
   <div class="container" >
     <div class="title_trending">
@@ -89,21 +164,15 @@
          <div class="col-md-7"><h5>Maisa Solutions</h5></div>
         </div>
         <div class="row count_btns_margin">
-        <div class="col-md-3">
-         <div class="inv_count_btn accept_count_btn"><span class="glyphicon glyphicon-ok"></span></div>
-         <div class="accept_count"><h4>23</h4><p>accepted</p></div>
+        <div class="col-md-4">
+         <button type="submit" class="btn btn-lg btn-primary btn-block accepte_btn" data-toggle="modal" data-target="#yourfriendwishlist" data-dismiss="modal">ACCEPT</button>
         </div>
-        <div class="col-md-3">
-        <div class="inv_count_btn maybe_count_btn"><span class="glyphicon glyphicon">?</span></div>
-         <div class="accept_count"><h4>23</h4><p>may be</p></div>
+        <div class="col-md-4">
+        <button type="submit" class="btn btn-lg btn-primary btn-block maybe_btn">MAY BE</button>
+        
         </div>
-        <div class="col-md-3">
-        <div class="inv_count_btn pending_count_btn"><span class="glyphicon glyphicon-exclamation-sign"></span></div>
-         <div class="accept_count"><h4>23</h4><p>pending</p></div>
-        </div>
-        <div class="col-md-3">
-        <div class="inv_count_btn rejected_count_btn"><span class="glyphicon glyphicon-remove"></span></div>
-         <div class="accept_count"><h4>23</h4><p>rejected</p></div>
+        <div class="col-md-4">
+        <button type="submit" class="btn btn-lg btn-primary btn-block rejected_btn">REJECT</button>
         </div>
         </div>
         
@@ -120,54 +189,6 @@
            </div>
         </div>
         <!--location end-->
-        <!--wishlist-->
-        <div class="row">
-           <div class="col-md-12">
-           <h4>Wishlist</h4>
-           <div class="row wishlist_popup_header event_pre_wishlist_block no_margin">
-              <div class="col-md-2"></div>
-              <div class="col-md-3">DESCRIPTION</div>
-              <div class="col-md-3">REQUESTED QUANTITY</div>
-              <div class="col-md-3">PURCHASED QUANTITY</div>
-              <div class="col-md-1">PRICE</div>
-            </div>
-             <div class="row wishlist_popup_center event_pre_wishlist_block">
-              <div class="col-md-2">
-                <div class="wishlist_img_block"><img src="images/product1.png"></div>
-              </div>
-              <div class="col-md-3">
-                <h4>Maisa Mug</h4>
-                <p>MAisa mug descriptions</p>
-              </div>
-              <div class="col-md-3">
-                <p>8</p>
-              </div>
-              <div class="col-md-3">
-                <p>0</p>
-              </div>
-              <div class="col-md-1"><p>Rs.500/-</p></div>
-            </div>
-            <div class="row wishlist_popup_center event_pre_wishlist_block">
-              <div class="col-md-2">
-                <div class="wishlist_img_block"><img src="images/product2.png"></div>
-              </div>
-              <div class="col-md-3">
-                <h4>Maisa Bag</h4>
-                <p>MAisa mug descriptions</p>
-              </div>
-              <div class="col-md-3">
-                <p>8</p>
-              </div>
-              <div class="col-md-3">
-                <p>0</p>
-              </div>
-              <div class="col-md-1"><p>Rs.500/-</p></div>
-            </div>
-            
-            <div class="row event_pre_wishlist no_margin"></div>
-           </div>
-        </div>
-        <!--wishlist end-->
         <!--event photos-->
         <div class="row">
         <div class="col-md-12">
@@ -221,14 +242,6 @@
         </div>
         
         
-        </div>
-        <div class="col-md-12">
-        <div class="row comment_block_btn">
-          <div class="col-md-9">
-           <textarea rows="2" cols="119"></textarea>
-          </div>
-          <div class="col-md-3"><button type="submit" class="btn btn-lg btn-primary btn-block comment_btn_post">POST</button></div>
-        </div>
         </div>
         </div>
         <!--comments end-->

@@ -1,122 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mparty</title>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mparty</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/ >
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.datetimepicker.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-         $('.datetimepicker').datetimepicker();
-      });
-    </script>
-  </head>
-  <body>
-    <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
+<!-- Bootstrap -->
+<link href="css/mparty_style.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Mparty</a>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html">What's Up?</a></li>
-            <li><a href="events_all.html">Events</a></li>
-            <li><a href="#contact">Venues</a></li>
-            <li><a href="#contact">Organizers</a></li>
-            <li><a href="#contact">My Calendar</a></li>
-            <li><a href="#contact">|</a></li>
-            <li><a href="login.html">My Account</a></li>
-            <li><a href="login.html">Logout</a></li>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo"></a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling --> <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="top-nav nav navbar-nav navbar-right">
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Maisa Solutions<img src="images/bg_pic.jpg" class="img-rounded bg_img"> <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Myaccount</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Settings</a></li>
+            <li class="divider"></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
 </nav>
-  <div class="container"> 
+<div class="navbar-collapse navbar-default_2 collapse">
+  <div class="container">
+    <ul class="main-nav nav navbar-nav">
+      <li><a href="whatsup.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
+      <li class="active"><a href="events.html"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
+      <li><a href="venues.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp Venues</a></li>
+      <li><a href="organizers.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp Organizers</a></li>
+      <li><a href="mycalendar.html"><span class="glyphicon glyphicon-calendar"></span>&nbsp My Calendar</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container-fluid" style="background-color:#f1f2f7">
+  <div class="container" >
+    
+    <div class="row event_margin">
+      <div class="col-md-2">
+        <div class="row">
+          <div class="billing_tab_active"><span class="glyphicon glyphicon-list-alt"></span></div>
+          <div class="event_tab_title">BILLING ADDRESS</div>
+          <div class="event_divider"></div>
+        </div>
+        <div class="row">
+          <div class="billing_tab"><span class="glyphicon glyphicon-credit-card"></span></div>
+          <div class="event_tab_title">PAYMENT</div>
+          <div class="event_divider"></div>
+        </div>
+        <div class="row">
+          <div class="billing_tab"><span class="glyphicon glyphicon-gift"></span></div>
+          <div class="event_tab_title">COMPLETE</div>
+          <div></div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="create_event_bg"> 
+          <!--create billing address start-->
+          <div class="row" id="create_billing_address">
+            <div class="col-md-6 event_left_block">
+              <div class="row">
+                <div class="col-md-12">
+                  <form role="form">
+                    <div class="col-md-6">
+                      <label>First Name*</label>
+                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                    </div>
+                    <div class="col-md-6">
+                      <label>Last Name*</label>
+                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                    </div>
+                    <div class="col-md-12">
+                      <label>Street Address*</label>
+                      <textarea class="form-control" placeholder="" rows="3"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                      <label>City*</label>
+                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                    </div>
+                    <div class="col-md-6">
+                      <label>State*</label>
+                       <select class="form-control" placeholder="Password" required>
+                        <option>Select Type</option>
+                        <option>Telangana</option>
+                        <option>Andhra Pradesh</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label>Country*</label>
+                      <select class="form-control" placeholder="Password" required>
+                        <option>Select Type</option>
+                        <option>India</option>
+                        <option>America</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                     <label>Zipcode*</label>
+                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                    </div>
+                    <div class="col-md-6">
+                      <label>Phone Number*</label>
+                      <input type="phone" id="inputEmail" class="form-control" placeholder="" required="true">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                      <label></label>
+                      <button class="btn btn-lg btn-primary btn-block" id="billingaddress" type="submit">CREATE</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 event_right_block">
+              <h4>Shipping Address</h4>
+              <div class="row">
+              <div class="col-md-3"><b>NAME</b></div><div class="col-md-9">Maisa Solutions</div>
+              <div class="col-md-3"><b>ADDRESS</b></div><div class="col-md-9">Flat No 202, Ecil</div>
+              <div class="col-md-3"><b>CITY</b></div><div class="col-md-9">Hyderabad</div>
+              <div class="col-md-3"><b>STATE</b></div><div class="col-md-9">Telangana</div>
+              <div class="col-md-3"><b>COUNTRY</b></div><div class="col-md-9">India</div>
+              <div class="col-md-3"><b>ZIPCODE</b></div><div class="col-md-9">500062</div>
+              </div>
+             
+             
+            </div>
+          </div>
+          <!--Create billing address end-->   
+          <!--payment start-->
+          <div class="row" id="payment_method">
+            <div class="col-md-6 event_left_block">
+              <div class="row">
+                <div class="col-md-12">
+                     <form role="form">
+                    <div class="col-md-6">
+                       <label>
+                        <input type="checkbox">CREDIT CARD
+                        </label>
+                    </div>
+                    <div class="col-md-6">
+                       <label>
+                        <input type="checkbox">DEBIT CARD
+                        </label>
+                    </div>
+                    <div class="col-md-12">
+                    <label></label>
+                        <input type="number" id="cardno" class="form-control" placeholder="enter card number 4111 xxxxxxx44455">
+                    </div>
+                    <div class="col-md-3">
+                      <label></label>
+                        <input type="text" id="carddate" class="form-control" placeholder="MM / YY">
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">   
+                    </div>
+                    <div class="col-md-3">
+                      <label></label>
+                        <input type="text" id="cvvno" class="form-control" placeholder="CVV NO">
+                    </div>
+                    <div class="col-md-12">
+                    <label></label>
+                        <input type="text" id="cardname" class="form-control" placeholder="Name On Card">
+                    </div>
+                     <div class="col-md-12">
+                       <label>
+                        <input type="checkbox">Save card
+                        </label>
+                    </div>
+                    <div class="col-md-12">
+                      <label></label>
+                      <button class="btn btn-lg btn-primary btn-block pay_now_btn" type="submit">PAY NOW</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 event_right_block">
+              <h4>Billing Address <a href="#" class="pull-right">(edit)<span class="glyphicon glyphicon-pencil"></span></a></h4>
+              
+              <div class="row">
+              <div class="col-md-3"><b>NAME</b></div><div class="col-md-9">Maisa Solutions</div>
+              <div class="col-md-3"><b>ADDRESS</b></div><div class="col-md-9">Flat No 202, Ecil</div>
+              <div class="col-md-3"><b>CITY</b></div><div class="col-md-9">Hyderabad</div>
+              <div class="col-md-3"><b>STATE</b></div><div class="col-md-9">Telangana</div>
+              <div class="col-md-3"><b>COUNTRY</b></div><div class="col-md-9">India</div>
+              <div class="col-md-3"><b>ZIPCODE</b></div><div class="col-md-9">500062</div>
+              </div>
+              &nbsp;
+            
+              <h4>Shipping Address</h4>
+              <div class="row">
+              <div class="col-md-3"><b>NAME</b></div><div class="col-md-9">Maisa Solutions</div>
+              <div class="col-md-3"><b>ADDRESS</b></div><div class="col-md-9">Flat No 202, Ecil</div>
+              <div class="col-md-3"><b>CITY</b></div><div class="col-md-9">Hyderabad</div>
+              <div class="col-md-3"><b>STATE</b></div><div class="col-md-9">Telangana</div>
+              <div class="col-md-3"><b>COUNTRY</b></div><div class="col-md-9">India</div>
+              <div class="col-md-3"><b>ZIPCODE</b></div><div class="col-md-9">500062</div>
+              </div>
+             
+             
+            </div>
+          </div>
+          <!--paymentend--> 
+          <!--placeorder start-->
+          <div class="row" id="place_order">
+            <div class="col-md-6 event_left_block">
+               
+              <div class="col-md-12">
+              <h4>Billing Address <a href="#" class="pull-right">(edit)<span class="glyphicon glyphicon-pencil"></span></a></h4>
+              <div class="row">
+              <div class="col-md-3"><b>NAME</b></div><div class="col-md-9">Maisa Solutions</div>
+              <div class="col-md-3"><b>ADDRESS</b></div><div class="col-md-9">Flat No 202, Ecil</div>
+              <div class="col-md-3"><b>CITY</b></div><div class="col-md-9">Hyderabad</div>
+              <div class="col-md-3"><b>STATE</b></div><div class="col-md-9">Telangana</div>
+              <div class="col-md-3"><b>COUNTRY</b></div><div class="col-md-9">India</div>
+              <div class="col-md-3"><b>ZIPCODE</b></div><div class="col-md-9">500062</div>
+              </div>
+              &nbsp;
+            
+              <h4>Shipping Address</h4>
+              <div class="row">
+              <div class="col-md-3"><b>NAME</b></div><div class="col-md-9">Maisa Solutions</div>
+              <div class="col-md-3"><b>ADDRESS</b></div><div class="col-md-9">Flat No 202, Ecil</div>
+              <div class="col-md-3"><b>CITY</b></div><div class="col-md-9">Hyderabad</div>
+              <div class="col-md-3"><b>STATE</b></div><div class="col-md-9">Telangana</div>
+              <div class="col-md-3"><b>COUNTRY</b></div><div class="col-md-9">India</div>
+              <div class="col-md-3"><b>ZIPCODE</b></div><div class="col-md-9">500062</div>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-6 event_right_block">
+              <div class="row">
+                <div class="place_order_right">
+                  <div class="col-md-12">
+                    <h4>Order Summary</h4>
+                    <div class="row inv_wishlist">
+                      <div class="col-md-3"><img src="images/product2.png" width="90"></div>
+                      <div class="col-md-6">
+                        <h5>Maisa Bag</h5>
+                        <p>Quantity 2</p>
+                        <p>Price Rs.500/-</p>
+                      </div>
+                      <div class="col-md-2">
+                        <h5>Rs.1000/-</h5>
+                      </div>
+                    </div>
+                    <div class="row inv_wishlist">
+                      <div class="col-md-3"><img src="images/product1.png" width="90"></div>
+                      <div class="col-md-6">
+                        <h5>Maisa Mug</h5>
+                        <p>Quantity 2</p>
+                         <p>Price Rs.500/-</p>
+                      </div>
+                      <div class="col-md-2">
+                        <h5>Rs.1000/-</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                 <div class="row">
+                  <div class="col-md-4"></div>
+                  <div class="col-md-5"><b>Item Total</b></div>
+                  <div class="col-md-3">RS.2000/-</div>
+                  </div>
+                  <div class="row">
+                   <div class="col-md-4"></div>
+                  <div class="col-md-5"><b>Shipping Charges</b></div>
+                  <div class="col-md-3">RS.100/-</div>
+                  </div>
+                  <div class="row">
+                   <div class="col-md-4"></div>
+                  <div class="col-md-5"><b>Total</b></div>
+                  <div class="col-md-3">RS.2100/-</div>
+                  </div>
+                  <div class="row">
+                   <div class="col-md-7"></div>
+                  <div class="col-md-4"><button type="submit" class="btn btn-lg btn-primary btn-block btn_place_order">PLACE ORDER</button></div>
+                  <div class="col-md-1"></div>
+                  </div>
+                </div>
+                  </a> </div>
+              </div>
+            </div>
+          </div>
+          <!--placeorder end-->                     
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="row social_icons"><a href="#"><img src="images/social_icon.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon2.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon3.jpg"></a>
+      <p class="text-muted pull-right">@2014 Mparty.</p>
+    </div>
+  </div>
+</footer>
 
-    <br>
-     <div class="create_event">
-      <div class="row">
-        <div class="col-md-1 cart_header ">1.Address</div>
-        <div class="col-md-1 cart_header">2.Delivery</div>
-        <div class="col-md-1 cart_header">3.Payment</div>
-        <div class="col-md-1 cart_header active_ad">4.Complete</div>
-      </div>
-      <div class="row">
-      <h2 class="event_details">Confirm</h2>
-  <!--     <button class="btn_cs btn_cs_change" onclick="populateSlider()"> Change Design</button> -->
-      </div>
-      <form role="form" class="form_margin">
-        <div class="row">
-          <h3>Billing Address</h3><a href="">Edit</a>
-         <div class="place_order_add"> Somani Naveen</div>
-         <div class="place_order_add"> Ecil Hyderabad</div>
-         <div class="place_order_add"> 5000062, Telangana</div>
-         <div class="place_order_add"> 999999999</div>
-        </div>
-        <div class="row">
-          <h3>Payment Information </h3><a href="">Edit</a>
-         <div class="place_order_add"> 5858 XXXXXXXXXXXXX 4786</div>
-        </div>
-        <div class="row">
-         <div class="wishlist_main">
-          <div class="wishlist_header del_cart"><table width="100%">
-           <tr>
-            <td>Item Description</td>
-            <td>Price</td>
-            <td>Qty</td>
-           </tr> 
-          </table></div>
-            <div class="wishlist">
-            <div class="col-md-1 wlist"><img src="img/shirt.jpg" width="90px"></div>
-            <div class="col-md-1 wlist_id">Brand New Maisa T shirt </div>
-            <div class="col-md-1 wlist_p del_cart_qty">Rs.500/-</div>
-            <div class="col-md-1 wlist_pq del_cart_pri">01</div>
-          </div>
-          <div class="wishlist">
-            <div class="col-md-1 wlist"><img src="img/shirt.jpg" width="90px"></div>
-            <div class="col-md-1 wlist_id">Brand New Maisa T shirt </div>
-            <div class="col-md-1 wlist_p del_cart_qty">Rs.500/-</div>
-            <div class="col-md-1 wlist_pq del_cart_pri">01</div>
-          </div>
-          </div>
-          <div class="row palce_order_tlt">
-            <h3>Total</h3>
-            <div class="total_order_text">Item Total: Rs. 1000/-</div><br>
-             <div class="total_order_text">Shipping Total: Rs. 100/-</div><br>
-            <div class="total_order_text">Order Total: Rs. 1100/-</div>
-          </div>
-            <h3>Shipping Method</h3>
-            <div class="row">
-            <div class="radio del_radio">
-              <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                method one 100
-              </label>
-            </div>
-            </div>
-             <button on type="submit" class="btn_l btn_l-login shipping_add_btn"><a href="index.html">Place Order</a></button>
-        
-          
-        </div>
-        
-      </form>  
-     </div>       
-  </div>
-  </div>
-  </body>
+<!--JS FILES--> 
+
+<script src="js/jquery.js"></script> 
+<script src="js/extra.js"></script> 
+<script src="js/bootstrap.js"></script>
+</body>
 </html>

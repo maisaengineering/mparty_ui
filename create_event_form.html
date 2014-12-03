@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mparty</title>
+
+<!-- Bootstrap -->
+<link href="css/mparty_style.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo"></a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling --> <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="top-nav nav navbar-nav navbar-right">
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Maisa Solutions<img src="images/bg_pic.jpg" class="img-rounded bg_img"> <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Myaccount</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Settings</a></li>
+            <li class="divider"></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+<div class="navbar-collapse navbar-default_2 collapse">
+  <div class="container">
+    <ul class="main-nav nav navbar-nav">
+      <li><a href="whatsup.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
+      <li class="active"><a href="events.html"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
+      <li><a href="venues.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp Venues</a></li>
+      <li><a href="organizers.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp Organizers</a></li>
+      <li><a href="mycalendar.html"><span class="glyphicon glyphicon-calendar"></span>&nbsp My Calendar</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container-fluid" style="background-color:#f1f2f7">
+  <div class="container" >
+    <div class="title_trending">
+      <div class="title_bg"></div>
+      <div class="title_name">Create Event</div>
+    </div>
+    <div class="row event_margin">
+      <div class="col-md-2">
+        <div class="row">
+          <div class="event_tab_active"><span class="glyphicon glyphicon-star"></span></div>
+          <div class="event_tab_title">CREATE EVENTS</div>
+          <div class="event_divider"></div>
+        </div>
+        <div class="row">
+          <div class="event_tab"><span class="glyphicon glyphicon-picture"></span></div>
+          <div class="event_tab_title">UPLOAD PHOTOS</div>
+          <div class="event_divider"></div>
+        </div>
+        <div class="row">
+          <div class="event_tab"><span class="glyphicon glyphicon-envelope"></span></div>
+          <div class="event_tab_title">SEND INVITATIONS</div>
+          <div></div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="create_event_bg"> 
+          <!--create event form start-->
+          <div class="row" id="create_form">
+            <div class="col-md-6 event_left_block">
+              <div class="row">
+                <div class="col-md-12">
+                  <form role="form">
+                    <div class="col-md-6">
+                      <label>Event Name*</label>
+                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                    </div>
+                    <div class="col-md-6">
+                      <label>Event Type*</label>
+                      <select class="form-control" placeholder="Password" required>
+                        <option>Select Type</option>
+                        <option>Wedding</option>
+                        <option>Birthday</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label>Host Name*</label>
+                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                    </div>
+                    <div class="col-md-6">
+                      <label>Host Phone*</label>
+                      <input type="phone" id="inputPassword" class="form-control" placeholder="" required="">
+                    </div>
+                    <div class="col-md-6">
+                      <label>Location*</label>
+                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                    </div>
+                    <div class="col-md-6">
+                      <label>Venue Type*</label>
+                      <select class="form-control" placeholder="Password" required>
+                        <option>Select Type</option>
+                        <option>Leonia</option>
+                        <option>Pariwar</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12">
+                      <label>Description*</label>
+                      <textarea class="form-control" placeholder="" rows="3"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                      <label>Start Date/Time*</label>
+                      <input type="datetime-local" id="inputEmail" class="form-control" placeholder="" required="true">
+                    </div>
+                    <div class="col-md-6">
+                      <label>End Date/Time*</label>
+                      <input type="datetime-local" id="inputPassword" class="form-control" placeholder="" required="">
+                    </div>
+                    <div class="col-md-12">
+                      <label>
+                        <input type="checkbox">
+                        Is Private</label>
+                    </div>
+                    <div class="col-md-12">
+                      <label></label>
+                      <button class="btn btn-lg btn-primary btn-block" type="submit">CREATE</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 event_right_block">
+              <h4>Event Name</h4>
+              <div id="large-image"> </div>
+              <div class="well">
+                <div id="myCarousel" class="carousel slide"> 
+                  
+                  <!-- Carousel items -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <div class="row">
+                        <div class="col-sm-3"><a href="#x"><img src="images/event3.png" alt="Image" class="img-responsive"></a> </div>
+                        <div class="col-sm-3"><a href="#x"><img src="images/event2.png" alt="Image" class="img-responsive"></a> </div>
+                        <div class="col-sm-3"><a href="#x"><img src="images/event1.png" alt="Image" class="img-responsive"></a> </div>
+                        <div class="col-sm-3"><a href="#x"><img src="images/event3.png" alt="Image" class="img-responsive"></a> </div>
+                      </div>
+                      <!--/row--> 
+                    </div>
+                    <!--/item--> 
+                  </div>
+                  <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a> <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> </div>
+                <!--/myCarousel--> 
+              </div>
+              <!--/well--> 
+            </div>
+          </div>
+          <!--Create event form end--> 
+          
+          <!--upload photos start-->
+          <div class="row" id="upload_photos">
+            <div class="col-md-6 event_left_block">
+              <div class="row">
+                <div class="col-md-12">
+                  <form role="form">
+                    <div class="col-md-12 upload_btn"> <span class="glyphicon glyphicon-picture"></span> <span class="glyphicon glyphicon-upload"></span>
+                      <label></label>
+                      <input type="file" id="exampleInputFile">
+                    </div>
+                    <div class="col-md-4">
+                      <button class="btn btn-lg btn-primary btn-block upload_btn_skip" type="submit">SKIP</button>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 event_right_block">
+              <div class="photos_block">
+                <h4>Event Photos</h4>
+                <div class="col-md-3"><img src="images/event_1.jpg" width="90"></div>
+                <div class="col-md-3"><img src="images/event_2.jpg" width="90"></div>
+                <div class="col-md-3"><img src="images/event_3.jpg" width="90"></div>
+                <div class="col-md-3"><img src="images/event_4.jpg" width="90"></div>
+              </div>
+              <div class="col-md-4"></div>
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <button class="btn btn-lg btn-primary btn-block upload_btn_done" type="submit">DONE</button>
+              </div>
+            </div>
+          </div>
+          <!--upload photos end--> 
+          
+          <!--invitations start-->
+          <div class="row" id="invitation_without_wishlist">
+            <div class="col-md-6 event_left_block">
+              <div class="row">
+                <div class="col-md-12 wishlist_text">
+                  <h4>Do You Want To Send Wishlist?</h4>
+                  <a href="wishlist.html" class="btn btn-lg btn-primary btn-block create_wishlist_btn">CREATE WISHLIST</a> </div>
+                <div class="col-md-12">
+                  <form role="form">
+                    <div class="col-md-12 invitation_text">
+                      <label></label>
+                      <textarea class="form-control" placeholder="Enter your friends email address" rows="12"></textarea>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                      <label></label>
+                      <button class="btn btn-lg btn-primary btn-block invite_btn_cancel" type="submit">CANCEL</button>
+                    </div>
+                    <div class="col-md-4">
+                      <label></label>
+                      <button class="btn btn-lg btn-primary btn-block upload_btn_done" type="submit">INVITE</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 event_right_block"> </div>
+          </div>
+          <!--invitation end--> 
+          <!--invitations start-->
+          <div class="row" id="invitation_with_wishlist">
+            <div class="col-md-6 event_left_block">
+              <div class="row">
+                <div class="col-md-12">
+                  <form role="form">
+                    <div class="col-md-12 invitation_text">
+                      <label></label>
+                      <textarea class="form-control" placeholder="Enter your friends email address" rows="12"></textarea>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                      <label></label>
+                      <button class="btn btn-lg btn-primary btn-block invite_btn_cancel" type="submit">CANCEL</button>
+                    </div>
+                    <div class="col-md-4">
+                      <label></label>
+                      <button class="btn btn-lg btn-primary btn-block upload_btn_done" type="submit">INVITE</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 event_right_block">
+              <div class="row">
+                <div class="inv_wislist_right">
+                  <div class="col-md-12">
+                    <h4>Wishlist</h4>
+                    <div class="row inv_wishlist">
+                      <div class="col-md-3"><img src="images/product2.png" width="90"></div>
+                      <div class="col-md-6">
+                        <h5>Maisa Bag</h5>
+                        <p>Requested Quantity 4</p>
+                      </div>
+                      <div class="col-md-2">
+                        <h5>Rs.500/-</h5>
+                      </div>
+                    </div>
+                    <div class="row inv_wishlist">
+                      <div class="col-md-3"><img src="images/product1.png" width="90"></div>
+                      <div class="col-md-6">
+                        <h5>Maisa Mug</h5>
+                        <p>Requested Quantity 4</p>
+                      </div>
+                      <div class="col-md-2">
+                        <h5>Rs.500/-</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 inv_addmore"> <a href="wishlist.html" id="inv_addmore_prdts">
+                  <div class="wishlist_add_btn"><span class="glyphicon glyphicon-plus"></span></div>
+                  <h4>Add More Products</h4>
+                  </a> </div>
+              </div>
+            </div>
+          </div>
+          <!--invitation end--> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="row social_icons"><a href="#"><img src="images/social_icon.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon2.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon3.jpg"></a>
+      <p class="text-muted pull-right">@2014 Mparty.</p>
+    </div>
+  </div>
+</footer>
+
+<!--JS FILES--> 
+
+<script src="js/jquery.js"></script> 
+<script src="js/extra.js"></script> 
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
