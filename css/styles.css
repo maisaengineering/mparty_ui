@@ -964,6 +964,41 @@ color: #e78f08;
 	text-align:center;
 	width: 352px;
 }
+.join_btn{
+width: 50px;
+background-color: #ef5323;
+margin: 0 auto;
+text-align: center;
+}
+.join_btn a{
+	text-decoration:none;
+	color:#fff;
+}
+.addguest_btn{
+width: 70px;
+background-color: #8bd92f;
+margin: 0 auto;
+text-align: center;
+}
+.addguest_btn a{
+	text-decoration:none;
+	color:#fff;
+}
+.writereview_btn{
+background-color: #8bd92f;
+margin: 0 auto;
+text-align: center;
+height: 30px;
+width: 130px;
+padding: 6px;
+}
+.writereview_btn a{
+	text-decoration:none;
+	color:#fff;
+}
+.review_start a:hover{
+	color:#e78f08;
+}
 @media (min-width: 768px) {
   .navbar {
     border-radius: 0px;
