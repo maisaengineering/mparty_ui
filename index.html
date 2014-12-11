@@ -17,55 +17,59 @@
     <![endif]-->
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
+
+ <!--**********************************header  secton*****************************-->
+
+ <nav class="navbar navbar-default" role="navigation">
   <div class="container"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo"></a> </div>
+      <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo" alt="mparty"></a> </div>
     
-    <!-- Collect the nav links, forms, and other content for toggling --> <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="top-nav nav navbar-nav navbar-right">
         <li><a href="signup.html" data-toggle="modal" data-target="#signup_modal">SignUp</a></li>
         <li><a href="login.html" data-toggle="modal" data-target="#login_modal">LogIn</a></li>
-      </ul>
-      </li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
   </div>
   <!-- /.container-fluid --> 
 </nav>
+
 <div class="navbar-collapse navbar-default_2 collapse">
   <div class="container">
     <ul class="main-nav nav navbar-nav">
-      <li><a href="index.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
-      <li><a href="venues.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp Venues</a></li>
-      <li><a href="organizers.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp Organizers</a></li>
-      <li><a href="mycalendar.html"><span class="glyphicon glyphicon-calendar"></span>&nbsp My Calendar</a></li>
+      <li class="active"><a href="index.html"><span class="glyphicon glyphicon-ok"></span>&nbsp; Whats Up?</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-star"></span>&nbsp; Events</a></li>
+      <li><a href="venues.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp; Venues</a></li>
+      <li><a href="organizers.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp; Organizers</a></li>
+      <li><a href="mycalendar.html"><span class="glyphicon glyphicon-calendar"></span>&nbsp; My Calendar</a></li>
     </ul>
   </div>
 </div>
+ <!--**********************************end header section ********************************-->
+
+  <!--**********************************all modal popups section ********************************-->
 <!--login modal box-->
 <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content"> <a href=""><a href="/"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a></a> <br>
-      <div class="modal-header"> <a href="#"><img src="images/fb_icon.jpg" class="pull-right"></a>
-        <h3 class="modal-title" id="myModalLabel">Login</h3>
+    <div class="modal-content"> <a href="#"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a>
+      <div class="modal-header"> <a href="#"><img src="images/fb_icon.jpg" class="pull-right" alt="fb login"></a>
+        <h3 class="modal-title" >Login</h3>
       </div>
       <div class="modal-body">
         <form class="form-signin" role="form">
-          <label>Email Id</label>
-          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus>
-          <br>
-          <label>Password</label>
-          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-          <br>
+          <label></label>
+          <input type="email" class="form-control" placeholder="Email address*" required="" autofocus>
+          <label></label>
+          <input type="password"  class="form-control" placeholder="Password*" required="">
+          <label></label>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
-          <br>
-          <a href="#" data-toggle="modal" data-target="#forgot_password_modal" data-dismiss="modal">Forgot Your Password?</a> <br>
-          <a href="#" data-toggle="modal" data-target="#signup_modal" data-dismiss="modal" class="pull-right">REGISTER</a>
+          <label></label>
+          <div class="row no_margin"> <a href="#" data-toggle="modal" data-target="#forgot_password_modal" data-dismiss="modal">Forgot Your Password?</a> <a href="#" data-toggle="modal" data-target="#signup_modal" data-dismiss="modal" class="pull-right">REGISTER</a> </div>
         </form>
       </div>
       <div class="modal-footer"> </div>
@@ -75,7 +79,7 @@
 <!--SIgnUP modal box-->
 <div class="modal fade" id="signup_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal2">
-    <div class="modal-content"> <a href=""><a href="/"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a></a> <br>
+    <div class="modal-content"> <a href=""><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a>
       <div class="modal-header">
         <h3 class="modal-title" id="myModalLabel">Create New Account</h3>
       </div>
@@ -83,37 +87,33 @@
         <form class="form-signin" role="form">
           <div class="row">
             <div class="col-md-6">
-              <label>First Name*</label>
-              <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+              <input type="text" class="form-control" placeholder="First Name*" required="" autofocus>
             </div>
             <div class="col-md-6">
-              <label>Last Name*</label>
-              <input type="text" id="inputPassword" class="form-control" placeholder="" required="">
+           
+              <input type="text"  class="form-control" placeholder="Last Name*" required="">
+              <!-- <span class="err"> error occured!</span>-->
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-md-12">
-              <label>Email Address*</label>
-              <input type="email" id="inputPassword" class="form-control" placeholder="" required="">
+              <input type="email"  class="form-control" placeholder="Email Address*" required="">
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-md-6">
-              <label>Password*</label>
-              <input type="password" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+              <input type="password"  class="form-control" placeholder="Password*" required="" autofocus>
             </div>
             <div class="col-md-6">
-              <label>Password Confirmation*</label>
-              <input type="password" id="inputPassword" class="form-control" placeholder="" required="">
+              <input type="password"  class="form-control" placeholder="Password Confirmation*" required="">
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-md-12">
-              <label>Phone Number*</label>
-              <input type="email" id="inputPassword" class="form-control" placeholder="" required="">
+              <input type="tel"  class="form-control" placeholder="Phone Number*" required="">
             </div>
           </div>
           <br>
@@ -133,15 +133,15 @@
 <!--Forgot password modal box-->
 <div class="modal fade" id="forgot_password_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content"> <a href=""><a href="/"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a></a> <br>
+    <div class="modal-content"> <a href="#"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a>
       <div class="modal-header">
-        <h3 class="modal-title" id="myModalLabel">Forgot Password?</h3>
+        <h3 class="modal-title">Forgot Password?</h3>
       </div>
       <div class="modal-body">
         <form class="form-signin" role="form">
-          <label>Enter Your Email Id</label>
-          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus>
-          <br>
+          <label></label>
+          <input type="email"  class="form-control" placeholder="Enter Your Email Id*" required="" autofocus>
+          <label></label>
           <button class="btn btn-lg btn-primary btn-block" type="submit">SEND</button>
         </form>
       </div>
@@ -149,150 +149,181 @@
     </div>
   </div>
 </div>
-<!--modal box end-->
+  <!--**********************************-all modal popups section ********************************-->
+
+
+  <!--**********************************main container section  ********************************-->
 <div class="container-fluid banner_padding">
-<div class="position_rel">
-<div >
- <img src="images/banner.jpg" width="100%">
  
-</div>
-<div class="whatsup_src_block">
-<div class="form-group whatsup_search"> <a href="#"><span class="glyphicon glyphicon-search pull-left whatsup_src_icon"></span></a>
-          <input type="search" class="event_search" placeholder="Find Events"></div></div>
-</div>
-  <div class="container" >
-    <div class="create_event">
-      <div  class="btn_orange"><a href="#" data-toggle="modal" data-target="#login_modal" data-dismiss="modal">Create Event</a></div>
-      <div class="title_trending">
-        <div class="title_bg"></div>
-        <div class="title_name">Trending Events</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-6 col-md-3">
-        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_4.jpg" alt="..."> </a> </div>
-        <div class="event_name">
-          <p>MAISA EVENT</p>
-        </div>
-        <div class="event_details">
-          <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-            <div class="pull-right">04.30 PM</div>
-          </div>
-          <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-          <div class="pull-right join_btn"><a href="#">Join</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_1.jpg" alt="..."> </a> </div>
-        <div class="event_name">
-          <p>MAISA EVENT</p>
-        </div>
-        <div class="event_details">
-          <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-            <div class="pull-right">04.30 PM</div>
-          </div>
-          <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-            <div class="pull-right join_btn"><a href="#">Join</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_2.jpg" alt="..."> </a> </div>
-        <div class="event_name">
-          <p>MAISA EVENT</p>
-        </div>
-        <div class="event_details">
-          <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-            <div class="pull-right">04.30 PM</div>
-          </div>
-          <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-          <div class="pull-right join_btn"><a href="#">Join</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_3.jpg" alt="..."> </a> </div>
-        <div class="event_name">
-          <p>MAISA EVENT</p>
-        </div>
-        <div class="event_details">
-          <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-            <div class="pull-right">04.30 PM</div>
-          </div>
-          <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-          <div class="pull-right join_btn"><a href="#">Join</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row event_margin">
-      <div class="col-xs-6 col-md-3">
-        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_1.jpg" alt="..."> </a> </div>
-        <div class="event_name">
-          <p>MAISA EVENT</p>
-        </div>
-        <div class="event_details">
-          <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-            <div class="pull-right">04.30 PM</div>
-          </div>
-          <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-          <div class="pull-right join_btn"><a href="#">Join</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_2.jpg" alt="..."> </a> </div>
-        <div class="event_name">
-          <p>MAISA EVENT</p>
-        </div>
-        <div class="event_details">
-          <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-            <div class="pull-right">04.30 PM</div>
-          </div>
-          <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-          <div class="pull-right join_btn"><a href="#">Join</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_3.jpg" alt="..."> </a> </div>
-        <div class="event_name">
-          <p>MAISA EVENT</p>
-        </div>
-        <div class="event_details">
-          <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-            <div class="pull-right">04.30 PM</div>
-          </div>
-          <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-          <div class="pull-right join_btn"><a href="#">Join</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_4.jpg" alt="..."> </a> </div>
-        <div class="event_name">
-          <p>MAISA EVENT</p>
-        </div>
-        <div class="event_details">
-          <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-            <div class="pull-right">04.30 PM</div>
-          </div>
-          <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-          <div class="pull-right join_btn"><a href="#">Join</a></div>
-          </div>
-        </div>
+  <!-- banner image --> 
+  <div class="position_rel">
+    <div > <img class="img-responsive" src="images/banner.jpg" alt="banner image" > </div>
+    <div class="whatsup_src_block">
+      <div class="form-group whatsup_search"> <a href="#"><span class="glyphicon glyphicon-search pull-left whatsup_src_icon"></span></a>
+        <input type="search" class="event_search" placeholder="Find Events">
       </div>
     </div>
   </div>
+   <!-- end banner image --> 
+  
+ 
+   <!-- inner container section --> 
+  <div class="container" >
+    <div class="row">
+      <div class="create_event">
+        <div  class="btn_orange"><a href="#" data-toggle="modal" data-target="#login_modal" data-dismiss="modal">Create Event</a></div>
+      </div>
+      <div class="title_name">Trending Events</div>
+    </div>
+    
+    <div class="row">
+    
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_4.jpg" alt="..."> </a>
+          <div class="event_name">
+            <p>MAISA EVENT</p>
+          </div>
+          <div class="event_details">
+            <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
+              <div class="pull-right">04.30 PM</div>
+            </div>
+            <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+              <a href="#"><div class="pull-right join_btn">Join</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_1.jpg" alt="..."> </a>
+          <div class="event_name">
+            <p>MAISA EVENT</p>
+          </div>
+          <div class="event_details">
+            <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
+              <div class="pull-right">04.30 PM</div>
+            </div>
+            <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+               <a href="#"><div class="pull-right join_btn">Join</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_2.jpg" alt="..."> </a>
+          <div class="event_name">
+            <p>MAISA EVENT</p>
+          </div>
+          <div class="event_details">
+            <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
+              <div class="pull-right">04.30 PM</div>
+            </div>
+            <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+               <a href="#"><div class="pull-right join_btn">Join</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_3.jpg" alt="..."> </a>
+          <div class="event_name">
+            <p>MAISA EVENT</p>
+          </div>
+          <div class="event_details">
+            <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
+              <div class="pull-right">04.30 PM</div>
+            </div>
+            <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+              <a href="#"><div class="pull-right join_btn">Join</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row event_margin">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_1.jpg" alt="..."> </a>
+          <div class="event_name">
+            <p>MAISA EVENT</p>
+          </div>
+          <div class="event_details">
+            <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
+              <div class="pull-right">04.30 PM</div>
+            </div>
+            <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+              <a href="#"><div class="pull-right join_btn">Join</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_2.jpg" alt="..."> </a>
+          <div class="event_name">
+            <p>MAISA EVENT</p>
+          </div>
+          <div class="event_details">
+            <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
+              <div class="pull-right">04.30 PM</div>
+            </div>
+            <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+              <a href="#"><div class="pull-right join_btn">Join</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_3.jpg" alt="..."> </a>
+          <div class="event_name">
+            <p>MAISA EVENT</p>
+          </div>
+          <div class="event_details">
+            <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
+              <div class="pull-right">04.30 PM</div>
+            </div>
+            <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+              <a href="#"><div class="pull-right join_btn">Join</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_4.jpg" alt="..."> </a>
+          <div class="event_name">
+            <p>MAISA EVENT</p>
+          </div>
+          <div class="event_details">
+            <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
+              <div class="pull-right">04.30 PM</div>
+            </div>
+            <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+              <a href="#"><div class="pull-right join_btn">Join</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+    <!-- end inner container section --> 
+  
 </div>
+  <!--**********************************end main container section ********************************-->
+
+  <!--**********************************footer section********************************-->
 <footer class="footer">
   <div class="container">
-    <div class="row social_icons"><a href="#"><img src="images/social_icon.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon2.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon3.jpg"></a>
+    <div class="row social_icons"><a href="#"><img src="images/social_icon.jpg" alt="icon facebook"></a> &nbsp; <a href="#"><img alt="icon youtube" src="images/social_icon2.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon3.jpg" alt="icon twitter"></a>
       <p class="text-muted pull-right">@2014 Mparty.</p>
     </div>
   </div>
 </footer>
+  <!--**********************************end footer section********************************-->
 
 <!--JS FILES--> 
 <script src="js/jquery.js"></script> 
