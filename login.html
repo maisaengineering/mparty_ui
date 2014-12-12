@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mparty</title>
+
+<!-- Bootstrap -->
+<link href="css/mparty_style.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+ <!--**********************************header  secton*****************************-->
+
+ <nav class="navbar navbar-default" role="navigation">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo" alt="mparty"></a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="top-nav nav navbar-nav navbar-right">
+        <li><a href="signup.html" data-toggle="modal" data-target="#signup_modal">SignUp</a></li>
+        <li><a href="login.html" data-toggle="modal" data-target="#login_modal">LogIn</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+
+<div class="navbar-collapse navbar-default_2 collapse">
+  <div class="container">
+    <ul class="main-nav nav navbar-nav">
+      <li><a href="index.html"><span class="glyphicon glyphicon-ok"></span>&nbsp; Whats Up?</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-star"></span>&nbsp; Events</a></li>
+      <li><a href="venues.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp; Venues</a></li>
+      <li><a href="organizers.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp; Organizers</a></li>
+      <li><a href="mycalendar.html"><span class="glyphicon glyphicon-calendar"></span>&nbsp; My Calendar</a></li>
+    </ul>
+  </div>
+</div>
+ <!--**********************************end header section ********************************-->
+
+
+  <!--**********************************main container section  ********************************-->
+<div class="container-fluid banner_padding">
+ 
+ 
+ 
+   <!-- inner container section --> 
+  <div class="container" >
+      <div class="row">
+         <div class="col-md-12">
+          <div class="title_name t_left">Login</div>
+         </div>
+      </div>
+     
+     <div class="row">
+     <div data-hook="" class="errorExplanation" id="errorExplanation" role="alert">
+        <h2> 1 error prohibited this record from being saved:</h2>
+        <p>There were problems with the following fields:</p>
+         <ul>
+           <li> Password Confirmation doesn't match Password</li>
+         </ul>
+      </div>
+      
+     
+        <form class="form-signin" role="form">
+        <div class="col-md-3">
+          <div class="row">
+            <div class="col-md-12">
+              <label></label>
+              <input type="text" class="form-control" placeholder="Email Address*" required="" autofocus>
+            </div>
+            <div class="col-md-12">
+            <label></label>
+              <input type="text"  class="form-control" placeholder="Password*" required="">
+              <!-- <span class="err"> error occured!</span>-->
+            </div>
+          </div>
+           <br>
+          <div class="row">
+             <div class="col-md-12">
+             
+              <button class="btn btn-primary btn-block" type="submit">Login</button>
+              </div>
+              <div class="col-md-12 ptop"><a href="#">Forgot your password?</a> <a href="#" class="pull-right">Register</a></div>
+              
+           </div>
+          </div>
+        </form>
+
+    
+    </div>
+   </div>
+  </div>
+    <!-- end inner container section --> 
+  
+</div>
+  <!--**********************************end main container section ********************************-->
+
+  <!--**********************************footer section********************************-->
+<footer class="footer">
+  <div class="container">
+    <div class="row social_icons"><a href="#"><img src="images/social_icon.jpg" alt="icon facebook"></a> &nbsp; <a href="#"><img alt="icon youtube" src="images/social_icon2.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon3.jpg" alt="icon twitter"></a>
+      <p class="text-muted pull-right">@2014 Mparty.</p>
+    </div>
+  </div>
+</footer>
+  <!--**********************************end footer section********************************-->
+
+<!--JS FILES--> 
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
