@@ -9,13 +9,13 @@
 <!-- Bootstrap -->
 <link href="css/mparty_style.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/jquery.timepicker.css" />
-  <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css" />
-  <link rel="stylesheet" type="text/css" href="css/site.css" />
-  <script src="js/jquery.js"></script> 
- <script type="text/javascript" src="js/jquery.timepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css" />
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.timepicker.js"></script>
 <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="js/site.js"></script>
+<script src="js/jcarousel.ajax.js" type="text/javascript" language="javascript"></script>
+<script src="js/jcarousel.min.js" type="text/javascript" language="javascript"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,8 +23,10 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 <body>
+
 <nav class="navbar navbar-default" role="navigation">
   <div class="container"> 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -32,7 +34,8 @@
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo"></a> </div>
     
-    <!-- Collect the nav links, forms, and other content for toggling --> <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="top-nav nav navbar-nav navbar-right">
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Maisa Solutions<img src="images/bg_pic.jpg" class="img-rounded bg_img"> <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -47,10 +50,13 @@
   </div>
   <!-- /.container-fluid --> 
 </nav>
+
+
+
 <div class="navbar-collapse navbar-default_2 collapse">
   <div class="container">
     <ul class="main-nav nav navbar-nav">
-      <li><a href="whatsup.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
+      <li><a href="index.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
       <li class="active"><a href="events.html"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
       <li><a href="venues.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp Venues</a></li>
       <li><a href="organizers.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp Organizers</a></li>
@@ -58,10 +64,13 @@
     </ul>
   </div>
 </div>
+
+
+
+
 <div class="container-fluid" style="background-color:#f1f2f7">
   <div class="container" >
-    <div class="title_trending">
-      <div class="title_bg"></div>
+    <div class="row">
       <div class="title_name">Create Event</div>
     </div>
     <div class="row event_margin">
@@ -91,65 +100,81 @@
                 <div class="col-md-12">
                   <form role="form">
                     <div class="col-md-6">
-                      <label>Event Name*</label>
-                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                      <input type="text" id="inputEmail" class="form-control" placeholder="Event Name*" required="" autofocus>
                     </div>
                     <div class="col-md-6">
-                      <label>Event Type*</label>
                       <select class="form-control" placeholder="Password" required>
-                        <option>Select Type</option>
+                        <option>Event Type*</option>
                         <option>Wedding</option>
                         <option>Birthday</option>
                       </select>
                     </div>
                     <div class="col-md-6">
-                      <label>Host Name*</label>
-                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                      <label></label>
+                      <input type="text" class="form-control" placeholder="Host Name*" required="" autofocus>
                     </div>
                     <div class="col-md-6">
-                      <label>Host Phone*</label>
-                      <input type="phone" id="inputPassword" class="form-control" placeholder="" required="">
+                      <label></label>
+                      <input type="tel" class="form-control" placeholder="Host Phone*" required="">
                     </div>
-                    <div class="col-md-6">
-                      <label>Location*</label>
-                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                    <div id="datepairExample">
+                      <div class="col-md-3">
+                        <label></label>
+                        <input type="text" class="form-control date start" placeholder="Start Date*"/>
+                      </div>
+                      <div class="col-md-3">
+                        <label></label>
+                        <input type="text" class="form-control time start" placeholder="Start Time*"/>
+                      </div>
+                      <div class="col-md-3">
+                        <label></label>
+                        <input type="text" class="form-control date end" placeholder="End Date*"/>
+                      </div>
+                      <div class="col-md-3">
+                        <label></label>
+                        <input type="text" class="form-control time end" placeholder="End Time*" />
+                      </div>
                     </div>
-                    <div class="col-md-6">
-                      <label>Venue Type*</label>
-                      <select class="form-control" placeholder="Password" required>
-                        <option>Select Type</option>
-                        <option>Leonia</option>
-                        <option>Pariwar</option>
+                    <div class="col-md-12">
+                      <label></label>
+                      <select id="dynamic_select" class="form-control"  required>
+                        <option value="">Venue*</option>
+                        <option value="venues.html">Choose</option>
+                        <option value="">Custom</option>
                       </select>
                     </div>
                     <div class="col-md-12">
-                      <label>Description*</label>
-                      <textarea class="form-control" placeholder="" rows="3"></textarea>
+                      <label></label>
+                      <textarea class="form-control" placeholder="Address*" rows="1"></textarea>
                     </div>
-                  
-                    <div id="datepairExample">
-                    <div class="col-md-3">
-                    <label>Start Date*</label>
-                    <input type="text" class="form-control date start" />
+                    <div class="col-md-6">
+                      <label></label>
+                      <input type="text"  class="form-control" placeholder="City*" required="" autofocus>
                     </div>
-                    <div class="col-md-3">
-                    <label>Start Time*</label>
-                    <input type="text" class="form-control time start" />
+                    <div class="col-md-6">
+                      <label></label>
+                      <select class="form-control"  required>
+                        <option>State*</option>
+                        <option>Telangana</option>
+                        <option>AndhraPradesh</option>
+                      </select>
                     </div>
-                    <div class="col-md-3">
-                    <label>End Date*</label>
-                    <input type="text" class="form-control date end" />
+                    <div class="col-md-6">
+                      <label></label>
+                      <select class="form-control"  required>
+                        <option>Country*</option>
+                        <option>India</option>
+                        <option>USA</option>
+                      </select>
                     </div>
-                    <div class="col-md-3">
-                    <label>End Time*</label>
-                    <input type="text" class="form-control time end" />
+                    <div class="col-md-6">
+                      <label></label>
+                      <input type="text"  class="form-control" placeholder="Zipcode*" required="">
                     </div>
-                    
-                    
-               
-            
+                    <div class="col-md-12">
+                      <label></label>
+                      <textarea class="form-control" placeholder="Description*" rows="2"></textarea>
                     </div>
-                  
                     <div class="col-md-12">
                       <label>
                         <input type="checkbox">
@@ -157,7 +182,9 @@
                     </div>
                     <div class="col-md-12">
                       <label></label>
-                      <button class="btn btn-lg btn-primary btn-block" type="submit">CREATE</button>
+                      <button class="btn btn-lg btn-primary btn-block" type="submit">
+                      CREATE
+                      </button>
                     </div>
                   </form>
                 </div>
@@ -166,25 +193,20 @@
             <div class="col-md-6 event_right_block">
               <h4>Event Name</h4>
               <div id="large-image"> </div>
-              <div class="well">
-                <div id="myCarousel" class="carousel slide"> 
-                  
-                  <!-- Carousel items -->
-                  <div class="carousel-inner">
-                    <div class="item active">
-                      <div class="row">
-                        <div class="col-sm-3"><a href="#x"><img src="images/event3.png" alt="Image" class="img-responsive"></a> </div>
-                        <div class="col-sm-3"><a href="#x"><img src="images/event2.png" alt="Image" class="img-responsive"></a> </div>
-                        <div class="col-sm-3"><a href="#x"><img src="images/event1.png" alt="Image" class="img-responsive"></a> </div>
-                        <div class="col-sm-3"><a href="#x"><img src="images/event3.png" alt="Image" class="img-responsive"></a> </div>
-                      </div>
-                      <!--/row--> 
-                    </div>
-                    <!--/item--> 
-                  </div>
-                  <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a> <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> </div>
-                <!--/myCarousel--> 
-              </div>
+              <div class="gallery jcarousel-wrapper" id="myCarousel">
+                <div class="jcarousel" data-jcarousel="false">
+                  <ul style="left: 0px; top: 0px;">
+                    <li> <a href="#"><img src="images/event1.png" alt="Image 1"></a></li>
+                    <li><a href="#"><img src="images/event2.png" alt="Image 1"></a></li>
+                    <li><a href="#"><img src="images/event3.png" alt="Image 1"></a></li>
+                    <li><a href="#"><img src="images/event4.png" alt="Image 1"></a></li>
+                    <li><a href="#"><img src="images/event1.png" alt="Image 1"></a></li>
+                    <li><a href="#"><img src="images/event2.png" alt="Image 1"></a></li>
+                    <li><a href="#"><img src="images/event3.png" alt="Image 1"></a></li>
+                    <li><a href="#"><img src="images/event4.png" alt="Image 1"></a></li>
+                  </ul>
+                </div>
+                <a href="#" class="jcarousel-control-prev inactive" data-jcarouselcontrol="true">‹</a> <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a> </div>
               <!--/well--> 
             </div>
           </div>
@@ -212,10 +234,20 @@
             <div class="col-md-6 event_right_block">
               <div class="photos_block">
                 <h4>Event Photos</h4>
-                <div class="col-md-3"><img src="images/event_1.jpg" width="90"></div>
-                <div class="col-md-3"><img src="images/event_2.jpg" width="90"></div>
-                <div class="col-md-3"><img src="images/event_3.jpg" width="90"></div>
-                <div class="col-md-3"><img src="images/event_4.jpg" width="90"></div>
+                <div class="row nomargin nomargin_left">
+                  <div class="col-md-3">
+                    <div class="remove_btn"><span class="glyphicon glyphicon-remove-circle"></span></div>
+                    <img src="images/event_1.jpg" width="90"></div>
+                  <div class="col-md-3">
+                    <div class="remove_btn"><span class="glyphicon glyphicon-remove-circle"></span></div>
+                    <img src="images/event_2.jpg" width="90"></div>
+                  <div class="col-md-3">
+                    <div class="remove_btn"><span class="glyphicon glyphicon-remove-circle"></span></div>
+                    <img src="images/event_3.jpg" width="90"></div>
+                  <div class="col-md-3">
+                    <div class="remove_btn"><span class="glyphicon glyphicon-remove-circle"></span></div>
+                    <img src="images/event_4.jpg" width="90"></div>
+                </div>
               </div>
               <div class="col-md-4"></div>
               <div class="col-md-4"></div>
@@ -237,17 +269,17 @@
                   <form role="form">
                     <div class="col-md-12 invitation_text">
                       <label></label>
-                      <textarea class="form-control" placeholder="Enter your friends email address" rows="12"></textarea>
+                      <div id="tags" class="tags_wrap">
+                        <input type="text" name="currency" class="biginput" id="autocomplete">
+                      </div>
                     </div>
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
                       <label></label>
-                      <button class="btn btn-lg btn-primary btn-block invite_btn_cancel" type="submit">CANCEL</button>
-                    </div>
+                      <a href="events.html" class="btn btn-lg btn-primary btn-block invite_btn_cancel" type="submit">CANCEL</a> </div>
                     <div class="col-md-4">
                       <label></label>
-                      <button class="btn btn-lg btn-primary btn-block upload_btn_done" type="submit">INVITE</button>
-                    </div>
+                      <a href="event_preview.html" class="btn btn-lg btn-primary btn-block upload_btn_done" type="submit">INVITE</a> </div>
                   </form>
                 </div>
               </div>
@@ -263,17 +295,17 @@
                   <form role="form">
                     <div class="col-md-12 invitation_text">
                       <label></label>
-                      <textarea class="form-control" placeholder="Enter your friends email address" rows="12"></textarea>
+                      <div id="" class="tags_wrap">
+                        <input type="text" name="currency" class="biginput" id="autocomplete">
+                      </div>
                     </div>
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
                       <label></label>
-                      <button class="btn btn-lg btn-primary btn-block invite_btn_cancel" type="submit">CANCEL</button>
-                    </div>
+                      <a href="events.html" class="btn btn-lg btn-primary btn-block invite_btn_cancel" type="submit">CANCEL</a> </div>
                     <div class="col-md-4">
                       <label></label>
-                      <button class="btn btn-lg btn-primary btn-block upload_btn_done" type="submit">INVITE</button>
-                    </div>
+                      <a href="event_preview.html" class="btn btn-lg btn-primary btn-block upload_btn_done" type="submit">INVITE</a> </div>
                   </form>
                 </div>
               </div>
@@ -318,6 +350,12 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
 <footer class="footer">
   <div class="container">
     <div class="row social_icons"><a href="#"><img src="images/social_icon.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon2.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon3.jpg"></a>
@@ -325,25 +363,9 @@
     </div>
   </div>
 </footer>
-
-<!--JS FILES--> 
- <script>
-                $('#datepairExample .time').timepicker({
-                    'showDuration': true,
-                    'timeFormat': 'g:ia'
-                });
-
-                $('#datepairExample .date').datepicker({
-                    'format': 'm/d/yyyy',
-                    'autoclose': true
-                });
-
-                $('#datepairExample').datepair();
-            </script>
- 
-
+<script src="js/index.js"></script> 
 <script src="js/extra.js"></script> 
+<script type="text/javascript" src="js/jquery.autocomplete.min.js"></script> 
 <script src="js/bootstrap.js"></script>
-
 </body>
 </html>

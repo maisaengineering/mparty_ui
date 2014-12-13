@@ -1,20 +1,23 @@
+
+
 $(document).ready(function() {
-    $("#large-image").html("<img src="+$(".carousel-inner .item .row .col-sm-3").eq(0).find('img').attr('src')+">");
-     $(".carousel-inner a").click(function(e){
+    $("#large-image").html("<img src="+$(".jcarousel ul li ").eq(0).find('img').attr('src')+">");
+     $(".jcarousel a").click(function(e){
     $("#large-image").html("<img src="+$(this).find('img').attr('src')+">");
 
   });
 
   $('#myCarousel').carousel({
-  interval: 0
+  interval: 1000
   })
     
     $('#myCarousel').on('slid.bs.carousel', function() {
       //alert("slid");
   });
-
-    
+   
 });
+
+/*fancy box*/
 
     $(document).ready(function() {
       /*
@@ -45,4 +48,15 @@ $(document).ready(function() {
       /*
        *  Open manually
        */
+
     });
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
