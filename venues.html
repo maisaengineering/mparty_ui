@@ -17,6 +17,8 @@
     <![endif]-->
 </head>
 <body>
+
+<div id="wrapper">
 <nav class="navbar navbar-default" role="navigation">
   <div class="container"> 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -156,9 +158,9 @@
       <div class="venue_block">
         <h1>Find Your Venue</h1>
         <div class="form-group position_rel"> <a href="#"><span class="glyphicon glyphicon-search pull-left venue_src_icon"></span></a>
-          <input type="search" class="form_search" placeholder="Event Name, Venue Name, Place">
+          <input type="search" class="form_search" placeholder="Enter any keyword">
           <select type="text" class="form_search crt_loc" placeholder="Search">
-            <option>Current City</option>
+            <option>Any City</option>
             <option>Hyderabad</option>
             <option>Banglore</option>
           </select>
@@ -174,11 +176,11 @@
                 <div class="modal-body">
                   <div class="row">
                     <div class="adv_input ">
-                      <label>Venue Name*</label>
-                      <input type ="text" class="form_adv_search">
+                      <label></label>
+                      <input type ="text" class="form_adv_search" placeholder="Venue Name*">
                     </div>
                     <div class="adv_input">
-                      <label>Venue Type*</label>
+                      <label></label>
                       <select class="form_adv_search">
                         <option>select venue type</option>
                         <option>Auditorium</option>
@@ -188,35 +190,41 @@
                   </div>
                   <div class="row">
                     <div class="adv_input">
-                      <label>Address*</label>
-                      <input type ="text" class="form_adv_search">
+                      <label></label>
+                      <input type ="text" class="form_adv_search" placeholder="Address*">
                     </div>
                     <div class="adv_input">
-                      <label>City*</label>
+                      <label></label>
+                      <input class="form_adv_search" placeholder="City*">
+                      
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="adv_input">
+                      <label></label>
                       <select class="form_adv_search">
+                      <option>State*</option>
+                          <option>Telangana</option>
+                          <option>Andhra Pradesh</option>
+                      </select>
+                    </div>
+                    <div class="adv_input">
+                      <label></label>
+                      <select class="form_adv_search">
+                      <option>Country*</option>
+                          <option>India</option>
+                          <option>USA</option>
                       </select>
                     </div>
                   </div>
                   <div class="row">
                     <div class="adv_input">
-                      <label>State*</label>
-                      <select class="form_adv_search">
-                      </select>
-                    </div>
-                    <div class="adv_input">
-                      <label>Country*</label>
-                      <select class="form_adv_search">
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="adv_input">
-                      <label>Zipcode*</label>
-                      <input type ="text" class="form_adv_search">
+                      <label></label>
+                      <input type ="text" class="form_adv_search" placeholder="Zipcode*">
                     </div>
                     <div class="row">
                       <div class="adv_input">
-                        <label>Price Range</label>
+                        <label></label>
                         <select class="form_adv_search">
                           <option>select price range</option>
                           <option>Rs. 1,00,000 - Rs. 3,00,00</option>
@@ -228,11 +236,11 @@
                   </div>
                   <div class="row">
                     <div class="adv_input">
-                      <label>Avaliable Dates</label>
-                      <input type ="date" class="form_adv_search">
+                      <label></label>
+                      <input type ="date" class="form_adv_search" placeholder="Select date">
                     </div>
                     <div class="adv_input">
-                      <label>Distance</label>
+                      <label></label>
                       <select class="form_adv_search">
                         <option>select distance</option>
                         <option>0 - 5kms</option>
@@ -254,79 +262,102 @@
     </div >
     <hr>
     <h2>search results</h2>
-    <div class="row">
+    <div class="row mbottom40">
       <div class="col-sm-6 col-md-4">
-        <div class="thumbnail"> <img src="images/venue_1.jpg" alt="...">
+        <div class="thumbnail border_search_result"> <img src="images/venue_1.jpg" alt="venue">
           <div class="caption">
-            <h3>Parivar</h3>
-            <p>Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
-            <p><a href="venue_view.html" class="btn btn-primary" role="button">View More</a></p>
+          <div>
+            <h3 class="t_left">Parivar <div class="pull-right venue_rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div></h3>
+            
+          </div>  
+            <p class="venue_description_height">Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
+            <p><a href="venue_view.html" class="btn btn-primary" role="button">know more</a></p>
           </div>
         </div>
       </div>
     </div>
     <hr>
-    <h2>Venues</h2>
-    <div class="row">
+    <h2>Popular Venues</h2>
+    <div class="row mbottom40">
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail"> <img src="images/venue_1.jpg" alt="...">
           <div class="caption">
-            <h3>Parivar</h3>
-            <p>Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
-            <p><a href="#" class="btn btn-primary" role="button">View More</a></p>
+           <div>
+            <h3 class="t_left">Parivar <div class="pull-right venue_rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div></h3>
+            
+          </div>  
+            <p class="venue_description_height">Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
+            <p><a href="#" class="btn btn-primary" role="button">know more</a></p>
           </div>
         </div>
       </div>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail"> <img src="images/venue_1.jpg" alt="...">
           <div class="caption">
-            <h3>Parivar</h3>
-            <p>Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
-            <p><a href="#" class="btn btn-primary" role="button">View More</a></p>
+            <div>
+            <h3 class="t_left">Parivar <div class="pull-right venue_rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div></h3>
+            
+          </div>  
+            <p class="venue_description_height">Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
+            <p><a href="#" class="btn btn-primary" role="button">know more</a></p>
           </div>
         </div>
       </div>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail"> <img src="images/venue_1.jpg" alt="...">
           <div class="caption">
-            <h3>Parivar</h3>
-            <p>Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
-            <p><a href="#" class="btn btn-primary" role="button">View More</a></p>
+            <div>
+            <h3 class="t_left">Parivar <div class="pull-right venue_rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div></h3>
+            
+          </div>  
+            <p class="venue_description_height">Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
+            <p><a href="#" class="btn btn-primary" role="button">know more</a></p>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row mbottom40">
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail"> <img src="images/venue_1.jpg" alt="...">
           <div class="caption">
-            <h3>Parivar</h3>
-            <p>Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
-            <p><a href="#" class="btn btn-primary" role="button">View More</a></p>
+            <div>
+            <h3 class="t_left">Parivar <div class="pull-right venue_rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div></h3>
+            
+          </div>  
+            <p class="venue_description_height">Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
+            <p><a href="#" class="btn btn-primary" role="button">know more</a></p>
           </div>
         </div>
       </div>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail"> <img src="images/venue_1.jpg" alt="...">
           <div class="caption">
-            <h3>Parivar</h3>
-            <p>Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
-            <p><a href="#" class="btn btn-primary" role="button">View More</a></p>
+            <div>
+            <h3 class="t_left">Parivar <div class="pull-right venue_rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div></h3>
+            
+          </div>  
+            <p class="venue_description_height">Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
+            <p><a href="#" class="btn btn-primary" role="button">know more</a></p>
           </div>
         </div>
       </div>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail"> <img src="images/venue_1.jpg" alt="...">
           <div class="caption">
-            <h3>Parivar</h3>
-            <p>Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
-            <p><a href="#" class="btn btn-primary" role="button">View More</a></p>
+            <div>
+            <h3 class="t_left">Parivar <div class="pull-right venue_rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div></h3>
+            
+          </div>  
+            <p class="venue_description_height">Hotel Avasa is a tremendous destination that offers five luxurious conference venues to conduct the events with your own choice of menu. It has ample space for Business meetings and Conferences backed</p>
+            <p><a href="#" class="btn btn-primary" role="button">know more</a></p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="row social_icons"><a href="#"><img src="images/social_icon.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon2.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon3.jpg"></a>

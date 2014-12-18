@@ -24,6 +24,8 @@
     <![endif]-->
 </head>
 <body>
+
+<div id="wrapper">
 <nav class="navbar navbar-default" role="navigation">
   <div class="container"> 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -58,8 +60,8 @@
 <!--login modal box-->
 <div class="modal fade" id="login_modal_venuev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content"> <a href=""><a href="/"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a></a> 
-      <div class="modal-header"> <a href="#"><img src="images/fb_icon.jpg" class="pull-right"></a>
+    <div class="modal-content"> <a href="#"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a> 
+      <div class="modal-header"> <a href="#"><img src="images/fb_icon.jpg" class="pull-right" alt="facebook icon"></a>
         <h3 class="modal-title" id="myModalLabel">Login</h3>
       </div>
        <div class="modal-body">
@@ -81,7 +83,7 @@
 <!--SIgnUP modal box-->
 <div class="modal fade" id="signup_modal_venuev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal2">
-    <div class="modal-content"> <a href=""><a href="/"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a></a>
+    <div class="modal-content"> <a href="#"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a>
       <div class="modal-header">
         <h3 class="modal-title" id="myModalLabel">Create New Account</h3>
       </div>
@@ -90,36 +92,36 @@
           <div class="row">
             <div class="col-md-6">
               
-              <input type="text" id="inputEmail" class="form-control" placeholder="First Name*" required="" autofocus>
+              <input type="text" class="form-control" placeholder="First Name*" required="" autofocus>
             </div>
             <div class="col-md-6">
      
-              <input type="text" id="inputPassword" class="form-control" placeholder="Last Name*" required="">
+              <input type="text" class="form-control" placeholder="Last Name*" required="">
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-md-12">
              
-              <input type="email" id="inputPassword" class="form-control" placeholder="Email Address*" required="">
+              <input type="email" class="form-control" placeholder="Email Address*" required="">
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-md-6">
               
-              <input type="password" id="inputEmail" class="form-control" placeholder="Password*" required="" autofocus>
+              <input type="password" class="form-control" placeholder="Password*" required="" autofocus>
             </div>
             <div class="col-md-6">
               
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password Confirmation*" required="">
+              <input type="password" class="form-control" placeholder="Password Confirmation*" required="">
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-md-12">
               
-              <input type="email" id="inputPassword" class="form-control" placeholder="Phone Number*" required="">
+              <input type="email" class="form-control" placeholder="Phone Number*" required="">
             </div>
           </div>
           <br>
@@ -139,14 +141,14 @@
 <!--Forgot password modal box-->
 <div class="modal fade" id="forgot_password_modal_venuev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content"> <a href=""><a href="/"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a></a> 
+    <div class="modal-content"> <a href="#"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a> 
       <div class="modal-header">
         <h3 class="modal-title" id="myModalLabel">Forgot Password?</h3>
       </div>
       <div class="modal-body">
         <form class="form-signin" role="form">
           <label></label>
-          <input type="email" id="inputEmail" class="form-control" placeholder="Enter Your Email Id*" required="" autofocus>
+          <input type="email"  class="form-control" placeholder="Enter Your Email Id*" required="" autofocus>
           <label></label>
           <button class="btn btn-lg btn-primary btn-block" type="submit">SEND</button>
         </form>
@@ -155,91 +157,7 @@
     </div>
   </div>
 </div>
-<!--review modal box-->
-<div class="modal fade" id="review_modal_venuev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content"> <a href=""><a href="/"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a></a> <br>
-      <div class="modal-header">
-        <h3 class="modal-title" id="myModalLabel">Review</h3>
-      </div>
-      <div class="modal-body review_start">
-        <form class="form-signin" role="form">
-          <label>Rate It</label>&nbsp;
-          <a href="#"><span class="glyphicon glyphicon-star"></span></a><a href="#"><span class="glyphicon glyphicon-star"></span></a><a href="#"><span class="glyphicon glyphicon-star"></span></a><a href="#"><span class="glyphicon glyphicon-star"></span></a><a href="#"><span class="glyphicon glyphicon-star"></span></a>
-          <br>
-          <label>Comment</label>
-          <textarea type="text" id="inputPassword" class="form-control" placeholder="write review" required></textarea>
-          <br>
-          
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Create</button>
-        </form>
-      </div>
-      <div class="modal-footer"> </div>
-    </div>
-  </div>
-</div>
-<!--modal box end-->    
-<!--getaquote modal box-->
-<div class="modal fade" id="getaquote_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal2">
-    <div class="modal-content"> <a href=""><a href="/"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a></a> <br>
-      <div class="modal-header">
-      </div>
-      <div class="modal-body">
-        <form class="form-signin" role="form">
-          <div class="row">
-            <div class="col-md-6">
-              <label>Name*</label>
-              <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
-            </div>
-            <div class="col-md-6">
-              <label>Email Address*</label>
-              <input type="email" id="inputPassword" class="form-control" placeholder="" required="">
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-md-6">
-              <label>City*</label>
-              <input type="text" id="inputPassword" class="form-control" placeholder="" required="">
-            </div>
-            <div class="col-md-6">
-              <label>Location*</label>
-              <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-md-6">
-              <label>Phone Number*</label>
-              <input type="phone" id="inputPassword" class="form-control" placeholder="" required="">
-            </div>
-            <div class="col-md-6">
-              <label>Date of your Event*</label>
-              <input type="date" id="inputPassword" class="form-control" placeholder="" required="">
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-md-12">
-              <label>Tell Us About Your Event </label>
-              <textarea class="form-control"></textarea>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-              <button class="btn btn-lg btn-primary btn-block" type="submit" id="getaquote">Send</button>
-            </div>
-            <div class="col-md-3"></div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer"> </div>
-    </div>
-  </div>
-</div>
+
 <div class="container-fluid">
   <div class="container venue_bg" >
     <h3>Venue Name</h3>
@@ -273,7 +191,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <div class="btn_orange quote_btn"><a href="create_event_form.html" data-toggle="modal" data-target="#getaquote_modal">Get a Quote</a></div>
+          <div class="btn_orange quote_btn"><a href="create_event_form.html">Choose</a></div>
         </div>
       </div>
     </div>
@@ -337,15 +255,15 @@
         <div role="tabpanel" class="tab-pane fade" id="Locations">
           <div class="row no_margin">
            <h4>Photos</h4>
-            <div class="col-md-3"><a class="fancybox" href="images/venue_1.jpg"><img src="images/venue_1.jpg" width="220px"></a></div>
-            <div class="col-md-3"><a class="fancybox" href="images/venue_1.jpg"><img src="images/venue_1.jpg" width="220px"></a></div>
-            <div class="col-md-3"><a class="fancybox" href="images/venue_1.jpg"><img src="images/venue_1.jpg" width="220px"></a></div>
-            <div class="col-md-3"><a class="fancybox" href="images/venue_1.jpg"><img src="images/venue_1.jpg" width="220px"></a></div>
+            <div class="col-md-3"><a class="fancybox" href="images/venue_1.jpg"><img src="images/venue_1.jpg" width="220"></a></div>
+            <div class="col-md-3"><a class="fancybox" href="images/venue_1.jpg"><img src="images/venue_1.jpg" width="220"></a></div>
+            <div class="col-md-3"><a class="fancybox" href="images/venue_1.jpg"><img src="images/venue_1.jpg" width="220"></a></div>
+            <div class="col-md-3"><a class="fancybox" href="images/venue_1.jpg"><img src="images/venue_1.jpg" width="220"></a></div>
           </div>
           <div class="row no_margin event_margin">
           <h4>Videos</h4>
             <div class="col-md-3">
-            <a class="fancybox-media" href="https://www.youtube.com/watch?v=X8XVuHi_fYo"><img src="images/venue_video.jpg" width="220px"></a>
+            <a class="fancybox-media" href="https://www.youtube.com/watch?v=X8XVuHi_fYo"><img src="images/venue_video.jpg" width="220"></a>
             </div>
             <div class="col-md-3"></div>
             <div class="col-md-3"></div>
@@ -356,7 +274,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="row comment_block">
-                <div class="col-md-1"> <img src="images/avatar.png"> </div>
+                <div class="col-md-1"> <img src="images/avatar.png" alt="avatar"> </div>
                 <div class="col-md-11">
                   <h5>Naveen</h5>
                   <p class="comment_time pull-right">2 hours ago</p>
@@ -364,7 +282,7 @@
                 </div>
               </div>
               <div class="row comment_block">
-                <div class="col-md-1"> <img src="images/avatar.png"> </div>
+                <div class="col-md-1"> <img src="images/avatar.png" alt="avatar"> </div>
                 <div class="col-md-11">
                   <h5>Naveen</h5>
                   <p class="comment_time pull-right">2 hours ago</p>
@@ -375,13 +293,15 @@
             <div class="col-md-6">
             
             </div>
-            <div class="col-md-6"><div class="writereview_btn pull-right"><a href="" data-toggle="modal" data-target="#login_modal_venuev">WRITE REVIEW</a></div></div>
+            <div class="col-md-6 mtop10 mbottom10"><a href="" class="btn btn-success pull-right" data-toggle="modal" data-target="#login_modal_venuev">WRITE REVIEW</a></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="row social_icons"><a href="#"><img src="images/social_icon.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon2.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon3.jpg"></a>

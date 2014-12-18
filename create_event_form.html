@@ -27,6 +27,7 @@
 </head>
 <body>
 
+<div id="wrapper">
 <nav class="navbar navbar-default" role="navigation">
   <div class="container"> 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -56,7 +57,7 @@
 <div class="navbar-collapse navbar-default_2 collapse">
   <div class="container">
     <ul class="main-nav nav navbar-nav">
-      <li><a href="index.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
+      <li><a href="whatsup.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
       <li class="active"><a href="events.html"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
       <li><a href="venues.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp Venues</a></li>
       <li><a href="organizers.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp Organizers</a></li>
@@ -98,7 +99,7 @@
             <div class="col-md-6 event_left_block">
               <div class="row">
                 <div class="col-md-12">
-                  <form role="form">
+                  <form role="form" id="new_event">
                     <div class="col-md-6">
                       <input type="text" id="inputEmail" class="form-control" placeholder="Event Name*" required="" autofocus>
                     </div>
@@ -118,31 +119,47 @@
                       <input type="tel" class="form-control" placeholder="Host Phone*" required="">
                     </div>
                     <div id="datepairExample">
-                      <div class="col-md-3">
+                     <div class="row no_margin">
+                      <div class="col-md-4">
                         <label></label>
                         <input type="text" class="form-control date start" placeholder="Start Date*"/>
                       </div>
-                      <div class="col-md-3">
+                      <div class="col-md-4">
                         <label></label>
                         <input type="text" class="form-control time start" placeholder="Start Time*"/>
                       </div>
-                      <div class="col-md-3">
-                        <label></label>
-                        <input type="text" class="form-control date end" placeholder="End Date*"/>
+                      <div class="col-md-4 nopleft">
+                           
+                          <div class="mtop20 btn_add_endtime"> <a href="#"> <span class="btn btn-xs btn-success glyphicon glyphicon-plus"></span> Add end time </a></div>
                       </div>
-                      <div class="col-md-3">
-                        <label></label>
-                        <input type="text" class="form-control time end" placeholder="End Time*" />
                       </div>
+                      
+                      <div id="endtime" class="row no_margin">
+                        <div class="col-md-4">
+                        <label></label>
+                        <input type="text" class="form-control date start" placeholder="End Date*"/>
+                      </div>
+                      <div class="col-md-4">
+                        <label></label>
+                        <input type="text" class="form-control time start" placeholder="End Time*"/>
+                      </div>
+                      <div class="col-md-4 nopleft">
+                           
+                          <div class="mtop20 btn_remove_endtime"> <a href="#"> <span class="btn btn-xs btn-danger glyphicon glyphicon-minus"></span> Remove end time </a></div>
+                      </div>
+                     </div>
+                     
                     </div>
                     <div class="col-md-12">
                       <label></label>
-                      <select id="dynamic_select" class="form-control"  required>
-                        <option value="">Venue*</option>
-                        <option value="venues.html">Choose</option>
-                        <option value="">Custom</option>
+                      <select id="venue_type" class="form-control"  required>
+                        <option >Venue*</option>
+                        <option value="choose">Choose</option>
+                        <option value="custom">Custom</option>
                       </select>
                     </div>
+                    
+                   <div id="venue_dform">
                     <div class="col-md-12">
                       <label></label>
                       <textarea class="form-control" placeholder="Address*" rows="1"></textarea>
@@ -171,6 +188,9 @@
                       <label></label>
                       <input type="text"  class="form-control" placeholder="Zipcode*" required="">
                     </div>
+                   </div>
+                   
+                   
                     <div class="col-md-12">
                       <label></label>
                       <textarea class="form-control" placeholder="Description*" rows="2"></textarea>
@@ -192,11 +212,26 @@
             </div>
             <div class="col-md-6 event_right_block">
               <h4>Event Name</h4>
-              <div id="large-image"> </div>
+              <div id="large-image"> 
+              
+                   <div class="contentplace">
+                     <div class="row">
+                       <div class="ptopbottom txt_center ptop_medium"> <span id="e_name"> Mparty</span> </div>
+                       <div class="content_info">
+                         <div class="ptopbottom">Date & Time: <span id="e_date"> 15/12/2014 </span> </div>
+                         <div class="ptopbottom">Location : <span id="e_locatoin"> Hyderabad</span> </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="imageplace"></div>
+                   
+                </div>
               <div class="gallery jcarousel-wrapper" id="myCarousel">
                 <div class="jcarousel" data-jcarousel="false">
                   <ul style="left: 0px; top: 0px;">
-                    <li> <a href="#"><img src="images/event1.png" alt="Image 1"></a></li>
+                    <li> 
+                        <a href="#"><img src="images/event1.png" alt="Image 1"></a>
+                   </li>
                     <li><a href="#"><img src="images/event2.png" alt="Image 1"></a></li>
                     <li><a href="#"><img src="images/event3.png" alt="Image 1"></a></li>
                     <li><a href="#"><img src="images/event4.png" alt="Image 1"></a></li>
@@ -234,7 +269,7 @@
             <div class="col-md-6 event_right_block">
               <div class="photos_block">
                 <h4>Event Photos</h4>
-                <div class="row nomargin nomargin_left">
+                <div class="row nomargin nomargin_left mbottom20">
                   <div class="col-md-3">
                     <div class="remove_btn"><span class="glyphicon glyphicon-remove-circle"></span></div>
                     <img src="images/event_1.jpg" width="90"></div>
@@ -248,6 +283,8 @@
                     <div class="remove_btn"><span class="glyphicon glyphicon-remove-circle"></span></div>
                     <img src="images/event_4.jpg" width="90"></div>
                 </div>
+                
+       
               </div>
               <div class="col-md-4"></div>
               <div class="col-md-4"></div>
@@ -340,7 +377,7 @@
                 <div class="col-md-12 inv_addmore"> <a href="wishlist.html" id="inv_addmore_prdts">
                   <div class="wishlist_add_btn"><span class="glyphicon glyphicon-plus"></span></div>
                   <h4>Add More Products</h4>
-                  </a> </div>
+                 </div>
               </div>
             </div>
           </div>
@@ -350,11 +387,7 @@
     </div>
   </div>
 </div>
-
-
-
-
-
+</div>
 
 <footer class="footer">
   <div class="container">

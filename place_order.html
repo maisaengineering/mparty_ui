@@ -17,6 +17,8 @@
     <![endif]-->
 </head>
 <body>
+
+<div id="wrapper">
 <nav class="navbar navbar-default" role="navigation">
   <div class="container"> 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -26,13 +28,10 @@
     
     <!-- Collect the nav links, forms, and other content for toggling --> <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="top-nav nav navbar-nav navbar-right">
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Maisa Solutions<img src="images/bg_pic.jpg" class="img-rounded bg_img"> <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Myaccount</a></li>
-            <li class="divider"></li>
-            <li><a href="index.html">Logout</a></li>
-          </ul>
-        </li>
+        <li><a href="signup.html" data-toggle="modal" data-target="#signup_modal">SignUp</a></li>
+        <li><a href="login.html" data-toggle="modal" data-target="#login_modal">LogIn</a></li>
+      </ul>
+      </li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -43,14 +42,14 @@
   <div class="container">
     <ul class="main-nav nav navbar-nav">
       <li><a href="index.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
-      <li class="active"><a href="events.html"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
       <li><a href="venues.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp Venues</a></li>
       <li><a href="organizers.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp Organizers</a></li>
       <li><a href="mycalendar.html"><span class="glyphicon glyphicon-calendar"></span>&nbsp My Calendar</a></li>
     </ul>
   </div>
 </div>
-<div class="container-fluid" style="background-color:#f1f2f7">
+<div class="container-fluid">
   <div class="container" >
     
     <div class="row event_margin">
@@ -80,49 +79,46 @@
                 <div class="col-md-12">
                   <form role="form">
                     <div class="col-md-6">
-                      <label>First Name*</label>
-                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                      <label></label>
+                      <input type="text"  class="form-control" placeholder="First Name*" required autofocus>
                     </div>
                     <div class="col-md-6">
-                      <label>Last Name*</label>
-                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                      <label></label>
+                      <input type="text"  class="form-control" placeholder="Last Name*" required autofocus>
                     </div>
                     <div class="col-md-12">
-                      <label>Street Address*</label>
-                      <textarea class="form-control" placeholder="" rows="3"></textarea>
+                      <label></label>
+                      <textarea class="form-control" placeholder="Street Address*" rows="3"></textarea>
                     </div>
                     <div class="col-md-6">
-                      <label>City*</label>
-                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
+                      <label></label>
+                      <input type="text" id="inputEmail" class="form-control" placeholder="City*" required="" autofocus>
                     </div>
                     <div class="col-md-6">
-                      <label>State*</label>
-                       <select class="form-control" placeholder="Password" required>
-                        <option>Select Type</option>
+                      <label></label>
+                       <select class="form-control" >
+                        <option>State*</option>
                         <option>Telangana</option>
                         <option>Andhra Pradesh</option>
                       </select>
                     </div>
                     <div class="col-md-6">
-                      <label>Country*</label>
-                      <select class="form-control" placeholder="Password" required>
-                        <option>Select Type</option>
+                      <label></label>
+                      <select class="form-control">
+                        <option>Country*</option>
                         <option>India</option>
                         <option>America</option>
                       </select>
                     </div>
                     <div class="col-md-6">
-                     <label>Zipcode*</label>
-                      <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus>
-                    </div>
-                    <div class="col-md-6">
-                      <label>Phone Number*</label>
-                      <input type="phone" id="inputEmail" class="form-control" placeholder="" required="true">
+                     <label></label>
+                      <input type="text"  class="form-control" placeholder="Zipcode*" required="" autofocus>
                     </div>
                     <div class="col-md-12">
+                      <label></label>
+                      <input type="tel" class="form-control" placeholder="Phone Number*" required>
                     </div>
-                    <div class="col-md-12">
-                    </div>
+
                     <div class="col-md-12">
                       <label></label>
                       <button class="btn btn-lg btn-primary btn-block" id="billingaddress" type="submit">CREATE</button>
@@ -149,73 +145,92 @@
           <!--payment start-->
           <div class="row" id="payment_method">
             <div class="col-md-6 event_left_block">
-              <div class="row">
                 <div class="col-md-12">
-                     <form role="form">
-                    <div class="col-md-6">
-                       <label>
-                        <input type="checkbox">CREDIT CARD
-                        </label>
+                    <form role="form" id="payment_details">
+                       <label></label>
+                        <select class="form-control" id="select_payment_types">
+                        <option>select payment method*</option>
+                        <option value="creditcard">Credit Card</option>
+                        <option value="debitcard">Debit Card</option>
+                        </select>
+                   
+                    <div class="debitcard_types row nomargin">
+                    <div class="col-md-12 ptopbottom">
+                    <label></label>
+                        <input type="radio" name="debitcard_type" value="visamaster">All Visa/MasterCard Debit Card
+                    </div>  
+                    <div class="col-md-12 ptopbottom">
+                    <label></label>  
+                        <input type="radio" name="debitcard_type">All Rupay Debit Cards
+                     </div>
+                     <div class="col-md-12 ptopbottom">
+                    <label></label>   
+                        <input type="radio" name="debitcard_type">State Bank of India Maestro Debit Card
+                        </div>
+                        <div class="col-md-12 ptopbottom">
+                    <label></label>
+                        <input type="radio" name="debitcard_type">Citibank Maestro Debit Card
+                       </div>
+                      </div>
+                 
+                   <div class="row" id="disable_carddetails">
+                     <div class="ccdc_bg"></div>
+                    <div class="col-md-12">
+                    <label></label>
+                        <input type="text" name="card_number"  class="form-control" placeholder="enter card number 4111 xxxxxxx44455">
+                    </div>
+                    <div class="col-md-3">
+                      <label></label>
+                        <input type="text" name="card_month_year"  id="carddate" class="form-control" placeholder="MM / YY">
                     </div>
                     <div class="col-md-6">
-                       <label>
-                        <input type="checkbox">DEBIT CARD
-                        </label>
+                    </div>
+                    
+                    <div class="col-md-3">
+                      <label></label>
+                        <input type="text" name="cvv_number"  id="cvvno" class="form-control" placeholder="CVV NO">
                     </div>
                     <div class="col-md-12">
                     <label></label>
-                        <input type="number" id="cardno" class="form-control" placeholder="enter card number 4111 xxxxxxx44455">
+                        <input type="text" name="name_oncard"  id="cardname" class="form-control" placeholder="Name On Card">
                     </div>
-                    <div class="col-md-3">
+                  
+                     
+                    <div class="col-md-4">
                       <label></label>
-                        <input type="text" id="carddate" class="form-control" placeholder="MM / YY">
+                      <button class="btn btn-lg btn-primary btn-block" type="submit">CANCEL</button>
                     </div>
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-3">   
-                    </div>
-                    <div class="col-md-3">
-                      <label></label>
-                        <input type="text" id="cvvno" class="form-control" placeholder="CVV NO">
-                    </div>
-                    <div class="col-md-12">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
                     <label></label>
-                        <input type="text" id="cardname" class="form-control" placeholder="Name On Card">
+                      <button class="btn btn-lg btn-primary btn-block pay_now_btn" type="submit">REVIEW</button>
                     </div>
-                     <div class="col-md-12">
-                       <label>
-                        <input type="checkbox">Save card
-                        </label>
-                    </div>
-                    <div class="col-md-12">
-                      <label></label>
-                      <button class="btn btn-lg btn-primary btn-block pay_now_btn" type="submit">PAY NOW</button>
-                    </div>
+                   </div>
                   </form>
-                </div>
-              </div>
+                 </div>
             </div>
             <div class="col-md-6 event_right_block">
-              <h4>Billing Address <a href="#" class="pull-right">(edit)<span class="glyphicon glyphicon-pencil"></span></a></h4>
+              <h4>Billing Address <a href="#" class="">(Edit)</a></h4>
               
-              <div class="row">
-              <div class="col-md-3"><b>NAME</b></div><div class="col-md-9">Maisa Solutions</div>
-              <div class="col-md-3"><b>ADDRESS</b></div><div class="col-md-9">Flat No 202, Ecil</div>
-              <div class="col-md-3"><b>CITY</b></div><div class="col-md-9">Hyderabad</div>
-              <div class="col-md-3"><b>STATE</b></div><div class="col-md-9">Telangana</div>
-              <div class="col-md-3"><b>COUNTRY</b></div><div class="col-md-9">India</div>
-              <div class="col-md-3"><b>ZIPCODE</b></div><div class="col-md-9">500062</div>
+               <div class="row">
+              <div class="col-md-3">NAME:</div><div class="col-md-9">Maisa Solutions</div>
+              <div class="col-md-3">ADDRESS:</div><div class="col-md-9">Flat No 202, Ecil</div>
+              <div class="col-md-3">CITY:</div><div class="col-md-9">Hyderabad</div>
+              <div class="col-md-3">STATE</div><div class="col-md-9">Telangana</div>
+              <div class="col-md-3">COUNTRY:</div><div class="col-md-9">India</div>
+              <div class="col-md-3">ZIPCODE:</div><div class="col-md-9">500062</div>
               </div>
-              &nbsp;
+            	
             
               <h4>Shipping Address</h4>
-              <div class="row">
-              <div class="col-md-3"><b>NAME</b></div><div class="col-md-9">Maisa Solutions</div>
-              <div class="col-md-3"><b>ADDRESS</b></div><div class="col-md-9">Flat No 202, Ecil</div>
-              <div class="col-md-3"><b>CITY</b></div><div class="col-md-9">Hyderabad</div>
-              <div class="col-md-3"><b>STATE</b></div><div class="col-md-9">Telangana</div>
-              <div class="col-md-3"><b>COUNTRY</b></div><div class="col-md-9">India</div>
-              <div class="col-md-3"><b>ZIPCODE</b></div><div class="col-md-9">500062</div>
+              
+               <div class="row">
+              <div class="col-md-3">NAME:</div><div class="col-md-9">Maisa Solutions</div>
+              <div class="col-md-3">ADDRESS:</div><div class="col-md-9">Flat No 202, Ecil</div>
+              <div class="col-md-3">CITY:</div><div class="col-md-9">Hyderabad</div>
+              <div class="col-md-3">STATE</div><div class="col-md-9">Telangana</div>
+              <div class="col-md-3">COUNTRY:</div><div class="col-md-9">India</div>
+              <div class="col-md-3">ZIPCODE:</div><div class="col-md-9">500062</div>
               </div>
              
              
@@ -225,27 +240,30 @@
           <!--placeorder start-->
           <div class="row" id="place_order">
             <div class="col-md-6 event_left_block">
-               
+              <div class="col-md-12"><div class="inv_preview_bg"><img src="images/event1.png" width="50%" alt="event1"></div></div> 
               <div class="col-md-12">
-              <h4>Billing Address <a href="#" class="pull-right">(edit)<span class="glyphicon glyphicon-pencil"></span></a></h4>
+              <h4>Billing Address <a href="#">(Edit)</a></h4>
               <div class="row">
-              <div class="col-md-3"><b>NAME</b></div><div class="col-md-9">Maisa Solutions</div>
-              <div class="col-md-3"><b>ADDRESS</b></div><div class="col-md-9">Flat No 202, Ecil</div>
-              <div class="col-md-3"><b>CITY</b></div><div class="col-md-9">Hyderabad</div>
-              <div class="col-md-3"><b>STATE</b></div><div class="col-md-9">Telangana</div>
-              <div class="col-md-3"><b>COUNTRY</b></div><div class="col-md-9">India</div>
-              <div class="col-md-3"><b>ZIPCODE</b></div><div class="col-md-9">500062</div>
+              <div class="col-md-3">NAME:</div><div class="col-md-9">Maisa Solutions</div>
+              <div class="col-md-3">ADDRESS:</div><div class="col-md-9">Flat No 202, Ecil</div>
+              <div class="col-md-3">CITY:</div><div class="col-md-9">Hyderabad</div>
+              <div class="col-md-3">STATE:</div><div class="col-md-9">Telangana</div>
+              <div class="col-md-3">COUNTRY:</div><div class="col-md-9">India</div>
+              <div class="col-md-3">ZIPCODE:</div><div class="col-md-9">500062</div>
               </div>
-              &nbsp;
-            
-              <h4>Shipping Address</h4>
+              
+              <h4 class="mtop20">Shipping Address</h4>
               <div class="row">
-              <div class="col-md-3"><b>NAME</b></div><div class="col-md-9">Maisa Solutions</div>
-              <div class="col-md-3"><b>ADDRESS</b></div><div class="col-md-9">Flat No 202, Ecil</div>
-              <div class="col-md-3"><b>CITY</b></div><div class="col-md-9">Hyderabad</div>
-              <div class="col-md-3"><b>STATE</b></div><div class="col-md-9">Telangana</div>
-              <div class="col-md-3"><b>COUNTRY</b></div><div class="col-md-9">India</div>
-              <div class="col-md-3"><b>ZIPCODE</b></div><div class="col-md-9">500062</div>
+              <div class="col-md-3">NAME:</div><div class="col-md-9">Maisa Solutions</div>
+              <div class="col-md-3">ADDRESS:</div><div class="col-md-9">Flat No 202, Ecil</div>
+              <div class="col-md-3">CITY:</div><div class="col-md-9">Hyderabad</div>
+              <div class="col-md-3">STATE</div><div class="col-md-9">Telangana</div>
+              <div class="col-md-3">COUNTRY:</div><div class="col-md-9">India</div>
+              <div class="col-md-3">ZIPCODE:</div><div class="col-md-9">500062</div>
+              </div>
+
+              <div class="row mtop20">
+              <div class="col-md-12"><b>Using Card:</b>XXXX-XXXX-XXXX-4444<a href="#">(Edit)</a></div>
               </div>
               </div>
             </div>
@@ -255,7 +273,7 @@
                   <div class="col-md-12">
                     <h4>Order Summary</h4>
                     <div class="row inv_wishlist">
-                      <div class="col-md-3"><img src="images/product2.png" width="90"></div>
+                      <div class="col-md-3"><img src="images/product2.png" width="90" alt="product 2"></div>
                       <div class="col-md-6">
                         <h5>Maisa Bag</h5>
                         <p>Quantity 2</p>
@@ -266,7 +284,7 @@
                       </div>
                     </div>
                     <div class="row inv_wishlist">
-                      <div class="col-md-3"><img src="images/product1.png" width="90"></div>
+                      <div class="col-md-3"><img src="images/product1.png" width="90" alt="product1"></div>
                       <div class="col-md-6">
                         <h5>Maisa Mug</h5>
                         <p>Quantity 2</p>
@@ -278,6 +296,8 @@
                     </div>
                   </div>
                 </div>
+                
+                
                 <div class="col-md-12">
                  <div class="row">
                   <div class="col-md-4"></div>
@@ -294,13 +314,15 @@
                   <div class="col-md-5"><b>Total</b></div>
                   <div class="col-md-3">RS.2100/-</div>
                   </div>
-                  <div class="row">
-                   <div class="col-md-7"></div>
-                  <div class="col-md-4"><button type="submit" class="btn btn-lg btn-primary btn-block btn_place_order">PLACE ORDER</button></div>
-                  <div class="col-md-1"></div>
+                  <div class="row mtop20">
+                  <div class="col-md-12">
+                   <div class="col-md-4"><button type="submit" class="btn">CANCEL</button></div>
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4"><a href="thankyou_placeorder.html" class="btn  btn-primary">PLACE ORDER</a></div>
+                  </div>
                   </div>
                 </div>
-                  </a> </div>
+              </div>
               </div>
             </div>
           </div>
@@ -310,6 +332,7 @@
     </div>
   </div>
 </div>
+
 <footer class="footer">
   <div class="container">
     <div class="row social_icons"><a href="#"><img src="images/social_icon.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon2.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon3.jpg"></a>
@@ -321,7 +344,8 @@
 <!--JS FILES--> 
 
 <script src="js/jquery.js"></script> 
-<script src="js/extra.js"></script> 
+
 <script src="js/bootstrap.js"></script>
+<script src="js/extra.js"></script> 
 </body>
 </html>

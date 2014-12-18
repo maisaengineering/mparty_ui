@@ -5,25 +5,33 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mparty</title>
-
+<!-- Bootstrap -->
 <!-- Bootstrap -->
 <link href="css/mparty_style.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+<script src="js/jquery.js"></script> 
+<script src="js/jcarousel.ajax.js" type="text/javascript" language="javascript"></script>
+<script src="js/jcarousel.min.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
+<script type="text/javascript" src="js/extra.js"></script>
 </head>
 <body>
+
+<div id="wrapper">
 <nav class="navbar navbar-default" role="navigation">
   <div class="container"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo"></a> </div>
-    
     <!-- Collect the nav links, forms, and other content for toggling --> <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="top-nav nav navbar-nav navbar-right">
         <li><a href="signup.html" data-toggle="modal" data-target="#signup_modal">SignUp</a></li>
@@ -47,85 +55,6 @@
     </ul>
   </div>
 </div>
-
-<!--add to wishlist modal box-->
-    <div class="modal fade" id="yourfriendwishlist" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal5">
-        <div class="modal-content modal_wishlist_bg"> <a href="/"><span class="glyphicon glyphicon-remove pull-right modal_wishlist_x" data-dismiss="modal"></span></a> <br>
-          <div class="modal-header">
-            <div class="title_trending rec_addlist_title_top">
-              <div class="title_bg"></div>
-              <div class="model_box_name rec_addlist_title">Your friend likes following gifts</div>
-            </div>
-          </div>
-          <div class="modal-body">
-           <div class="row wishlist_popup_header event_rec_wishlist_block no_margin">
-              <div class="col-md-2"></div>
-              <div class="col-md-2">DESCRIPTION</div>
-              <div class="col-md-2">REQUESTED QUANTITY</div>
-              <div class="col-md-2">PURCHASED QUANTITY</div>
-               <div class="col-md-2">SELECT QUANTITY</div>
-              <div class="col-md-1">PRICE</div>
-            </div>
-           <div class="row wishlist_popup_center event_rec_wishlist_block">
-              <div class="col-md-2">
-                <div class="wishlist_img_block"><img src="images/product1.png"></div>
-              </div>
-              <div class="col-md-2">
-                <h4>Maisa Mug</h4>
-                <p>MAisa mug descriptions</p>
-              </div>
-              <div class="col-md-2">
-                <p>8</p>
-              </div>
-              <div class="col-md-2">
-                <p>0</p>
-              </div>
-              <div class="col-md-2">
-                <select>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                </select>
-              </div>
-              <div class="col-md-1"><p>Rs.500/-</p></div>
-            </div>
-             <div class="row wishlist_popup_center event_rec_wishlist_block">
-              <div class="col-md-2">
-                <div class="wishlist_img_block"><img src="images/product2.png"></div>
-              </div>
-              <div class="col-md-2">
-                <h4>Maisa Bagg</h4>
-                <p>MAisa mug descriptions</p>
-              </div>
-              <div class="col-md-2">
-                <p>8</p>
-              </div>
-              <div class="col-md-2">
-                <p>0</p>
-              </div>
-              <div class="col-md-2">
-                <select>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                </select>
-              </div>
-              <div class="col-md-1"><p>Rs.500/-</p></div>
-            </div>
-             <div class="row wishlist_popup_footer">
-              <div class="col-md-4"></div>
-              <div class="col-md-4"></div>
-              <div class="col-md-4">
-                <a href="shopping_cart.html"><button type="submit" class="btn btn-lg btn-primary btn-block btn_addtocart pull-right">ADD TO CART</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer"> </div>
-        </div>
-      </div>
-    </div>
-    <!--modalbox end--> 
     
 <div class="container-fluid">
   <div class="container" >
@@ -137,41 +66,24 @@
       <!--event description-->
       
       <div class="row event_margin">
-        <div class="col-md-6"><div class="inv_preview_bg"><img src="images/event2.png"></div></div>
-        <div class="col-md-6 event_preview_right">
+        <div class="col-md-12"><div class="inv_preview_bg"><img src="images/event2.png" alt="event2"></div></div>
+        <div class="col-md-12 event_preview_right">
+       <div class="row">
+         <div class="col-md-3"><h4>Description</h4></div>
+         <div class="col-md-9"><h5>Maisa Solutions holds a high reputation and proven track record for providing solutions to information technology problems of varying complexity</h5></div>
+        </div>
+ 
         <div class="row">
-         <div class="col-md-5"><h4>Event Name</h4></div>
-         <div class="col-md-7"><h5>Maisa Public Event</h5></div>
+         <div class="col-md-3"><h4>Venue</h4></div>
+         <div class="col-md-3"><h5>Maisa convention center</h5></div>
+         <div class="col-md-2">
+         <a href="accept_invitation.html" class="btn btn-lg btn-primary btn-block accepte_btn">ACCEPT</a>
         </div>
-        <div class="row">
-         <div class="col-md-5"><h4>Host</h4></div>
-         <div class="col-md-7"><h5>Maisa Solutions</h5></div>
-        </div>
-        <div class="row">
-         <div class="col-md-5"><h4>Host Phone</h4></div>
-         <div class="col-md-7"><h5>+91 999999999</h5></div>
-        </div>
-        <div class="row">
-         <div class="col-md-5"><h4>Description</h4></div>
-         <div class="col-md-7"><h5>Maisa Solutions holds a high reputation and proven track record for providing solutions to information technology problems of varying complexity</h5></div>
-        </div>
-        <div class="row">
-         <div class="col-md-5"><h4>Date and Time</h4></div>
-         <div class="col-md-7"><h5>01/01/2015, &nbsp; 12:00 PM</h5></div>
-        </div>
-        <div class="row">
-         <div class="col-md-5"><h4>Venue</h4></div>
-         <div class="col-md-7"><h5>Maisa Solutions</h5></div>
-        </div>
-        <div class="row count_btns_margin">
-        <div class="col-md-4">
-         <button type="submit" class="btn btn-lg btn-primary btn-block accepte_btn" data-toggle="modal" data-target="#yourfriendwishlist" data-dismiss="modal">ACCEPT</button>
-        </div>
-        <div class="col-md-4">
+        <div class="col-md-2">
         <button type="submit" class="btn btn-lg btn-primary btn-block maybe_btn">MAY BE</button>
         
         </div>
-        <div class="col-md-4">
+        <div class="col-md-2">
         <button type="submit" class="btn btn-lg btn-primary btn-block rejected_btn">REJECT</button>
         </div>
         </div>
@@ -183,8 +95,8 @@
         <div class="row">
            <div class="col-md-12">
            <h4>Location</h4>
-           <div class="location_bock">
-           <img src="images/map.jpg" width="100%">
+           <div class="location_block">
+           <img src="images/map.jpg" alt="map">
            </div>
            </div>
         </div>
@@ -193,25 +105,20 @@
         <div class="row">
         <div class="col-md-12">
         <h4>Photos</h4>
-         <div class="well">
-                <div id="myCarousel_uploadphotos" class="carousel slide"> 
-                  
-                  <!-- Carousel items -->
-                  <div class="carousel-inner">
-                    <div class="item active">
-                      <div class="row">
-                        <div class="col-sm-3"><a href="#x"><img src="images/event_3.jpg" alt="Image" class="img-responsive"></a> </div>
-                        <div class="col-sm-3"><a href="#x"><img src="images/event_2.jpg" alt="Image" class="img-responsive"></a> </div>
-                        <div class="col-sm-3"><a href="#x"><img src="images/event_1.jpg" alt="Image" class="img-responsive"></a> </div>
-                        <div class="col-sm-3"><a href="#x"><img src="images/event_4.jpg" alt="Image" class="img-responsive"></a> </div>
-                      </div>
-                      <!--/row--> 
-                    </div>
-                    <!--/item--> 
-                  </div>
-                  <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a> <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> </div>
-                <!--/myCarousel--> 
-              </div>
+         <div class="gallery event_photos" id="myCarousel">
+          <div class="jcarousel event_photos_block" data-jcarousel="false">
+                <ul style="left: 0px; top: 0px;">
+                    <li><a class="fancybox" href="images/event_3.jpg"><img src="images/event_3.jpg" alt="Image 1"></a></li>
+                    <li><a class="fancybox" href="images/event_2.jpg"><img src="images/event_2.jpg" alt="Image 1"></a></li>
+                    <li><a class="fancybox" href="images/event_1.jpg"><img src="images/event_1.jpg" alt="Image 1"></a></li>
+                    <li><a class="fancybox" href="images/event_4.jpg"><img src="images/event_4.jpg" alt="Image 1"></a></li>
+                    <li><a class="fancybox" href="images/event_3.jpg"><img src="images/event_3.jpg" alt="Image 1"></a></li>
+                    <li><a class="fancybox" href="images/event_2.jpg"><img src="images/event_2.jpg" alt="Image 1"></a></li>
+              </ul>
+          </div>
+            <a href="#" class="jcarousel-control-prev inactive event_photo_prev" data-jcarouselcontrol="true">‹</a>
+            <a href="#" class="jcarousel-control-next event_photo_next" data-jcarouselcontrol="true">›</a>
+        </div>
         </div>
         </div>
         <!--event photos end-->
@@ -221,7 +128,7 @@
         <h4>Comments</h4>
         <div class="row comment_block">
            <div class="col-md-1">
-           <img src="images/avatar.png">
+           <img src="images/avatar.png" alt="avatar">
            </div>
            <div class="col-md-11">
            <h5>Naveen</h5>
@@ -232,7 +139,7 @@
         
         <div class="row comment_block">
            <div class="col-md-1">
-           <img src="images/avatar.png">
+           <img src="images/avatar.png" alt="avatar">
            </div>
            <div class="col-md-11">
            <h5>Naveen</h5>
@@ -247,6 +154,8 @@
         <!--comments end-->
   </div>
 </div>
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="row social_icons"><a href="#"><img src="images/social_icon.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon2.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon3.jpg"></a>
@@ -256,7 +165,6 @@
 </footer>
 
 <!--JS FILES--> 
-<script src="js/jquery.js"></script> 
 <script src="js/bootstrap.js"></script>
 </body>
 </html>

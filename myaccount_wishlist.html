@@ -17,6 +17,7 @@
     <![endif]-->
 </head>
 <body>
+
 <div id="wrapper">
 <nav class="navbar navbar-default" role="navigation">
   <div class="container"> 
@@ -25,33 +26,42 @@
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo"></a> </div>
     
-    <!-- Collect the nav links, forms, and other content for toggling --> <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="top-nav nav navbar-nav navbar-right">
-        <li><a href="signup.html" data-toggle="modal" data-target="#signup_modal_checkout">SignUp</a></li>
-        <li><a href="login.html" data-toggle="modal" data-target="#login_modal_checkout">LogIn</a></li>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Maisa Solutions<img src="images/bg_pic.jpg" class="img-rounded bg_img"> <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Myaccount</a></li>
+            <li class="divider"></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </li>
       </ul>
-      
     </div>
     <!-- /.navbar-collapse --> 
   </div>
   <!-- /.container-fluid --> 
 </nav>
+
+
 <div class="navbar-collapse navbar-default_2 collapse">
   <div class="container">
     <ul class="main-nav nav navbar-nav">
       <li><a href="index.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
+      <li><a href="events.html"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
       <li><a href="venues.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp Venues</a></li>
       <li><a href="organizers.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp Organizers</a></li>
       <li><a href="mycalendar.html"><span class="glyphicon glyphicon-calendar"></span>&nbsp My Calendar</a></li>
     </ul>
   </div>
 </div>
+
+
 <div class="container-fluid">
   <div class="container" >
-    <div class="title_trending">
-        <div class="title_bg"></div>
-        <div class="title_name">Shopping Cart</div>
+    <div class="row">
+        
+        <div class="title_name">TEST EVENT</div>
       </div>
       
        <!--wishlist-->
@@ -60,10 +70,12 @@
            <div class="row wishlist_popup_header no_margin shopping_cart_wishlist">
               <div class="col-md-2"></div>
               <div class="col-md-4">DESCRIPTION</div>
-              <div class="col-md-2">QUANTITY</div>
               <div class="col-md-2">PRICE</div>
-              <div class="col-md-2">TOTAL</div>
+              <div class="col-md-2">DATE ADDED</div>
+              <div class="col-md-2">ACTIONS</div>
             </div>
+             
+             
              <div class="row wishlist_popup_center shopping_cart_wishlist_list">
               <div class="col-md-2">
                 <div class="wishlist_img_block"><img src="images/product1.png" alt="product1"></div>
@@ -71,14 +83,28 @@
               <div class="col-md-4">
                 <h4>Maisa Mug</h4>
                 <p>MAisa mug descriptions</p>
-                <p>SIZE : medium</p>
+                <p>AVAILABILITY: Instock</p>
               </div>
-              <div class="col-md-2">
-                <p>2</p>
-              </div>
+          
               <div class="col-md-2"><p>Rs.500/-</p></div>
-               <div class="col-md-2"><p>Rs.1000/-</p></div>
+               <div class="col-md-2"><p>11/12/2014</p></div>
+                <div class="col-md-2">
+                <div class="row">
+                <div class="col-md-12 ptopbottom"><button data-toggle="tooltip" data-placement="top" data-original-title="remove from wishlist" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash color_white"></button> &nbsp;	
+                <button data-toggle="tooltip" data-placement="top" data-original-title="add to cart" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus color_white"></button> </div>
+                  <div class="col-md-12 ptopbottom">
+                Move to another wishlist
+                <select class="form-control select_myacc_wishlist">
+                <option>Test Event</option>
+                <option>Test Event1</option>
+                <option>Test Event2</option>
+                </select>
+                <button class="btn btn-success btn-sm mtop10">Move</button>
+                </div>
+                </div>
+              </div>
             </div>
+            
              <div class="row wishlist_popup_center shopping_cart_wishlist_list">
               <div class="col-md-2">
                 <div class="wishlist_img_block"><img src="images/product2.png" alt="product2"></div>
@@ -86,31 +112,19 @@
               <div class="col-md-4">
                 <h4>Maisa Bag</h4>
                 <p>MAisa mug descriptions</p>
-                <p>SIZE : medium</p>
+                <p>AVAILABILITY: Instock</p>
               </div>
-              <div class="col-md-2">
-                <p>2</p>
-              </div>
+            
               <div class="col-md-2"><p>Rs.500/-</p></div>
-               <div class="col-md-2"><p>Rs.1000/-</p></div>
+               <div class="col-md-2"><p>14/12/2014</p></div>
+                 <div class="col-md-2">
+                <p>In Stock</p>
+              </div>
             </div>
             <div class="row shopping_cart_footer no_margin">
-                  <div class="col-md-2"></div>
-              <div class="col-md-4"></div>
-              <div class="col-md-3"></div>
-              <div class="col-md-1"><b>TOTAL</b></div>
-              <div class="col-md-2"><b>Rs.2000/-</b></div>
+                 
             </div>
-             <div class="row wishlist_popup_footer no_margin">
-              <div class="col-md-6"></div>
-              <div class="col-md-2">
-              <input type="text" id="couponcode" class="form-control coupon_input" placeholder="enter coupon code">
-              </div>
-              <div class="col-md-2"><a href="#" class="btn btn-lg btn-primary btn-block btn_checkout_update">EDIT</a></div>
-              <div class="col-md-2">
-                <a href="place_order.html" class="btn btn-lg btn-primary btn-block btn_checkout">CHECKOUT</a>
-              </div>
-            </div>
+            
            </div>
         </div>
         <!--wishlist end-->
@@ -129,5 +143,12 @@
 <!--JS FILES--> 
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.js"></script>
+
+<script>
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
 </body>
 </html>

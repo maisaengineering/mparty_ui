@@ -1,13 +1,10 @@
 
-
 <!-- js for user email tags-->
 
 $(function(){
 
   $('#tags input').on('focusout',function(){    
     var txt= this.value.replace(/[^a-zA-Z0-9\+\-\.\#]/g,''); // allowed characters
-	
-	
 		
 	if(txt) {
 
@@ -80,6 +77,7 @@ $(function(){
   ];
   
   // setup autocomplete function pulling from currencies[] array
+ $(function(){
   $('#autocomplete').autocomplete({
     lookup: currencies,
     onSelect: function (suggestion) {
@@ -87,25 +85,57 @@ $(function(){
       $('#outputcontent').html(thehtml);
     }
   });
+ }); 
 });
-
-
 
 
 <!-- js for venue select redirection-->
 $(function(){
-      // bind change event to select
-      $('#dynamic_select').bind('change', function () {
-          var url = $(this).val(); // get selected value
-          if (url) { // require a URL
-              window.location = url; // redirect
-			}
-		  return false;
+  
+	  $('#new_event #venue_type').bind('change', function () {
+         if($(this).val() == 'choose'){
+			 $('#venue_dform').fadeOut()
+			 window.location = '../MPARTY_UI_V2/venues.html'; // redirect
+		 }else {
+			$('#venue_dform').fadeIn('slow') 
+	     }
       });
+	  
+	  
     });
 <!-- ************************************-->
 
+
+/*end time toggle option */ 
+$(".btn_add_endtime").click(function(e) {
+	  $("#endtime").fadeIn("slow");
+	  $(this).fadeOut("slow");
+	   $(".btn_remove_endtime").fadeIn("slow");
+	   return false;
+	   e.preventDefault();
+	});
+$(".btn_remove_endtime").click(function() {
+	  $("#endtime").fadeOut("slow");
+	  $(this).fadeOut("slow")
+	  $(".btn_add_endtime").fadeIn("slow");
+	  return false;
+	   e.preventDefault();
+	});	
+
+<!-- ************************************-->
+$(function(){
+   $('#calendar').eCalendar({ 
+    events: [
+        {title: 'Event Title 1', description: 'Description 1', datetime: new Date(2014, 11, 12, 17)},
+        {title: 'Event Title 2', description: 'Description 2', datetime: new Date(2014,11, 17, 16)},
+		{title: 'Event Title 2', description: 'Description 2', datetime: new Date(2014,11, 20, 20)},
+		
+    ]
+});
+});
+
 /*date picker */
+$(function(){
              $('#datepairExample .time').timepicker({
                     'showDuration': true,
                     'timeFormat': 'g:ia'
@@ -117,18 +147,7 @@ $(function(){
                 });
 
                 $('#datepairExample').datepair();
-				
+});			
 /*********************/
 
 
-$(document).ready(function () {
-   $('#calendar').eCalendar({
-    events: [
-        {title: 'Event Title 1', description: 'Description 1', datetime: new Date(2014, 11, 12, 17)},
-        {title: 'Event Title 2', description: 'Description 2', datetime: new Date(2014,11, 17, 16)},
-		{title: 'Event Title 2', description: 'Description 2', datetime: new Date(2014,11, 20, 20)},
-		
-    ]
-});
-
-});
