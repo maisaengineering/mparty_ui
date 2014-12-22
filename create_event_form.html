@@ -10,12 +10,7 @@
 <link href="css/mparty_style.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css" />
-<script src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.timepicker.js"></script>
-<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="js/site.js"></script>
-<script src="js/jcarousel.ajax.js" type="text/javascript" language="javascript"></script>
-<script src="js/jcarousel.min.js" type="text/javascript" language="javascript"></script>
+ 
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,6 +21,12 @@
 
 </head>
 <body>
+<div class="alert_wrapper">
+<div class="alert alert-success alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+  you have <strong>successfully</strong> created an Event
+</div>
+</div>
 
 <div id="wrapper">
 <nav class="navbar navbar-default" role="navigation">
@@ -102,6 +103,7 @@
                   <form role="form" id="new_event">
                     <div class="col-md-6">
                       <input type="text" id="inputEmail" class="form-control" placeholder="Event Name*" required="" autofocus>
+                      
                     </div>
                     <div class="col-md-6">
                       <select class="form-control" placeholder="Password" required>
@@ -110,6 +112,10 @@
                         <option>Birthday</option>
                       </select>
                     </div>
+                    
+                    <!--<div class="col-md-12"><div class="err">oops please fill the field</div><div></div></div>-->
+                    
+                    
                     <div class="col-md-6">
                       <label></label>
                       <input type="text" class="form-control" placeholder="Host Name*" required="" autofocus>
@@ -159,7 +165,7 @@
                       </select>
                     </div>
                     
-                   <div id="venue_dform">
+                   <div id="venue_dform" style="display:none;">
                     <div class="col-md-12">
                       <label></label>
                       <textarea class="form-control" placeholder="Address*" rows="1"></textarea>
@@ -191,6 +197,58 @@
                    </div>
                    
                    
+                   <div id="venue_afterchoose">
+                    <div class="col-md-12 ptopbottom mtop20">
+                      <span class="glyphicon glyphicon-map-marker"></span> <span>Location Name</span>
+                    </div>
+                    
+                     <div class="row no_margin ptopbottom">
+                      <div class="col-md-3">
+                      Address: 
+                     </div>
+                     <div class="col-md-9">
+                    Bommaraspet, Shameerpet, Ranaga Reddy District
+                     </div>
+                    </div>
+                 
+                    <div class="row no_margin ptopbottom">
+                      <div class="col-md-3">
+                      City: 
+                     </div>
+                     <div class="col-md-9">
+                    Hyderabad 
+                     </div>
+                    </div>
+                    
+                    <div class="row no_margin ptopbottom">
+                      <div class="col-md-3">
+                      State: 
+                     </div>
+                     <div class="col-md-9">
+                    Telangana
+                     </div>
+                    </div>
+                    
+                    <div class="row no_margin ptopbottom">
+                      <div class="col-md-3">
+                      Country: 
+                     </div>
+                     <div class="col-md-9">
+                    India
+                     </div>
+                    </div>
+                    
+                    <div class="row no_margin ptopbottom">
+                      <div class="col-md-3">
+                      Zip: 
+                     </div>
+                     <div class="col-md-9">
+                    500072
+                     </div>
+                    </div>
+                   </div>
+                   
+                   
                     <div class="col-md-12">
                       <label></label>
                       <textarea class="form-control" placeholder="Description*" rows="2"></textarea>
@@ -202,7 +260,7 @@
                     </div>
                     <div class="col-md-12">
                       <label></label>
-                      <button class="btn btn-lg btn-primary btn-block" type="submit">
+                      <button class="btn btn-lg btn-primary btn-block btn_create" type="submit">
                       CREATE
                       </button>
                     </div>
@@ -211,7 +269,7 @@
               </div>
             </div>
             <div class="col-md-6 event_right_block">
-              <h4>Event Name</h4>
+            
               <div id="large-image"> 
               
                    <div class="contentplace">
@@ -374,10 +432,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-12 inv_addmore"> <a href="wishlist.html" id="inv_addmore_prdts">
+                <div class="col-md-12 inv_addmore">
+                 <a href="wishlist.html" id="inv_addmore_prdts">
                   <div class="wishlist_add_btn"><span class="glyphicon glyphicon-plus"></span></div>
                   <h4>Add More Products</h4>
+                  </a>
                  </div>
+                 
               </div>
             </div>
           </div>
@@ -396,9 +457,24 @@
     </div>
   </div>
 </footer>
-<script src="js/index.js"></script> 
-<script src="js/extra.js"></script> 
-<script type="text/javascript" src="js/jquery.autocomplete.min.js"></script> 
-<script src="js/bootstrap.js"></script>
+
+ <script src="js/jquery.js"></script>  <!-- main js library --> 
+<script src="js/bootstrap.js"></script> <!--bootstrap  js  --> 
+
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>  <!-- date picker js  -->
+<script type="text/javascript" src="js/jquery.timepicker.js"></script>  <!-- timepicker js  -->
+<script src="js/jcarousel.min.js" type="text/javascript" language="javascript"></script>  <!-- jcarousel library  --> 
+<script src="js/jcarousel.ajax.js" type="text/javascript" language="javascript"></script> <!-- jcarousel js  --> 
+<script type="text/javascript" src="js/jquery.autocomplete.min.js"></script> <!-- autocomplete library  -->
+
+<!-- venue view js files  -->
+<script type="text/javascript" src="js/jquery.e-calendar.js"></script> 
+ <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+ <script type="text/javascript" src="js/jquery.fancybox-media.js"></script> 
+ 
+ <script src="js/index.js"></script> 
+<script src="js/manual.js"></script> 
+
+
 </body>
 </html>

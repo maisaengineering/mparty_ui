@@ -315,12 +315,12 @@ label{
 }
 .event_left_block{
 	border-right:2px solid #cecfd0;
-	height:auto;
-	overflow:hidden; /*16-12*/
+	min-height: 540px;
+	overflow:hidden; 
 }
 .event_right_block{
-    height:auto;
-	overflow:hidden;  /*16-12*/
+    min-height: 540px;
+	overflow:hidden;  
 }
 
 .event_left_block label{
@@ -358,7 +358,7 @@ label{
 	border-color: #8bd92f;
 }
 #create_form{
-  display:none;
+  display:block;
 }
 #upload_photos{
 	display:none;
@@ -367,7 +367,7 @@ label{
 	display:none;
 }
 #invitation_with_wishlist{
-	display:block;
+	display:none;
 }
 .inv_wishlist{
 	border: 1px solid #ccc;
@@ -1613,11 +1613,25 @@ border:1px solid #e78f08;
 	height:100px;
 	overflow:hidden;
 }
-
-
-
-
-
+.alert_wrapper {
+	position:fixed;
+	z-index:10; 
+	margin-left:auto;
+	margin-right:auto; 
+	top:-60px;
+	left:0;
+	right:0;
+	width:50%;
+}
+/*added by dinesh */
+#infscr-loading {
+  text-align: center;
+}
+#infscr-loading img {
+  width:20px;
+  height:20px;
+}
+/****************/
 
 
 
