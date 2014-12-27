@@ -368,7 +368,7 @@ label{
 	display:none;
 }
 #invitation_without_wishlist{
-	display:block;
+	display:none;
 }
 #invitation_with_wishlist{
 	display:none;
@@ -1368,19 +1368,20 @@ li.ui-timepicker-selected .ui-timepicker-duration,
 	float:left;
 }
 #event_template_designs .jcarousel li {
-    float: left;
-	width:140px; /*24/12/2014*/
-	margin-right:10px; /*24/12/2014*/
-	-webkit-transform: scale(0.15);
-            -webkit-transform-origin: left top;
-            -ms-transform: scale(0.15);
-            -ms-transform-origin: left top;
-			-moz-transform: scale(0.15);
-            -moz-transform-origin: left top;
-            -transform: scale(0.15);
-            -transform-origin: left top;
-			cursor:pointer;
-			
+  float: left;
+  width: 140px;
+  /*24/12/2014*/
+  margin-right:10px;
+  /*24/12/2014*/
+  transform: scale(0.15);
+  transform-origin: left top;
+  -webkit-transform: scale(0.30);
+  -webkit-transform-origin: left top;
+  -ms-transform: scale(0.15);
+  -ms-transform-origin: left top;
+  -moz-transform: scale(0.15);
+  -moz-transform-origin: left top;
+  cursor: pointer;
 }
 
 .jcarousel img {
@@ -1538,14 +1539,26 @@ background-color: #555;
   position: relative;
   transform: scale(0.5);
   transform-origin: left top 0;
+  -webkit-transform: scale(1);
+  -webkit-transform-origin: left top;
+  -ms-transform: scale(0.5);
+  -ms-transform-origin: left top;
+  -moz-transform: scale(0.5);
+  -moz-transform-origin: left top;
   height: 350px;
 }
 
-#eventDesignPreview{
+#eventDesignPreview {
   position: relative;
   transform: scale(0.545);
-  transform-origin: center top 0;
-  height: 350px
+  transform-origin: left top;
+  -webkit-transform: scale(1);
+  -webkit-transform-origin: 30% top;
+  -ms-transform: scale(0.545);
+  -ms-transform-origin: center top;
+  -moz-transform: scale(0.545);
+  -moz-transform-origin: center top;
+  height: 350px;
 }
 .contentplace {
 	position:absolute;
