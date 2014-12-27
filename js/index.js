@@ -5,13 +5,13 @@
 /*********************jcarousel library js*******************************/
 
 $(document).ready(function(e) {
-    $("#large-image .imageplace").html("<img src="+ $(".jcarousel ul li ").eq(0).find('img').attr('src')+">");
-     $(".jcarousel a").click(function(e){
-    $("#large-image .imageplace").html("<img src="+$(this).find('img').attr('src')+">");
-	/*$("#large-image .contentplace")*/
-	return false; // prevent default click action from happening!
+    $("#event_template_designs #large-image").html($("#event_template_designs .jcarousel li").eq(0).html());
+     $("#event_template_designs .jcarousel li").click(function(e){
+    $("#event_template_designs #large-image").html($(this).html());
+  /*$("#large-image .contentplace")*/
+  return false; // prevent default click action from happening!
      e.preventDefault(); // same thing as above
-	
+  
   });
 
   $('#myCarousel').carousel({
@@ -25,7 +25,6 @@ $(document).ready(function(e) {
 });
 /**************************************************************************/
 
-
 /*******************************date picker ****************************/
 $(function(){
              $('#datepairExample .time').timepicker({
@@ -37,8 +36,9 @@ $(function(){
                     'format': 'm/d/yyyy',
                     'autoclose': true
                 });
+        
 
-});	
+}); 
 /*************************************************************************/
 
 
@@ -48,8 +48,8 @@ $(function(){
     events: [
         {title: 'Event Title 1', description: 'Description 1', datetime: new Date(2014, 11, 12, 17)},
         {title: 'Event Title 2', description: 'Description 2', datetime: new Date(2014,11, 17, 16)},
-		{title: 'Event Title 2', description: 'Description 2', datetime: new Date(2014,11, 20, 20)},
-		
+    {title: 'Event Title 2', description: 'Description 2', datetime: new Date(2014,11, 20, 20)},
+    
     ]
 });
 });
@@ -84,3 +84,30 @@ $(function(){
        */
     });
 /**************************************************************************/
+
+/*********************private and public switch js*******************************/
+
+$(document).ready(function() {
+  
+  $("#new_event #switch_public").addClass('btn-success').removeClass('btnn-default');
+    $("#new_event #switch_private").addClass('btn-default').removeClass('btn-success');
+  $("#new_event #switch_private").val('');
+  $("#new_event #switch_public").val('')
+  
+      $("#new_event #switch_private").click(function() {
+           $("#new_event #switch_public").removeClass('btn-success').addClass('btnn-default');
+           $(this).removeClass('btn-default').addClass('btn-success');
+         $(this).val('private');
+         $("#new_event #switch_public").val('');
+            
+       });
+       
+       $("#new_event #switch_public").click(function() {
+          $(this).addClass('btn-success').removeClass('btnn-default');
+                $("#new_event #switch_private").addClass('btn-default').removeClass('btn-success');
+        $(this).val('public');
+        $("#new_event #switch_private").val('');
+       });
+         
+
+});

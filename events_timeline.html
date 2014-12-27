@@ -48,10 +48,10 @@
   <div class="container">
     <ul class="main-nav nav navbar-nav">
       <li><a href="index.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
-      <li class="active"><a href="events.html"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
+      <li class="active"><a href="events.html"><span class="glyphicon glyphicon-star"></span>&nbsp My Events</a></li>
       <li><a href="venues.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp Venues</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbsp; Organizers</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-calendar"></span>&nbsp My Calendar</a></li>
+      <li><a href="organizers.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp Organizers</a></li>
+      <li><a href="mycalendar.html"><span class="glyphicon glyphicon-calendar"></span>&nbsp My Calendar</a></li>
     </ul>
   </div>
 </div>
@@ -61,250 +61,454 @@
   <div class="container" >
     <div class="row">
       <div class="create_event">
-        <a href="create_event_form.html"><button  class="btn_orange">Create Event</button></a>
+        <a href="create_event_form.html"><button class="btn_orange">Create Event</button></a>
       </div>
      
     </div>
     
-      <div role="tabpanel" class="mtop20">
+      <div role="tabpanel" class="mtop20" id="timeline_tabs">
         
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Events Timeline</a></li>
-          <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">My Events</a></li>
+           <li role="presentation"  class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">I'm organizing</a></li>
+          <li role="presentation"><a href="#tab2" aria-controls="tab1" role="tab" data-toggle="tab">I'm attending</a></li>
+         
         </ul>
         
         <!-- Tab panes -->
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="tab1">
        
-           <div class="row" id="timeline">
-              <div class="col-md-12">
-                 
-                 
-               
-               <div class="position_rel">
-               <div class="fade_past"></div>
-               <div class="fade_upcoming"></div>
-               <div class="scroll_timeline">
-              
-                
-              
-               <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
-                    <h4>MAISA EVENT </h4>
-                   <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>23/12/14
-                    <div class="pull-right">04.30 PM</div>
-                   </div>
-                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                     </div>
-                 </div>
-                 
-                 <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
-                    <h4>MAISA EVENT </h4>
-                   <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>26/11/14
-                    <div class="pull-right">04.30 PM</div>
-                   </div>
-                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                     </div>
-                 </div>
-                 
-                 <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..." > </a> </div>
-                    <h4>MAISA EVENT </h4>
-                   <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>27/12/14
-                    <div class="pull-right">04.30 PM</div>
-                   </div>
-                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                     </div>
-                 </div>
-                 
-                 <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..." > </a> </div>
-                    <h4>MAISA EVENT </h4>
-                   <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>29/12/14
-                    <div class="pull-right">04.30 PM</div>
-                   </div>
-                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                     </div>
-                 </div>
-                 
-                 <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..." > </a> </div>
-                    <h4>MAISA EVENT </h4>
-                   <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>30/12/14
-                    <div class="pull-right">04.30 PM</div>
-                   </div>
-                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                     </div>
-                 </div>
-                 
-                  <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..." > </a> </div>
-                    <h4>MAISA EVENT </h4>
-                   <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>30/12/14
-                    <div class="pull-right">04.30 PM</div>
-                   </div>
-                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                     </div>
-                 </div>
-                 
-                 
-                  <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..." > </a> </div>
-                    <h4>MAISA EVENT </h4>
-                   <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>01/01/15
-                    <div class="pull-right">04.30 PM</div>
-                   </div>
-                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                     </div>
-                 </div>
-                 
-                  <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..." > </a> </div>
-                    <h4>MAISA EVENT </h4>
-                   <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>02/01/15
-                    <div class="pull-right">04.30 PM</div>
-                   </div>
-                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                     </div>
-                 </div>
-                 
-                  <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..." > </a> </div>
-                    <h4>MAISA EVENT </h4>
-                   <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>26/01/15
-                    <div class="pull-right">04.30 PM</div>
-                   </div>
-                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                     </div>
-                 </div>
-                 
-                 
-                 <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..." > </a> </div>
-                    <h4>MAISA EVENT </h4>
-                   <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>26/01/15
-                    <div class="pull-right">04.30 PM</div>
-                   </div>
-                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                     </div>
-                 </div>
-                 
-                 <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..." > </a> </div>
-                    <h4>MAISA EVENT </h4>
-                   <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>26/01/15
-                    <div class="pull-right">04.30 PM</div>
-                   </div>
-                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                     </div>
-                 </div>
-                 
-                 
-                 </div>
-                 </div>
-                 
-                </div>
-           </div>
-          
-          
-        </div>
-        
-        
-        <div role="tabpanel" class="tab-pane" id="tab2">
-       
-           <div class="row" id="timeline">
+           <div class="row">
               <div class="col-md-12">
               
               <div style="position:relative;">
                <div class="fade_past"></div>
                <div class="fade_upcoming"></div>
-               <div style="height:450px; width:100%; overflow:auto;">
+               <div class="scroll_timeline">
+ 
+                 <div class="event_details">
+                  <div class="row">
+                  <div class="col-md-1">
+                   <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                  <div class="event_date">
+                  <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                    <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                  </div>
+                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                   </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+                        <button class="btn addguest_btn" title="Add Guest"><span class="glyphicon glyphicon-plus color_white"></span></button>
+                   </div>
+                 </div>
+                </div>
+               </div>
+                 
+                <div class="event_details">
+                  <div class="row">
+                  <div class="col-md-1">
+                   <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                  <div class="event_date">
+                  <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                    <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                  </div>
+                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                   </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+                        <button class="btn addguest_btn" title="Add Guest"><span class="glyphicon glyphicon-plus color_white"></span></button>
+                   </div>
+                 </div>
+                </div>
+               </div>
+                 
+               <div class="event_details">
+                  <div class="row">
+                  <div class="col-md-1">
+                   <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                  <div class="event_date">
+                  <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                    <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                  </div>
+                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                   </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+                        <button class="btn addguest_btn" title="Add Guest"><span class="glyphicon glyphicon-plus color_white"></span></button>
+                   </div>
+                 </div>
+                </div>
+               </div>
+                 
+                <div class="event_details">
+                  <div class="row">
+                  <div class="col-md-1">
+                   <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                  <div class="event_date">
+                  <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                    <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                  </div>
+                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                   </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+                        <button class="btn addguest_btn" title="Add Guest"><span class="glyphicon glyphicon-plus color_white"></span></button>
+                   </div>
+                 </div>
+                </div>
+               </div>
+                 
+                <div class="event_details">
+                 <div class="row">
+                  <div class="col-md-1">
+                    <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                   <div class="event_date">
+                   <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                   <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                   </div>
+                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                  </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+                        <button class="btn addguest_btn" title="Add Guest"><span class="glyphicon glyphicon-plus color_white"></span></button>
+                   </div>
+                 </div>
+                </div>
+               </div>
                
-
+               
+                 
+                  <div class="event_details">
+                 <div class="row">
+                  <div class="col-md-1">
+                    <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                   <div class="event_date">
+                   <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                   <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                   </div>
+                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                  </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+                        <button class="btn addguest_btn" title="Add Guest"><span class="glyphicon glyphicon-plus color_white"></span></button>
+                   </div>
+                 </div>
+                </div>
+               </div>
+               
+               
+                 
                  <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
-                    <h4>MAISA EVENT </h4>
-                  <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-                    <div class="pull-right">04.30 PM</div>
+                 <div class="row">
+                  <div class="col-md-1">
+                    <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                   <div class="event_date">
+                   <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                   <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                   </div>
+                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
                   </div>
-                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                    <div class="pull-right addguest_btn"><a href="#">Add Guest</a></div>
                   </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+                        <button class="btn addguest_btn" title="Add Guest"><span class="glyphicon glyphicon-plus color_white"></span></button>
+                   </div>
                  </div>
-                 
-                 <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
-                    <h4>MAISA EVENT </h4>
-                  <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-                    <div class="pull-right">04.30 PM</div>
-                  </div>
-                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                    <div class="pull-right addguest_btn"><a href="#">Add Guest</a></div>
-                  </div>
-                 </div>
-                 
-                 <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
-                    <h4>MAISA EVENT </h4>
-                  <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-                    <div class="pull-right">04.30 PM</div>
-                  </div>
-                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                    <div class="pull-right addguest_btn"><a href="#">Add Guest</a></div>
-                  </div>
-                 </div>
-                 
-                  <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
-                    <h4>MAISA EVENT </h4>
-                  <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-                    <div class="pull-right">04.30 PM</div>
-                  </div>
-                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                    <div class="pull-right addguest_btn"><a href="#">Add Guest</a></div>
-                  </div>
-                 </div>
-                 
-                  <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
-                    <h4>MAISA EVENT </h4>
-                  <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-                    <div class="pull-right">04.30 PM</div>
-                  </div>
-                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                    <div class="pull-right addguest_btn"><a href="#">Add Guest</a></div>
-                  </div>
-                 </div>
-                 
-                  <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
-                    <h4>MAISA EVENT </h4>
-                  <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-                    <div class="pull-right">04.30 PM</div>
-                  </div>
-                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                    <div class="pull-right addguest_btn"><a href="#">Add Guest</a></div>
-                  </div>
-                 </div>
-                 
-                  <div class="event_details">
-                   <div class="event_img" style="float:left;"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
-                    <h4>MAISA EVENT </h4>
-                  <div class="event_date"><span class="glyphicon glyphicon-calendar"></span>24/11/14
-                    <div class="pull-right">04.30 PM</div>
-                  </div>
-                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
-                    <div class="pull-right addguest_btn"><a href="#">Add Guest</a></div>
-                  </div>
-                 </div>
+                </div>
+               </div>
                   
                 </div>
            </div>
           </div>
           </div>
+      </div>
+        
+        
+        <div role="tabpanel" class="tab-pane" id="tab2">
+       
+        <div class="row">
+              <div class="col-md-12">
+             
+               <div class="position_rel">
+               <div class="fade_past"></div>
+               <div class="fade_upcoming"></div>
+               
+               <div class="scroll_timeline">
+ 
+                 <div class="event_details">
+                  <div class="row">
+                  <div class="col-md-1">
+                   <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                  <div class="event_date">
+                  <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                    <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                  </div>
+                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                   </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+            
+                   </div>
+                 </div>
+                </div>
+               </div>
+                 
+                <div class="event_details">
+                  <div class="row">
+                  <div class="col-md-1">
+                   <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                  <div class="event_date">
+                  <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                    <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                  </div>
+                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                   </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+                        
+                   </div>
+                 </div>
+                </div>
+               </div>
+                 
+               <div class="event_details">
+                  <div class="row">
+                  <div class="col-md-1">
+                   <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                  <div class="event_date">
+                  <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                    <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                  </div>
+                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                   </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+             
+                   </div>
+                 </div>
+                </div>
+               </div>
+                 
+                <div class="event_details">
+                  <div class="row">
+                  <div class="col-md-1">
+                   <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                  <div class="event_date">
+                  <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                    <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                  </div>
+                  <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                   </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+                        
+                   </div>
+                 </div>
+                </div>
+               </div>
+                 
+                <div class="event_details">
+                 <div class="row">
+                  <div class="col-md-1">
+                    <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                   <div class="event_date">
+                   <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                   <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                   </div>
+                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                  </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+                      
+                   </div>
+                 </div>
+                </div>
+               </div>
+               
+               
+                 
+                  <div class="event_details">
+                 <div class="row">
+                  <div class="col-md-1">
+                    <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                   <div class="event_date">
+                   <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                   <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                   </div>
+                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                  </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+                       
+                   </div>
+                 </div>
+                </div>
+               </div>
+               
+               
+                 
+                 <div class="event_details">
+                 <div class="row">
+                  <div class="col-md-1">
+                    <div class="event_img"> <a href="#"> <img src="images/event_3.jpg" alt="..."> </a> </div>
+                   </div>
+                   <div class="col-md-5">
+                     <h4>MAISA EVENT </h4>
+                   <div class="event_date">
+                   <span><span class="glyphicon glyphicon-calendar"></span>26/01/15</span>&nbsp;
+                   <span><span class="glyphicon glyphicon-time"></span>&nbsp; 04.30 PM</span>
+                   </div>
+                   <div class="event_place"><span class="glyphicon glyphicon-map-marker"></span>Hyderabad
+                  </div>
+                  </div>
+                   
+                   <div class="col-md-6">
+                     <div class="pull-right">
+                         <span class="color_success"><span class="glyphicon glyphicon-ok-sign"></span> 23 members accepted</span>
+                         </div>
+                         <div class="clearfix"></div>
+                          <div class="pull-right mtop10">
+                        <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
+                       
+                   </div>
+                 </div>
+                </div>
+               </div>
+                  
+                </div>
+                 </div>
+                </div>
+           </div>
           
         </div>
         
