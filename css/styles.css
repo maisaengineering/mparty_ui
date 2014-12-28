@@ -362,13 +362,13 @@ label{
 	border-color: #8bd92f;
 }
 #create_form{
-  display:block;
+  display:none;
 }
 #upload_photos{
 	display:none;
 }
 #invitation_without_wishlist{
-	display:none;
+	display:block;
 }
 #invitation_with_wishlist{
 	display:none;
@@ -1702,6 +1702,7 @@ background: #fff;
 border: 1px solid #cfcfcf;
 padding:4px 4px;
 margin-top:15px;
+cursor:pointer;
 }
 
 #timeline_tabs .event_img {
@@ -1762,7 +1763,37 @@ width:50%;
 	padding-top:4px;
 }
 
+.loading-indicator {
+  position:fixed;
+  width:100%;
+  z-index:200;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  left:auto;
+  right:auto;
+  height:100%;
+  background-color:rgba(0,0,0,0.2);
+}
+.loading-indicator div img {
+  width: 28px;
+  height: 28px;
+}
+.loading-indicator div {
+  padding:8px;
+  background-color:#333333;
+  display:inline-block;
+  border-radius:40px;
+  position:relative;
+  top:3%;
+}
 
+.latest {
+	color:#8bd92f;
+}
+#timeline_tabs .event_details .latest {
+	border:1px solid #8bd92f;
+}
 
 /***************responsive**********************/
 @media (min-width: 768px) {
