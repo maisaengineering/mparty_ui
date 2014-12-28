@@ -67,6 +67,46 @@
 
 <div class="container-fluid">
   <div class="container" >
+    <!--Add more guests-->
+        <div class="modal fade" id="add_more_guests" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal2">
+        <div class="modal-content modal_wishlist_bg"> <a href="/"><span class="glyphicon glyphicon-remove pull-right modal_wishlist_x" data-dismiss="modal"></span></a> <br>
+          <div class="modal-header">
+            <div class="title_trending">
+              <div class="title_bg"></div>
+              <div class="model_box_name">Add Guests</div>
+            </div>
+          </div>
+          <div class="modal-body">
+          <div class="row"> 
+           <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-12">
+                  <form role="form">
+                    <div class="col-md-12 invitation_text">
+                      <label></label>
+                      <div id="" class="tags_wrap">
+                        <input type="text" name="currency" class="biginput" id="autocomplete">
+                      </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                      <label></label>
+                      <a href="events.html" class="btn btn-lg btn-primary btn-block invite_btn_cancel" type="submit">CANCEL</a> </div>
+                    <div class="col-md-4">
+                      <label></label>
+                      <a href="event_preview.html" class="btn btn-lg btn-primary btn-block upload_btn_done" type="submit">INVITE</a> </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="modal-footer"> </div>
+        </div>
+      </div>
+    </div>
+    <!--Add more guests-->
     <div class="row">
       <div class="title_name">Maisa Event</div>
     </div>
@@ -88,7 +128,7 @@
           <div class="col-md-7">
             <h5>Maisa Solutions</h5>
           </div>
-          <div class="col-md-2"> <a href="#" class="btn btn-primary pull-right">Edit Event</a> </div>
+          <div class="col-md-2"> <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#add_more_guests">Add Guests</a> </div>
         </div>
         <div class="row">
           <div class="col-md-3">
@@ -271,7 +311,8 @@
 </footer>
 
 <!--JS FILES--> 
-
+<script src="js/index.js"></script> 
+<script src="js/manual.js"></script> 
 <script src="js/bootstrap.js"></script>
 </body>
 </html>
