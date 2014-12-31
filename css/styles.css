@@ -8,7 +8,10 @@ body{
 background-color:#f1f2f7;
 height:100%;
 }
-
+.container{
+  max-width: none !important;
+  width: 970px;
+}
 .social_icons{
    padding:20px;
 }
@@ -339,6 +342,7 @@ label{
 }
 .event_left_block textarea{
 	border:1px solid #ccc;
+	resize:none;
 }
 
 .upload_btn{
@@ -762,6 +766,7 @@ border-bottom:1px solid #f1f2f7;
 	border:1px solid #cfcfcf;
 	width:100%;   /*15-12*/
 	height:48px;  /*15-12*/
+	resize:none;
 }
 .comment_time{
 	font-style:italic;
@@ -1374,8 +1379,8 @@ li.ui-timepicker-selected .ui-timepicker-duration,
   margin-right:10px;
   /*24/12/2014*/
   transform: scale(0.15);
-  transform-origin: left top;
-  -webkit-transform: scale(0.30);
+  transform-origin: scale top;
+  -webkit-transform: scale(0.15);
   -webkit-transform-origin: left top;
   -ms-transform: scale(0.15);
   -ms-transform-origin: left top;
@@ -1539,7 +1544,7 @@ background-color: #555;
   position: relative;
   transform: scale(0.5);
   transform-origin: left top 0;
-  -webkit-transform: scale(1);
+  -webkit-transform: scale(0.5);
   -webkit-transform-origin: left top;
   -ms-transform: scale(0.5);
   -ms-transform-origin: left top;
@@ -1551,9 +1556,9 @@ background-color: #555;
 #eventDesignPreview {
   position: relative;
   transform: scale(0.545);
-  transform-origin: left top;
-  -webkit-transform: scale(1);
-  -webkit-transform-origin: 30% top;
+  transform-origin: center top;
+  -webkit-transform: scale(0.545);
+  -webkit-transform-origin: center top;
   -ms-transform: scale(0.545);
   -ms-transform-origin: center top;
   -moz-transform: scale(0.545);
@@ -1726,6 +1731,7 @@ background: -webkit-linear-gradient(top, rgba(181,181,181,1) 0%,rgba(255,255,255
 background: -o-linear-gradient(top, rgba(181,181,181,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top, rgba(181,181,181,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
 background: linear-gradient(to bottom, rgba(181,181,181,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+pointer-events: none;
 }
 
 #timeline_tabs .fade_upcoming {
@@ -1740,6 +1746,7 @@ background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(181,181,181
 background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(181,181,181,1) 100%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(181,181,181,1) 100%); /* IE10+ */
 background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(181,181,181,1) 100%); /* W3C */
+pointer-events: none;
 }
 
 #timeline_tabs .scroll_timeline {
@@ -1774,6 +1781,7 @@ width:50%;
   right:auto;
   height:100%;
   background-color:rgba(0,0,0,0.2);
+  display:none;
 }
 .loading-indicator div img {
   width: 28px;
