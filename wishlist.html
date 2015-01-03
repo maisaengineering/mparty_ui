@@ -15,7 +15,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head>
+</head>s
 <body>
 <div id="wrapper">
 <nav class="navbar navbar-default" role="navigation">
@@ -131,6 +131,7 @@
     <!--modalbox end--> 
     <!--shipping modal box-->
     <div class="modal fade" id="wishlist_shipping_addrs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+     
       <div class="modal-dialog modal2">
         <div class="modal-content modal_wishlist_bg"> <a href="/"><span class="glyphicon glyphicon-remove pull-right modal_wishlist_x" data-dismiss="modal"></span></a> <br>
           <div class="modal-header">
@@ -142,15 +143,15 @@
           <div class="modal-body">
             <div class="row shipping_address_form">
               <div class="col-md-12">
+               <div class="col-md-6">
+        <label></label>
+        <input type="text"  class="form-control" placeholder="First Name*" required="" autofocus>
+      </div>
                 <form role="form">
-                  <div class="col-md-6">
-                    <label></label>
-                    <input type="text"  class="form-control" placeholder="First Name*" required="" autofocus>
-                  </div>
-                  <div class="col-md-6">
-                    <label></label>
+<div class="col-md-6">
+  <label></label>
                     <input type="text"  class="form-control" placeholder="Last Name*" required="" autofocus>
-                  </div>
+                </div>
                   <div class="col-md-6">
                     <label></label>
                     <input type="text" class="form-control" placeholder="Street Address1*" required="" autofocus>
@@ -161,13 +162,13 @@
                   </div>
                   <div class="col-md-6">
                     <label></label>
-                    <input type="text"  class="form-control" placeholder="Street Address2*" required="" autofocus>
+                    <input type="text"  class="form-control" placeholder="City" required="" autofocus>
                   </div>
                   <div class="col-md-6">
                     <label></label>
                     <select class="form-control">
-                     <option>---select state---</option>
-                      <option>Select Type</option>
+                   
+                      <option>Select State</option>
                       <option>Telangana</option>
                       <option>Andhra Pradesh</option>
                     </select>
@@ -175,8 +176,8 @@
                   <div class="col-md-6">
                     <label></label>
                     <select class="form-control">
-                      <option>---select Country---</option>
-                      <option>Select Type</option>
+                      <option>select Country</option>
+                
                       <option>India</option>
                       <option>USA</option>
                     </select>
@@ -210,7 +211,7 @@
       <div class="col-md-3"></div>
       <div class="col-md-6 position_rel">
         <input type="search" class="form-control" placeholder="search products">
-        <span class="glyphicon glyphicon-search position_abs search_btn"></span> </div>
+        <button class="position_abs search_btn"><span class="glyphicon glyphicon-search"></span></button> </div>
       <div class="col-md-3"><a href="#" class="btn btn-lg btn-primary btn-block addwishlist_btn" data-toggle="modal" data-target="#mywishlist">
         <div class="img-rounded search_btn_count position_abs">
           <p>2</p>
