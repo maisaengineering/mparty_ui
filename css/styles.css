@@ -340,14 +340,13 @@ label{
 	border:1px solid #ccc;
 	resize:none;
 }
-
 .upload_btn{
 	padding:98px;
+	text-align:center;
 }
 .upload_btn span{
 	font-size:50px;
 	line-height: 1.5em;
-    padding-left: 118px;
 }
 .upload_btn_skip{
 	background:#cfcfcf;
@@ -362,10 +361,10 @@ label{
 	border-color: #8bd92f;
 }
 #create_form{
-  display:block;
+  display:none;
 }
 #upload_photos{
-	display:none;
+	display:block;
 }
 #invitation_without_wishlist{
 	display:none;
