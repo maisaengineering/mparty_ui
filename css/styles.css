@@ -8,10 +8,6 @@ body{
 background-color:#f1f2f7;
 height:100%;
 }
-.container{
-  max-width: none !important;
-  width: 970px;
-}
 .social_icons{
    padding:20px;
 }
@@ -161,7 +157,7 @@ margin: 20px auto;
 .modal-content{
    border-radius:0px;
    background-color:rgba(0,0,0,.9);
-   top:140px;
+   top:50px;
    opacity:0.9;
 
 }
@@ -863,16 +859,6 @@ padding: 26px;
 padding-left: 32px;
 font-size: 30px;
 margin: 0 auto;
-}
-#create_billing_address{
-	display:none;
-}
-#payment_method{
-   display:block;
-}
-
-#place_order{
-	display:none;
 }
 .pay_now_btn{
 background: #8bd92f;
@@ -1826,6 +1812,10 @@ width:50%;
 .fb_img{
 	margin-top:60px;
 }
+.text-maybe {
+	color:#f0ad4e;
+} 
+
 /***************responsive**********************/
 @media (min-width: 768px) {
  
@@ -1851,7 +1841,12 @@ width:50%;
 }
 
 /***************our responsive**********************/
-
+@media screen and (max-device-width:767px) {
+.container {
+width:1200px !important;
+}
+}
+ 
 @media screen 
 and (max-device-width : 767px) 
  {

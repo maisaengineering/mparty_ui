@@ -76,6 +76,14 @@
         </ul>
         
         <!-- Tab panes -->
+        
+        <!-- added include buttons -->
+        <div class="mtop10 mbottom10 pull-right">
+           <button class="btn btn-warning" id="btnIncludeMaybe"><input type="checkbox" id="checkIncludeMaybe" > include Maybe</button>  <button id="btnIncludeRejected" class="btn btn-danger"> <input type="checkbox" id="checkIncludeRejected"> include Rejected </button>
+         </div>
+         <!-- added include buttons -->
+         
+         
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="tab1">
        
@@ -112,6 +120,8 @@
                           <div class="pull-right mtop10">
                         <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
                         <button class="btn addguest_btn" title="Add Guest"><span class="glyphicon glyphicon-plus color_white"></span></button>
+                        <div class="clearfix"></div>
+                        <div class="pull-right clearfix text-danger mtop10">Rejected</div>
                    </div>
                  </div>
                 </div>
@@ -140,6 +150,10 @@
                           <div class="pull-right mtop10">
                         <button class="btn addguest_btn"><a href="#" class="color_white">View Comments</a></button>
                         <button class="btn addguest_btn" title="Add Guest"><span class="glyphicon glyphicon-plus color_white"></span></button>
+                        
+                        <div class="clearfix"></div>
+                        <div class="pull-right clearfix text-maybe mtop10">Maybe</div>
+                        
                    </div>
                  </div>
                 </div>
@@ -536,6 +550,15 @@
 <!--JS FILES--> 
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.js"></script>
+
+<script>
+$("#btnIncludeMaybe").click(function(events) {
+	  $("#checkIncludeMaybe").trigger("click");
+ 	});
+$("#btnIncludeRejected").click(function() {
+	  $("#checkIncludeRejected").trigger("click");
+	});
+</script>
 
 </body>
 </html>
