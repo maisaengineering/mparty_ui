@@ -81,7 +81,18 @@
         </div>
       </div>
       <div class="col-xs-6 col-md-3">
-        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_1.jpg" alt="..."> </a> </div>
+        <div class="event_img"> 
+        <a href="#" class="thumbnail fadein">
+        
+        
+          <img src="images/event_1.jpg" alt="...">
+          <img src="images/event_2.jpg" alt="...">
+          <img src="images/event_3.jpg" alt="..."> 
+       
+         
+         </a> 
+         
+         </div>
         <div class="event_name">
           <p>MAISA EVENT</p>
         </div>
@@ -199,5 +210,13 @@
 <!--JS FILES--> 
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.js"></script>
+<script>
+$('.fadein img:gt(0)').hide();
+
+setInterval(function () {
+    $('.fadein :first-child').fadeOut(500).next('img').fadeIn(500).end().appendTo('.fadein');
+}, 4000); // 4 seconds
+
+</script>
 </body>
 </html>

@@ -154,12 +154,16 @@ margin: 20px auto;
 	color:#fff;
   background-color: transparent;
 }
-.modal-content{
+/*.modal-content{
    border-radius:0px;
    background-color:rgba(0,0,0,.9);
    top:50px;
    opacity:0.9;
 
+}*/
+.modal_darktheme {
+   background-color:rgba(0,0,0,.9);
+   opacity:0.9;
 }
 .main-nav > li > a {
  border-bottom:2px solid transparent;
@@ -207,7 +211,7 @@ border:none;
 .modal-header{
   border-bottom:none;
 }
-.modal-footer{
+#wrapper .modal-footer{
 	border-top:none;
 }
 .modal-body a{
@@ -361,10 +365,10 @@ label{
 	border-color: #8bd92f;
 }
 #create_form{
-  display:none;
+  display:block;
 }
 #upload_photos{
-	display:block;
+	display:none;
 }
 #invitation_without_wishlist{
 	display:none;
@@ -1814,6 +1818,7 @@ width:50%;
 .venue_ctc_details{
 	list-style-type: none;
 	padding-left:0px;
+	line-height:1.5;
 }
 .h3_or{
 	margin-top:75px;
@@ -1841,27 +1846,43 @@ width:50%;
     -moz-opacity: 0;
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)
 }
+
+.fadein {
+    position:relative;
+    height:260px;
+    width:320px;
+}
+
+.fadein img {
+    position:absolute;
+    left:0;
+    top:0;
+}
 /***************responsive**********************/
 @media (min-width: 768px) {
  
   .navbar {
     border-radius: 0px;
 }
-  .modal-dialog {
+/* .modal-dialog {
     width: 324px;
     margin: 30px auto;
-  }
+  }*/
+  .modal1{
+	width:324px;
+	margin:30px auto;
+}
   .modal2{
 	width:629px;
-	margin: 0 auto;
+	margin:30px auto;
 }
  .modal3{
 	width:595px;
-	margin: 0 auto;
+	margin:30px auto;
 }
 .modal5{
 	width:1170px;
-	margin:0 auto;
+	margin:30px auto;
 }
 }
 

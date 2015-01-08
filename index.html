@@ -57,7 +57,7 @@
 <!--login modal box-->
 <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content"> <a href="#"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a>
+    <div class="modal-content modal_darktheme modal1"> <a href="#"><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a>
       <div class="modal-header"> <a href="#"><img src="images/fb_icon.jpg" class="pull-right" alt="fb login"></a>
         <h3 class="modal-title" >Login</h3>
       </div>
@@ -80,7 +80,7 @@
 <!--SIgnUP modal box-->
 <div class="modal fade" id="signup_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal2">
-    <div class="modal-content"> <a href=""><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a>
+    <div class="modal-content modal_darktheme"> <a href=""><span class="glyphicon glyphicon-remove pull-right modal_box_x" data-dismiss="modal"></span></a>
       <div class="modal-header">
         <h3 class="modal-title" id="myModalLabel">Create New Account</h3>
       </div>
@@ -329,5 +329,13 @@
 <!--JS FILES--> 
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.js"></script>
+<script src="js/bootbox.js"></script>
+<script>
+$(document).ready(function(e) {
+   bootbox.alert("Hello world!", function() {
+}); 
+});
+
+</script>
 </body>
 </html>
