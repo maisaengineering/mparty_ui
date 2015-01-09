@@ -365,7 +365,7 @@ label{
 	border-color: #8bd92f;
 }
 #create_form{
-  display:block;
+  display:none;
 }
 #upload_photos{
 	display:none;
@@ -374,7 +374,7 @@ label{
 	display:none;
 }
 #invitation_with_wishlist{
-	display:none;
+	display:block;
 }
 .inv_wishlist{
 	border: 1px solid #ccc;
@@ -1518,6 +1518,9 @@ background-color: #555;
 .mtop10 {
 	margin-top:10px;
 }
+.mtop30 {
+	margin-top:30px;
+}
 .mbottom40 {
 	margin-bottom:40px;
 }
@@ -1858,7 +1861,17 @@ width:50%;
     left:0;
     top:0;
 }
-/***************responsive**********************/
+#OrderDetails .orderPurchasedDetails {
+	border:1px solid #cccccc;
+	margin-top:10px;
+}
+.txt_bold {
+	font-weight:bold;
+}
+.orderDetails tr td {
+	border:none !important;
+}
+/***************responsive**********************
 @media (min-width: 768px) {
  
   .navbar {
