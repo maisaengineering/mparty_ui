@@ -1875,6 +1875,12 @@ width:50%;
 .orderDetails tr td {
 	border:none !important;
 }
+.scroll_wishlist {
+	height:270px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	
+}
 /***************responsive**********************
 @media (min-width: 768px) {
  
