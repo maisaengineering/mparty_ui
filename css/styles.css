@@ -1024,7 +1024,7 @@ padding:6px 8px;
 	color:#fff !important;
 }
 .unjoin_btn{
-  background-color: #e78f08;
+  background-color: #b22222;
   margin: 0 auto;
   text-align: center;
   color:#ffffff;
@@ -1536,6 +1536,10 @@ background-color: #555;
 .nopleft{
 	padding-left:0px;
 }
+.nopadding {
+	padding-left:0px;
+	padding-right:0px;
+}
 .color_white {
 	color:#FFFFFF !important;
 }
@@ -1684,7 +1688,7 @@ border:1px solid #e78f08;
 	top:-60px;
 	left:0;
 	right:0;
-	width:50%;
+	width:60%;
 }
 /*added by dinesh */
 #infscr-loading {
