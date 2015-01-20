@@ -407,7 +407,7 @@ label{
 	border-color: #cfcfcf;
 }
 .wishlist_header{
-	margin-top:40px;
+	margin-top:20px;
 }
 .wishlist_header input{
 	border:1px solid #ccc;
@@ -1534,6 +1534,12 @@ background-color: #555;
 .mtop30 {
 	margin-top:30px;
 }
+.mtop5 {
+	margin-top:5px;
+}
+.mright5 {
+	margin-right:5px;
+}
 .mbottom50 {
 	margin-bottom:50px;
 }
@@ -1963,6 +1969,7 @@ width:50%;
 }
 .bg_white {
 	background-color:#ffffff;
+	padding-bottom:20px;
 }
 .wishlist_eventpreview {
 	font-size:12px !important;
@@ -2055,9 +2062,22 @@ top:65px;
 height:130px;
 width:480px;
 }
-#eventDesignPreviewInvitee .event_photos {
+#eventDesignPreviewInvitee .event_ph
+otos {
 	top:0px;
 	display:none;
+}
+ul#breadcrumbs {
+	margin:0px;
+	padding:0px;
+}
+ul#breadcrumbs li {
+	float:left;
+	list-style-type:none;
+	font-weight:bold;
+}
+ul#breadcrumbs li:last-child {
+	font-weight:inherit;
 }
 
 /***************responsive**********************
