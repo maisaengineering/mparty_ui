@@ -371,10 +371,10 @@ label{
 	display:none;
 }
 #invitation_without_wishlist{
-	display:none;
+	display:block;
 }
 #invitation_with_wishlist{
-	display:block;
+	display:none;
 }
 .inv_wishlist{
 	border: 1px solid #ccc;
@@ -1516,6 +1516,12 @@ background-color: #555;
 .mtop70 {
 	margin-top:70px;
 }
+.mtop60 {
+	margin-top:60px;
+}
+.mtop50 {
+	margin-top:60px;
+}
 .mtop40 {
 	margin-top:40px;
 }
@@ -1527,6 +1533,9 @@ background-color: #555;
 }
 .mtop30 {
 	margin-top:30px;
+}
+.mbottom50 {
+	margin-bottom:50px;
 }
 .mbottom40 {
 	margin-bottom:40px;
