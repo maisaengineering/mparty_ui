@@ -21,6 +21,8 @@
 
 </head>
 <body>
+
+
 <div class="alert_wrapper">
 <div class="alert alert-success alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -291,11 +293,15 @@
                       <button class="btn btn-primary" id="btnUploadPhotos">Upload Photos</button>
                       
                     </div>
+                    
                     <div class="col-md-4">
-                      <button class="btn btn-lg btn-primary btn-block upload_btn_skip" type="submit">SKIP</button>
-                    </div>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4"></div>
+            <button class="btn btn-lg btn-block upload_btn_skip" type="submit">SKIP</button>
+          </div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <button class="btn btn-lg btn-primary btn-block upload_btn_done mtop70" type="submit">DONE</button>
+          </div>
+                    
                   </form>
                 </div>
               </div>
@@ -317,16 +323,10 @@
                     <div class="remove_btn"><span class="glyphicon glyphicon-remove-circle"></span></div>
                     <img src="images/event_4.jpg" width="90"></div>
                 </div>
-                
-       
               </div>
-              <div class="col-md-4"></div>
-              <div class="col-md-4"></div>
-              <div class="col-md-4">
-                <button class="btn btn-lg btn-primary btn-block upload_btn_done" type="submit">DONE</button>
               </div>
             </div>
-          </div>
+         
           <!--upload photos end--> 
           
           <!--invitations start-->
@@ -365,6 +365,7 @@
                 <div class="col-md-12">
                   <form role="form">
                     <div class="col-md-12 invitation_text">
+                    <a href="event_preview_v2.html" class="btn btn-primary pull-right" type="submit">EVENT PREVIEW</a>
                       <label></label>
                       <div id="" class="tags_wrap">
                         <input type="text" name="currency" class="biginput" id="autocomplete">
@@ -419,6 +420,8 @@
             </div>
           </div>
           <!--invitation end--> 
+          </div>
+          
         </div>
       </div>
     </div>

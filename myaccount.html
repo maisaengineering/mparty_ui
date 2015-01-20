@@ -18,6 +18,32 @@
 </head>
 <body>
 
+<div class="modal fade in" id="changeProfilePic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false"><div class="modal-backdrop fade in" style="height: 587px;"></div>
+      <div class="modal-dialog modal5">
+        <div class="modal-content modal_wishlist_bg"> <a href="/"><span class="glyphicon glyphicon-remove pull-right modal_wishlist_x" data-dismiss="modal"></span></a> <br>
+          <div class="modal-header">
+      
+              <div class="model_box_name">Change Profile Photo</div>
+           
+          </div>
+          <div class="modal-body">
+             <button class="btn btn-primary center-block">browse</button>
+             
+              <div class="picCropArea">
+              <!--<img src="images/event_1.jpg" width="240" height="240" alt=""/>--> 
+              
+              </div>
+            
+          </div>
+          <div class="modal-footer"> 
+            <button class="btn btn-success pull-right">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
 <div id="wrapper">
 <nav class="navbar navbar-default" role="navigation">
   <div class="container"> 
@@ -68,43 +94,35 @@
     </div>
     
     <div class="row">
-       <h4>Personal Details <a href="editprofile.html" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-edit"></span> edit profile</a></h4>
-       <div class="ptopbottom"><span class="glyphicon glyphicon-envelope"></span> testmail@test.com</div>
-       <div class="ptopbottom"><span class="glyphicon glyphicon-user"></span> Sadashiv Bachuwar</div>
-       <div class="ptopbottom"><span class="glyphicon glyphicon-phone"></span> 9898989898</div>
-       
-       <h4>Address</h4>
-       <div class="ptopbottom">#Flat No 202, Ecil</div>
-       <div class="ptopbottom">City: <span>Hyderabad</span></div>
-       <div class="ptopbottom">State: <span>Telangana</span></div>
-       <div class="ptopbottom">Country: <span>India</span></div>
-       <div class="ptopbottom">zip: <span>500062</span></div>
+      <div class="col-md-3">
+       <div><img src="images/event_1.jpg" width="240" height="240"alt=""/> 
+       </div>
+         <a href="#" class="btn btn-primary btn-sm mtop10" data-toggle="modal" data-target="#changeProfilePic" data-dismiss="modal">change photo</a>
+      </div>
+      
+      <div class="col-md-4">
+       <h4>Personal Details</h4>
+        <div style="font-size:16px;">
+        <div class="mtop20"><span class="glyphicon glyphicon-user"></span> Sadashiv Bachuwar</div>
+       <div class="mtop20"><span class="glyphicon glyphicon-envelope"></span> testmail@test.com</div>
+       <div class="mtop20"><span class="glyphicon glyphicon-phone"></span> 9898989898</div>
+       </div>
        
      </div>
      
-     
-      <!--<div class="row mtop20 myaccount_wishlist">
-         <h4>My Wishlist</h4>
-         <ul>
-<li><span class="glyphicon glyphicon-ok"></span> <a href="https://mparty.herokuapp.com/wishlists/2b3caa60a76399da3e11ec05a7eafb18a72e056b">Test 001</a></li>
-  <li> <span class="glyphicon glyphicon-ok"></span><a href="/wishlists/ef2a275a5ee74048b834f6c0b63a6cdd73c938fe">Test 002</a></li>
-  <li> <span class="glyphicon glyphicon-ok"></span><a href="/wishlists/cf874ef21cfe10e9b208b5eee08ffb563f18795b">aaa</a></li>
-  <li> <span class="glyphicon glyphicon-ok"></span><a href="/wishlists/195710fab22800f914e6e42482787cd510a0a801">sfg</a></li>
-  <li><span class="glyphicon glyphicon-ok"></span> <a href="/wishlists/810bd084a862c295d5538d9f2af02dd4938b857b">fb test 3</a></li>
-  <li><span class="glyphicon glyphicon-ok"></span><a href="/wishlists/e3d6d42439aba4769e22625895b9ea2771f20296">T1</a></li>
-  <li><span class="glyphicon glyphicon-ok"></span><a href="/wishlists/da22f647536e48fed7ef814182d9f2306b55344b">aaa</a></li>
-  <li><span class="glyphicon glyphicon-ok"></span><a href="/wishlists/6115817a390701ac6a5038c232508ab2bf42d8c5">NEW ONE</a></li>
-  <li><span class="glyphicon glyphicon-ok"></span><a href="/wishlists/18666a252c35220c8a5db9ec93791a22ac82bae7">abcd</a></li>
-  <li><span class="glyphicon glyphicon-ok"></span><a href="/wishlists/15cf486855e7218bdd321e6146ff810f684d6ac3">Test 4</a></li>
-  <li><span class="glyphicon glyphicon-ok"></span><a href="/wishlists/12d682f12c19cbf231a30d8d47c1312d581bc320">Nirvaana </a></li>
-  <li><span class="glyphicon glyphicon-ok"></span><a href="/wishlists/c5c55799d7b8130722ea8674c4aeb85904c0726f">a</a></li>
-  <li><span class="glyphicon glyphicon-ok"></span><a href="/wishlists/3f0f4c949d97b10d29c06931136e2c4e4320aa5a">Timings</a></li>
-  <li><span class="glyphicon glyphicon-ok"></span><a href="/wishlists/e84cdb977cfaeddb501a82121ffb0f9671937ad3">completely past </a></li>
-    
-</ul>
-     </div> -->   
+     <div class="col-md-5">
+        <h4>Address <a href="editprofile.html" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-edit"></span> edit profile</a></h4>
+        <ul class="venue_ctc_details" id="venue_afterchoose">
+                        <li><span class="glyphicon glyphicon-map-marker"></span> <b>Maisa Conventation Center</b></li>
+                        <li>12/11,Near National Associations,</li>
+                        <li>Khan Abdul Gaffar Khan Road,Mumbai,</li>
+                        <li>Maharastra,India, 500062</li>
+                        
+                    </ul>
+     </div>
      
   </div>
+</div>
 </div>
 </div>
 

@@ -554,9 +554,16 @@
 <script>
 $("#btnIncludeMaybe").click(function(e) {
 	  $("#checkIncludeMaybe").trigger("click");
+	   $("#checkIncludeMaybe").click(function(e) {
+		      e.stopPropagation();
+		   });
+	  
  	});
 $("#btnIncludeRejected").click(function() {
 	  $("#checkIncludeRejected").trigger("click");
+	  $("#checkIncludeRejected").click(function(e) {
+		      e.stopPropagation();
+		   });
 	});
 </script>
 

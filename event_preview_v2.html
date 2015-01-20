@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mparty</title>
+
+<!-- Bootstrap -->
+<link href="css/mparty_style.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script src="js/jquery.js"></script>
+<script src="js/jcarousel.ajax.js" type="text/javascript" language="javascript"></script>
+<script src="js/jcarousel.min.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
+<script type="text/javascript" src="js/extra.js"></script>
+</head>
+<style></style>
+<body>
+
+<body>
+<div id='flash_messages'>
+  <div class='alert_wrapper'>
+    <div class='alert alert-success alert-dismissible fade in'>
+      <button class='close' data-dismiss='alert' type='button'> <span aria-hidden='true'>&times;</span> <span class='sr-only'>Close</span> </button>
+      Successfully Joined. </div>
+  </div>
+</div>
+<div class='loading-indicator'>
+  <div><img alt="Loading indicator" src="images/loading-indicator-b92c0a7dec097295929c779f27feedc4.gif" /></div>
+</div>
+<div id='wrapper'>
+<nav class='navbar navbar-default' role='navigation'>
+  <div class='container'> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class='navbar-header'>
+      <button class='navbar-toggle collapsed' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'> <span class='sr-only'>Toggle navigation</span> <span class='icon-bar'></span> <span class='icon-bar'></span> <span class='icon-bar'></span> </button>
+      <a class='navbar-brand' href='/'> <img alt="mparty" src="images/logo-c3196482ceecd736e7a033edbb5a2102.png" /> </a> </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+      <ul class='top-nav nav navbar-nav navbar-right'>
+        <li class='dropdown'> <a aria-expanded='false' class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'> Sadashiv Bachuwar <span class='caret'></span> </a>
+          <ul class='dropdown-menu' role='menu'>
+            <li><a href="/account">My Account</a></li>
+            <li><a href="/account/my-orders">Orders</a></li>
+            <li class='divider'></li>
+            <li><a href="/logout">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class='navbar-collapse navbar-default_2 collapse'>
+  <div class='container'>
+    <ul class='main-nav nav navbar-nav'>
+      <li class=''> <a href='/'><span class='glyphicon glyphicon-ok'></span> What's Up? </a> </li>
+      <li class='active'> <a href='/events'><span class='glyphicon glyphicon-star'></span>&nbsp; My Events </a> </li>
+      <li class=''> <a href='/venues'><span class='glyphicon glyphicon-map-marker'></span> Venues </a> </li>
+      <li class=''> <a href='/calendar'><span class='glyphicon glyphicon-calendar'></span> My Calendar </a> </li>
+    </ul>
+  </div>
+</div>
+<div class="container-fluid">
+<div class="container bg_white">
+<!--Add more guests modal-->
+<div class="modal fade" id="add_more_guests" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal2">
+    <div class="modal-content modal_wishlist_bg"> <a href="/"><span class="glyphicon glyphicon-remove pull-right modal_wishlist_x" data-dismiss="modal"></span></a> <br>
+      <div class="modal-header">
+        <div class="title_trending">
+          <div class="title_bg"></div>
+          <div class="model_box_name">Add Guests</div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12">
+                <form accept-charset="UTF-8" action="/events/invite-friends" class="form_margin" id="invite_friends_form" method="post">
+                  <div style="margin:0;padding:0;display:inline">
+                    <input name="utf8" type="hidden" value="&#x2713;" />
+                    <input name="authenticity_token" type="hidden" value="DiQgagywG7EzoyVnwUUcCxaOvUBAexG5zbh98Y43r9s=" />
+                  </div>
+                  <input id="event_id" name="event_id" type="hidden" value="257" />
+                  <input id="friend_emails" name="friend_emails" type="hidden" />
+                  <div class="col-md-12 invitation_text">
+                    <label></label>
+                    <div id="tags" class="tags_wrap">
+                      <input type="text" name="emails_autocomplete" placeholder="Enter email with comma separated" class="biginput" id="emails_autocomplete">
+                    </div>
+                  </div>
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4">
+                    <label></label>
+                    <a href="http://mparty.herokuapp.com/events/257" class="btn btn-lg btn-primary btn-block invite_btn_cancel" type="submit">CANCEL</a> </div>
+                  <div class="col-md-4">
+                    <label></label>
+                    <input class="btn btn-lg btn-primary btn-block upload_btn_done" name="commit" type="submit" value="INVITE" />
+                  </div>
+                </form>
+                <script type="text/javascript">
+    function validateEmail(txtEmail){
+        var a = txtEmail
+        var filter = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+        if(filter.test(a)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+  $('#invite_friends_form  #tags input').on('focusout',function(){
+    var txt= this.value.replace(/^[\s]+|,|("[\s]+")$/g,''); // // space need to remove at the end allowed characters
+    if(txt) {
+        if(validateEmail(txt)){
+            $(this).before('<span class="tag">'+ txt.toLowerCase() +'</span>');
+            this.value="";
+        }else{
+            bootbox.alert(txt+' is not valid email')
+            this.value="";
+        }
+    }
+  }).on('keyup',function( e ){
+      e.stopPropagation()
+      // space 32
+    if(/(188|13)/.test(e.which)) $(this).focusout(); // if: comma,enter (delimit more keyCodes with | pipe)
+     // alert(e.which)
+  });
+  
+  
+  $('#invite_friends_form #tags').on('click','.tag',function(){
+     if(confirm("Do you want to remove invitee's email address?")) $(this).remove();
+  });
+  
+  $('#invite_friends_form  .tags_wrap').click(function() {
+         $('#tags input').focus();
+  })
+
+  $("#invite_friends_form").submit(function(e) {  
+    emails = []
+    $('#tags').children('.tag').each(function () {
+     emails.push($(this).text()); // "this" is the current element in the loop
+    });
+    $('#friend_emails').val(emails.join()) 
+  })
+
+</script>
+                <style type="text/css">
+#tags input{
+  background:#eee;
+  border:0;
+  margin:4px;
+  padding:7px;
+  width:auto;
+  background-color:transparent;
+  outline:none;
+  /*dinesh to increase text length for placeholder in events/_invite_form.html */
+  width: 270px;
+}
+</style>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer"> </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+ <div class="col-md-12">
+  <div class="title_name">Bachu
+    
+    
+    <a href="#" class="btn btn-info pull-right mleft10" data-toggle="modal" data-target="#add_more_guests"><span class="glyphicon glyphicon-edit"></span>Edit Event    </a> 
+   	 <a href="#" class="btn btn-success pull-right" data-toggle="modal" data-target="#add_more_guests"><span class="glyphicon glyphicon-plus"></span>Add Guests    </a>
+    
+  </div>
+ </div>
+</div>
+
+<!--event description-->
+
+<div class="row">
+
+<div class="col-md-6" style="width:55%;">
+  <div class="col-md-12 event_preview_right">
+    <div class="row">
+      <div class="col-md-3">
+        <h4>Description:</h4>
+      </div>
+      <div class="col-md-9">
+        <h5>
+          <p>sdgsdgsd</p>
+        </h5>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-3">
+        <h4>Date:</h4>
+      </div>
+      <div class="col-md-9">
+        <h5>
+          <p>2015-01-14 02-00 AM</p>
+        </h5>
+      </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-md-3">
+        <h4>Venue:</h4>
+        
+      </div>
+      <div class="col-md-9">
+        <h5>sdgasdgsd, sdgs, Telangana, India, 123456</h5>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12"> <button class="btn"> <span class="glyphicon glyphicon-map-marker"></span>Find Venue in Google Map</button></div>
+    </div>
+ 
+     <div class="row count_btns_margin">
+      <div class="col-md-6"> 
+        <div><span class="glyphicon glyphicon-ok-sign icon-success"></span> <span class="txt_bold icon-success">4</span> members attending</div>
+      </div>
+      
+      <div class="col-md-6"> 
+        <div><span class="glyphicon glyphicon-question-sign icon-warning"></span> <span class="txt_bold icon-warning">6</span> members maybe attending</div>
+      </div>
+      
+      <div class="col-md-6"> 
+        <div><span class="glyphicon glyphicon-exclamation-sign icon-black"></span> <span class="txt_bold icon-black">2</span> members pending</div>
+      </div>
+      
+      <div class="col-md-6"> 
+        <div><span class="glyphicon glyphicon-remove-sign icon-danger"></span> <span class="txt_bold icon-danger">1</span> member rejected</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-md-6" style="width:45%;">
+<div id="eventDesignPreview">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Sofadi+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Stalinist+One' rel='stylesheet' type='text/css'>
+<style type="text/css">
+    body{padding:0;margin:0}.newYearDesign-5{padding:0;margin:0 auto;position:relative}.newYearDesign-5 .eventDesignContainer{background-image:url(http://sadacreator.esy.es/design_3.png);background-position:center center;background-repeat:no-repeat;font-family:ProximaNova-Regular,Arial,Helvetica,sans-serif;font-size:25px;font-weight:400;width:900px;height:643px;position:relative}.newYearDesign-5 .eventDesignBody{height:578px;width:100%;position:relative;left:128px;margin-left:20px;margin-right:20px;text-align:center}.newYearDesign-5 .eventDesignHostname{font-size:48px;color:#ba071d;padding-top:56px;line-height:58px;text-transform:uppercase;font-family:'Bad Script',cursive}.newYearDesign-5 .eventDesignEventName{font-size:52px;line-height:58px;padding-top:4.8em;color:#c13026;text-transform:uppercase;font-family:Audiowide,cursive}.newYearDesign-5 .eventDesignEventDate{font-size:28px;line-height:25px;color:#aa642d;height:28px;padding-top:100px;width:340px;margin-left:auto;margin-right:auto;margin-top:5px;font-weight:700}.newYearDesign-5 .eventDesignEventText{font-size:25px;color:#777;line-height:1.2em}.newYearDesign-5 .eventDesignEventText table{width:100%;height:145px}.newYearDesign-5 .eventDesignEventText td{vertical-align:middle;text-align:center}.newYearDesign-5 .eventDesignPhoto{position:absolute;left:0;top:0;width:451px;height:578px;background-position:center center;background-repeat:no-repeat;background-size:auto 578px;text-align:center}.newYearDesign-5 .eventDesignPhotoTemp{opacity:.3;filter:alpha(opacity=30)}.newYearDesign-5 .eventDesignPhotoTemp:before{content:"A A A add your own photo";white-space:pre-wrap;width:100%;text-align:center;color:#000;font-size:35px}.newYearDesign-5 .eventDesignFooter{height:65px;background-position:505px center;background-repeat:no-repeat;padding-left:40px;padding-right:495px;text-align:center}.newYearDesign-5 .eventDesignSponsor{display:inline-block;margin-left:auto;margin-right:auto;left:0;margin-top:-25px;text-align:center;height:90px;background-color:#bfbfbf;padding-left:15px;padding-right:15px;border-left:solid 4px #fff;border-right:solid 4px #fff;position:relative;z-index:1}.newYearDesign-5 .eventDesignSponsor table{width:100%;height:100%;margin:0;padding:0}.newYearDesign-5 .eventDesignSponsor td{width:100%;height:100%;vertical-align:middle}.newYearDesign-5 .eventDesignSponsor img{vertical-align:middle}
+  </style>
+</head>
+<body>
+<div class="newYearDesign-5">
+  <div class="eventDesignContainer">
+    <div class="eventDesignBody">
+      <div class="eventDesignEventName"> Bachu </div>
+      <div class="eventDesignEventDate"> 2015-01-14 02-00 AM </div>
+      <div class="eventDesignHostname"> Sadashiv Bachuwar </div>
+    </div>
+    <div class="eventDesignPhoto" style=""> </div>
+    <div class="eventDesignFooter"> </div>
+  </div>
+</div>
+
+</body>
+</html>
+</div>
+</div>
+</div>
+<!--event description end-->
+<!--location-->
+<!-- <div class="row">
+      <div class="col-md-12">
+        <label></label>
+        <div class="location_block">
+              <iframe frameborder="0" height="165" width = 100% src="https://www.google.com/maps/embed/v1/place?key=
+             AIzaSyAG6rgVJUyd9eXKI5TAxRqCPO8ei0DuUmo&q=sdgasdgsdsdgs "></iframe>
+        </div>
+      </div>
+    </div>-->
+
+<div class="row mtop40">
+  <div class="col-md-6 wishlist_eventpreview" style="width:55%;">
+    
+    <h4>Wishlist</h4>
+    <div class="event_wishlist_table">
+    <div class="row event_pre_wishlist_block mtop10 txt_bold">
+      <div class="col-md-2"></div>
+      <div class="col-md-3">DESCRIPTION</div>
+      <div class="col-md-3">REQ QUANTITY</div>
+      <div class="col-md-2">PURCHASED QUANTITY</div>
+      <div class="col-md-1">PRICE</div>
+    </div>
+    <div class="row wishlist_popup_center event_pre_wishlist_block">
+      <div class="col-md-2">
+        <div class="wishlist_img_block"><img src="images/product1.png"  alt=""/></div>
+      </div>
+      <div class="col-md-3">
+        <h5>Ruby on Rails Bag</h5>
+      </div>
+      <div class="col-md-3">
+        <p>1</p>
+      </div>
+      <div class="col-md-2">
+        <p>1</p>
+      </div>
+      <div class="col-md-1">
+        <p>$22.99/-</p>
+      </div>
+    </div>
+    <div class="row wishlist_popup_center event_pre_wishlist_block">
+      <div class="col-md-2">
+        <div class="wishlist_img_block"><img src="images/product2.png"  alt=""/></div>
+      </div>
+      <div class="col-md-3">
+        <h5>Spree Tote</h5>
+      </div>
+      <div class="col-md-3">
+        <p>1</p>
+      </div>
+      <div class="col-md-2">
+        <p>1</p>
+      </div>
+      <div class="col-md-1">
+        <p>$15.99/-</p>
+      </div>
+    </div>
+    <div class="row no_margin">
+       
+    </div>
+    </div>
+  </div>
+  
+    <div class="col-md-6" style="width:45%;">
+    <h4>Photos</h4>
+    <div class="gallery event_photos" id="myCarousel">
+      <div class="jcarousel event_photos_block" data-jcarousel="false">
+        <ul style="left: 0px; top: 0px;">
+          <li><a class="fancybox" href="https://commondatastorage.googleapis.com/test_mparty_pictures786/picture/image/390/Koala.jpg" rel="gallery1">
+          
+          <img src="https://commondatastorage.googleapis.com/test_mparty_pictures786/picture/image/390/slide_show_Koala.jpg" alt="Image 1">
+          
+          <img src="https://commondatastorage.googleapis.com/test_mparty_pictures786/picture/image/390/slide_show_Koala.jpg" alt="Image 1">
+          
+          </a>
+          
+          </li>
+        </ul>
+      </div>
+      <a href="#" class="jcarousel-control-prev inactive event_photo_prev" data-jcarouselcontrol="true">‹</a><a href="#" class="jcarousel-control-next event_photo_next" data-jcarouselcontrol="true">›</a></div>
+  </div>
+  
+ 
+  
+</div>
+
+<!--
+    <div class="form_margin">
+      <div class="row">
+        <div class="wishlist_main">
+          <div class="wishlist_header"><table width="100%">
+            <tr>
+              <td>View</td>
+              <td>Item Description</td>
+              <td>Price</td>
+              <td>Requested Qty.</td>
+              <td>Purchased Qty.</td>
+            </tr>
+          </table></div>
+              <div class="wishlist">
+                <div class="col-md-1 wlist">
+                </div>
+                <div class="col-md-1 wlist_id"></div>
+                <div class="col-md-1 wlist_p"> </div>
+                <div class="col-md-1 wlist_rq"> </div>
+                <div class="col-md-1 wlist_pq"></div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <p style="margin-left: 40px;"></p>
+    <p style="margin-left: 40px;"> Do you want to send wish list? please  one</p>
+-->
+
+<!--event photos end-->
+<!--comments-->
+
+<div class="row">
+  <div class="col-md-12">
+    <h4>Comments</h4>
+    <form accept-charset="UTF-8" action="/comments" data-remote="true" id="comment_form" method="post">
+      <div style="margin:0;padding:0;display:inline">
+        <input name="utf8" type="hidden" value="&#x2713;" />
+      </div>
+      <input id="resource" name="resource" type="hidden" value="event" />
+      <input id="resource_id" name="resource_id" type="hidden" value="257" />
+      <div class="row comment_block_btn">
+        <div class="col-md-9">
+          <textarea cols="95" id="comment_content" name="content" rows="2">
+</textarea>
+        </div>
+        <div class="col-md-3">
+          <div id="submit">
+            <input class="btn btn-lg btn-primary btn-block comment_btn_post " name="commit" type="submit" value="Comment" />
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="col-md-12">
+    <div class="comment_block">
+      <div id="no_comment">No comments</div>
+    </div>
+  </div>
+</div>
+<!--comments end-->
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    $(".row .comment_block").removeClass("comment_block")
+    $("#submit").click(function(){
+        $("#no_comment").empty().addClass("comment_block");
+    });
+</script>
+</div>
+<footer class='footer'>
+  <div class='container'>
+    <div class='row social_icons'><a href='#'><img alt="Social icon" src="images/social_icon-ab7ebc0eb5c422b35e2956cd52b1ddc1.jpg" /></a><a href='#'><img alt="Social icon2" src="images/social_icon2-e962a03be665e5b379b1923dd75dfa3c.jpg" /></a><a href='#'><img alt="Social icon3" src="images/social_icon3-19d2a4fb8b25fc22560be2758f3147ac.jpg" /></a>
+      <p class='text-muted pull-right'>&copy;2015 Mparty</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+<script src="js/jquery.js"></script><!-- main js library -->
+<script src="js/bootstrap.js"></script><!--bootstrap  js  -->
+
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script><!-- date picker js  -->
+<script type="text/javascript" src="js/jquery.timepicker.js"></script><!-- timepicker js  -->
+<script src="js/jcarousel.min.js" type="text/javascript" language="javascript"></script><!-- jcarousel library  -->
+<script src="js/jcarousel.ajax.js" type="text/javascript" language="javascript"></script><!-- jcarousel js  -->
+<script type="text/javascript" src="js/jquery.autocomplete.min.js"></script><!-- autocomplete library  -->
+
+<!-- venue view js files  -->
+<script type="text/javascript" src="js/jquery.e-calendar.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
+<script src="js/index.js"></script>
+<script src="js/manual.js"></script>
+</body>
+</html>
