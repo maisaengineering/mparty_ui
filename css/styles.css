@@ -368,14 +368,13 @@ label{
   display:none;
 }
 #upload_photos{
-	display:none;
+	display:block;
 }
-
 #confirm_wishlist_invitation {
 	display:none}
 
 #invitation_without_wishlist{
-	display:block;
+	display:none;
 }
 #invitation_with_wishlist{
 	display:none;
@@ -965,15 +964,12 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	background:#fff;
 }
 .venue_slider{
-	width: 50%;
+	width: 64%;
 	float: left;
 }
 .venue_right{
-	width:48%;
 	float:right;
-	border-radius:6px;
-	background:#fff;
-	height:424px;
+	background:#ffffff;
 }
 .venue_right h4{
 	float: left;
@@ -2112,10 +2108,31 @@ ul#import_contact_list li {
 	border:1px solid #dddddd;
 }
 .event_wishlist_table .scroll_wishlist_table {
-height:200px;
+height:240px;
 overflow:auto;
 overflow-x:hidden;
 }
+.border_table {
+	border:1px solid #cccccc;
+}
+.italic_style {
+font-size:12px;
+font-style:italic;
+}
+.event_preview_right .fb-bg {
+  height:34px;
+}
+.event_img_rotation {
+	position:relative;
+	width:262px;
+	height:260px;
+}
+.event_img_rotation img {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
 /***************responsive**********************
 @media (min-width: 768px) {
  

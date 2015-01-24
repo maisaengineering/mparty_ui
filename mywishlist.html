@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mparty</title>
+
+<!-- Bootstrap -->
+<link href="css/mparty_style.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="modal fade in" id="changeProfilePic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+<div class="modal-backdrop fade in"></div>
+      <div class="modal-dialog modal5">
+        <div class="modal-content modal_wishlist_bg"> <a href="/"><span class="glyphicon glyphicon-remove pull-right modal_wishlist_x" data-dismiss="modal"></span></a> <br>
+          <div class="modal-header">
+              <h3 class="txt_center">Change Profile Photo</h3>
+          </div>
+          <div class="modal-body">
+             <button class="btn btn-primary center-block">browse</button>
+             
+              <div class="picCropArea">
+              <!--<img src="images/event_1.jpg" width="240" height="240" alt=""/>--> 
+              
+              </div>
+            
+          </div>
+          <div class="modal-footer"> 
+            <button class="btn btn-success pull-right">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+<div id="wrapper">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo"></a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="top-nav nav navbar-nav navbar-right">
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Maisa Solutions<img src="images/bg_pic.jpg" class="img-rounded bg_img"> <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Myaccount</a></li>
+            <li class="divider"></li>
+            <li><a href="#">My Orders</a></li>
+            <li class="divider"></li>
+            <li><a href="#">My Wishlist</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Changepassword</a></li>
+            <li class="divider"></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+
+
+<div class="navbar-collapse navbar-default_2 collapse">
+  <div class="container">
+    <ul class="main-nav nav navbar-nav">
+      <li><a href="index.html"><span class="glyphicon glyphicon-ok"></span>&nbsp Whats Up?</a></li>
+      <li class="active"><a href="events.html"><span class="glyphicon glyphicon-star"></span>&nbsp Events</a></li>
+      <li><a href="venues.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp Venues</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbsp; Organizers</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-calendar"></span>&nbsp My Calendar</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="container-fluid" style="background-color:#f1f2f7">
+  <div class="container">
+    <div class="row">
+       <div class="title_name">My Wishlist</div>
+    </div>
+    
+   <div class="row">
+   
+      <div class="col-md-12">
+      
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Maisa Event Wishlist <span class="italic_style">(4 items)</span>  <div class="pull-right"><span class="glyphicon glyphicon-calendar"></span>
+                          24/01/15
+                    </div>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        
+        <div class="col-md-12">
+                    <a href="#" class="color_success"><h4>Maisa Event</h4></a>
+                    <div class="row mbottom10">
+                     
+                     <div class="col-md-6 mbottom10">
+                      <div class="row border_table no_margin">
+                       <div class="col-md-3"><img src="images/product2.png" width="90"></div>
+                        <div class="col-md-6">
+                        <h5>Maisa Bag</h5>
+                        <p>Requested Quantity 4</p>
+                        <p><a id="viewPurchasedPerson" href="#" class="color_success txt_bold" data-toggle="popover" data-placement="top">
+Purchased Quantity 2</a></p>
+                       </div>
+                      <div class="col-md-2">  
+                        <h5>Rs.500/-</h5>
+                       </div>
+                       </div>
+                      </div>
+                                
+                     <div class="col-md-6 mbottom10">
+                      <div class="row border_table no_margin">
+                      <div class="col-md-3"><img src="images/product1.png" width="90"></div>
+                      <div class="col-md-6">
+                        <h5>Maisa Mug</h5>
+                        <p>Requested Quantity 4</p>
+                        <p><a id="viewPurchasedPerson" href="#" class="color_success txt_bold" data-toggle="popover" data-placement="top">
+Purchased Quantity 2</a></p>
+                      </div>
+                      <div class="col-md-2">
+                        <h5>Rs.500/-</h5>
+                      </div>
+                     </div>
+                     </div>
+                     
+                     <div class="col-md-6 mbottom10">
+                      <div class="row border_table no_margin">
+                       <div class="col-md-3"><img src="images/product2.png" width="90"></div>
+                        <div class="col-md-6">
+                        <h5>Maisa Bag</h5>
+                        <p>Requested Quantity 4</p>
+                        <p><a id="viewPurchasedPerson" href="#" class="color_success txt_bold" data-toggle="popover" data-placement="top">
+Purchased Quantity 2</a></p>
+                       </div>
+                      <div class="col-md-2">  
+                        <h5>Rs.500/-</h5>
+                       </div>
+                       </div>
+                      </div>
+                      
+                      <div class="col-md-6 mbottom10">
+                      <div class="row border_table no_margin">
+                       <div class="col-md-3"><img src="images/product2.png" width="90"></div>
+                        <div class="col-md-6">
+                        <h5>Maisa Bag</h5>
+                        <p>Requested Quantity 4</p>
+                        <p><a id="viewPurchasedPerson" href="#" class="color_success txt_bold" data-toggle="popover" data-placement="top">
+Purchased Quantity 2</a></p>
+                       </div>
+                      <div class="col-md-2">  
+                        <h5>Rs.500/-</h5>
+                       </div>
+                       </div>
+                      </div>
+                     
+                    </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Maisa Event Wishlist <span class="italic_style">(8 items)</span>  <div class="pull-right"><span class="glyphicon glyphicon-calendar"></span>
+                          24/01/15
+                    </div>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        
+        <div class="col-md-12">
+                    <a href="#" class="color_success"><h4>Maisa Event</h4></a>
+                    <div class="row mbottom10">
+                     
+                     <div class="col-md-6 mbottom10">
+                      <div class="row border_table no_margin">
+                       <div class="col-md-3"><img src="images/product2.png" width="90"></div>
+                        <div class="col-md-6">
+                        <h5>Maisa Bag</h5>
+                        <p>Requested Quantity 4</p>
+                        <p><a id="viewPurchasedPerson" href="#" class="color_success txt_bold" data-toggle="popover" data-placement="top">
+Purchased Quantity 2</a></p>
+                       </div>
+                      <div class="col-md-2">  
+                        <h5>Rs.500/-</h5>
+                       </div>
+                       </div>
+                      </div>
+                                
+                     <div class="col-md-6 mbottom10">
+                      <div class="row border_table no_margin">
+                      <div class="col-md-3"><img src="images/product1.png" width="90"></div>
+                      <div class="col-md-6">
+                        <h5>Maisa Mug</h5>
+                        <p>Requested Quantity 4</p>
+                        <p><a id="viewPurchasedPerson" href="#" class="color_success txt_bold" data-toggle="popover" data-placement="top">
+Purchased Quantity 2</a></p>
+                      </div>
+                      <div class="col-md-2">
+                        <h5>Rs.500/-</h5>
+                      </div>
+                     </div>
+                     </div>
+                     
+                     <div class="col-md-6 mbottom10">
+                      <div class="row border_table no_margin">
+                       <div class="col-md-3"><img src="images/product2.png" width="90"></div>
+                        <div class="col-md-6">
+                        <h5>Maisa Bag</h5>
+                        <p>Requested Quantity 4</p>
+                        <p><a id="viewPurchasedPerson" href="#" class="color_success txt_bold" data-toggle="popover" data-placement="top">
+Purchased Quantity 2</a></p>
+                       </div>
+                      <div class="col-md-2">  
+                        <h5>Rs.500/-</h5>
+                       </div>
+                       </div>
+                      </div>
+                      
+                      <div class="col-md-6 mbottom10">
+                      <div class="row border_table no_margin">
+                       <div class="col-md-3"><img src="images/product2.png" width="90"></div>
+                        <div class="col-md-6">
+                        <h5>Maisa Bag</h5>
+                        <p>Requested Quantity 4</p>
+                        <p><a id="viewPurchasedPerson" href="#" class="color_success txt_bold" data-toggle="popover" data-placement="top">
+Purchased Quantity 2</a></p>
+                       </div>
+                      <div class="col-md-2">  
+                        <h5>Rs.500/-</h5>
+                       </div>
+                       </div>
+                      </div>
+                     
+                    </div>
+                  </div>
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+      <h4 class="panel-title" >
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+           Maisa Event Wishlist  <span class="italic_style">(10 items)</span>  <div class="pull-right"><span class="glyphicon glyphicon-calendar"></span>
+                          20/01/15
+                    </div>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        
+        <div class="col-md-12">
+                    <a href="#" class="color_success"><h4>Maisa Event</h4></a>
+                    <div class="row mbottom10">
+                     
+                     <div class="col-md-6 mbottom10">
+                      <div class="row border_table no_margin">
+                       <div class="col-md-3"><img src="images/producdfs.png" width="90"></div>
+                        <div class="col-md-6">
+                        <h5>Maisa Bag</h5>
+                        <p>Requested Quantity 4</p>
+                        <p><a id="viewPurchasedPerson" href="#" class="color_success txt_bold" data-toggle="popover" data-placement="top">
+Purchased Quantity 2</a></p>
+                       </div>
+                      <div class="col-md-2">  
+                        <h5>Rs.500/-</h5>
+                       </div>
+                       </div>
+                      </div>
+                                
+                     <div class="col-md-6 mbottom10">
+                      <div class="row border_table no_margin">
+                      <div class="col-md-3"><img src="images/product1.png" width="90"></div>
+                      <div class="col-md-6">
+                        <h5>Maisa Mug</h5>
+                        <p>Requested Quantity 4</p>
+                        <p><a id="viewPurchasedPerson" href="#" class="color_success txt_bold" data-toggle="popover" data-placement="top">
+Purchased Quantity 2</a></p>
+                      </div>
+                      <div class="col-md-2">
+                        <h5>Rs.500/-</h5>
+                      </div>
+                     </div>
+                     </div>
+                     
+                     <div class="col-md-6 mbottom10">
+                      <div class="row border_table no_margin">
+                       <div class="col-md-3"><img src="images/product2.png" width="90"></div>
+                        <div class="col-md-6">
+                        <h5>Maisa Bag</h5>
+                        <p>Requested Quantity 4</p>
+                        <p><a id="viewPurchasedPerson" href="#" class="color_success txt_bold" data-toggle="popover" data-placement="top">
+Purchased Quantity 2</a></p>
+                       </div>
+                      <div class="col-md-2">  
+                        <h5>Rs.500/-</h5>
+                       </div>
+                       </div>
+                      </div>
+                      
+                      <div class="col-md-6 mbottom10">
+                      <div class="row border_table no_margin">
+                       <div class="col-md-3"><img src="images/product2.png" width="90"></div>
+                        <div class="col-md-6">
+                        <h5>Maisa Bag</h5>
+                        <p>Requested Quantity 4</p>
+                        <p><a id="viewPurchasedPerson" href="#" class="color_success txt_bold" data-toggle="popover" data-placement="top">
+Purchased Quantity 2</a></p>
+                       </div>
+                      <div class="col-md-2">  
+                        <h5>Rs.500/-</h5>
+                       </div>
+                       </div>
+                      </div>
+                     
+                    </div>
+                  </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+         
+      </div>
+       
+  </div>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row social_icons"><a href="#"><img src="images/social_icon.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon2.jpg"></a> &nbsp; <a href="#"><img src="images/social_icon3.jpg"></a>
+      <p class="text-muted pull-right">@2014 Mparty.</p>
+    </div>
+  </div>
+</footer>
+
+<!--JS FILES--> 
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.js"></script>
+
+<script>
+
+$("#viewPurchasedPerson, .panel-body").click(function(e) {
+	   e.stopPropagation();
+	});
+var purchasedPerson = '<div>bsadashiv123@gmail.com : <span class="txt_bold">1</span></div>  	<div>sagar123@gmail.com : <span class="txt_bold">1</span> </div>';
+$("#viewPurchasedPerson").popover({  
+	  animation:true,
+	  content: purchasedPerson,
+	  html:true,
+	  trigger:'hide',
+	  container:'body'
+	});
+
+</script>
+</body>
+</html>

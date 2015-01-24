@@ -16,6 +16,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
 
  <!--**********************************header  secton*****************************-->
@@ -188,7 +189,7 @@
   <div class="container" >
     <div class="row">
       <div class="create_event">
-        <button  class="btn_orange" data-toggle="modal" data-target="#login_modal" data-dismiss="modal">Create Event</button>
+        <button class="btn_orange" data-toggle="modal" data-target="#login_modal" data-dismiss="modal">Create Event</button>
       </div>
       <div class="title_name">Trending Events</div>
     </div>
@@ -196,7 +197,11 @@
     <div class="row">
     
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="event_img"> <a href="event_preview_public.html" class="thumbnail"> <img src="images/event_4.jpg" alt="..."> </a>
+        <div class="event_img"> <a href="event_preview_public.html" class="thumbnail event_img_rotation"> <img src="images/event_4.jpg" alt="...">
+           <img src="images/event_3.jpg" alt="...">
+           
+           <img src="images/event_2.jpg" alt="...">
+         </a>
           <div class="event_name">
             <p>MAISA EVENT</p>
           </div>
@@ -348,10 +353,19 @@
 <script src="js/bootbox.js"></script>
 <script>
 $(document).ready(function(e) {
-   bootbox.alert("Hello world!", function() {
+   bootbox.alert("sdfjskdfosnfs ", function() {
 }); 
 });
+</script>
 
+<script type="text/javascript">
+  $(".event_img_rotation img:gt(0)").hide();
+  
+  setInterval( function() {
+	  
+	  $(".event_img_rotation :first-child").fadeOut(2000).next('img').fadeIn(2000).end().appendTo(".event_img_rotation");
+	  
+	  },5000);
 </script>
 </body>
 </html>
