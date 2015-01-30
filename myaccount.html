@@ -26,12 +26,17 @@
               <h3 class="txt_center">Change Profile Photo</h3>
           </div>
           <div class="modal-body">
-             <button class="btn btn-primary center-block">browse</button>
-             
-              <div class="picCropArea">
-              <!--<img src="images/event_1.jpg" width="240" height="240" alt=""/>--> 
-              
-              </div>
+             <form accept-charset="UTF-8" action="/account/update_avatar" class="update_avatar" enctype="multipart/form-data" id="edit_user_24" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="+ZdnrzBDauhoi3FKAL9uR3EFCdtNsxpAa+bmtPpxmVQ="></div>
+            
+            <div class="center-block position_rel browse_width">
+<input class="btn btn-primary center-block event_file_upload_button" id="user_avatar" name="user[avatar]" onchange="image_preview(this);" type="file">
+
+<button class="btn btn-primary center-block">browse photo</button>
+  
+</div>
+            <div class="picCropArea" id="img-preview">
+            </div>
+            </form>
             
           </div>
           <div class="modal-footer"> 
