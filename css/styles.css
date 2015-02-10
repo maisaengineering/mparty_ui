@@ -365,10 +365,10 @@ label{
 	border-color: #8bd92f;
 }
 #create_form{
-  display:none;
+  display:block;
 }
 #upload_photos{
-	display:block;
+	display:none;
 }
 #confirm_wishlist_invitation {
 	display:none}
@@ -1884,6 +1884,9 @@ width:50%;
 .text-maybe {
 	color:#f0ad4e;
 } 
+.text-success {
+	color:#4cae4c;
+} 
 .text-info {
   color: #31b0d5;
 }
@@ -1914,6 +1917,10 @@ width:50%;
     top:0;
 }
 #OrderDetails .orderPurchasedDetails {
+	border:1px solid #cccccc;
+	margin-top:10px;
+}
+#delivery .deliveryDetails {
 	border:1px solid #cccccc;
 	margin-top:10px;
 }
@@ -2137,15 +2144,67 @@ font-style:italic;
 	padding-top:15px;
 }
 #changeProfilePic .event_file_upload_button {
-	width:0px;
-	height:36px;
-	width:100%;
-	font-size:inherit;
+  width:0px;
+  height:36px;
+  width:100%;
+  font-size:inherit;
+  width:112px;
+  left:0;
 }
 .browse_width {
-	width:112px;
+  width:240px;
+}
+ul.notification-list {
+list-style-type:none;
+margin:0px;
+padding:0px;
+width:220px;
+} 
+ul.notification-list li {
+padding:6px 2px;
+font-size:12px;
+border-bottom:1px solid #eeeeee;
+}
+.time_ago {
+	font-size:10px;
+	color:#aaaaaa;
+}
+.badge {
+position: relative;
+right: -38px;
+z-index: 2;
+top: -22px;
+background-color:#F50900;
+}
+#NotificationBtn {
+	outline:none;
+}
+.upload_browse_width {
+  width: 120px;
+  margin: 0 auto;
 }
 
+.city_select {
+	background-color:transparent;
+	background-image:url(../images/select-city-arrow.png);
+	background-position:90% center;
+	background-repeat:no-repeat;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+	padding-right:30px;
+	color:#ffffff;
+	border:none;
+}
+
+.request_invite {
+position:absolute;
+right:5px;
+top:5px;
+}
+
+.btn-gray {
+	background-color:#dddddd;
+}
 /***************responsive**********************
 @media (min-width: 768px) {
  

@@ -60,12 +60,17 @@
           <div class="event_divider"></div>
         </div>
         <div class="row">
+          <div class="billing_tab_active"><span class="glyphicon glyphicon-shopping-cart"></span></div>
+          <div class="event_tab_title">DELIVERY</div>
+          <div class="event_divider"></div>
+        </div>
+        <div class="row">
           <div class="billing_tab"><span class="glyphicon glyphicon-credit-card"></span></div>
           <div class="event_tab_title">PAYMENT</div>
           <div class="event_divider"></div>
         </div>
         <div class="row">
-          <div class="billing_tab_active"><span class="glyphicon glyphicon-gift"></span></div>
+          <div class="billing_tab"><span class="glyphicon glyphicon-gift"></span></div>
           <div class="event_tab_title">COMPLETE</div>
           <div></div>
         </div>
@@ -146,11 +151,114 @@
               </div>
               
               </div>
+              
+              
+              <h4>Order Summary</h4>
+              <div class="row">
+                  <div class="col-md-6 txt_bold">Item Total</div>
+                  <div class="col-md-6">$1000.00</div>
+              </div>
+              
+              <div class="row text-success">
+                  <div class="col-md-6 txt_bold">Order Total</div>
+                  <div class="col-md-6">$1050.00</div>
+              </div>
              
              
             </div>
           </div>
-          <!--Create billing address end-->   
+          <!--Create billing address end-->  
+          
+          
+          
+          
+          
+          <div class="row" id="delivery">
+            <div class="col-md-6 event_left_block">
+              <div class="row">
+                  
+                   <div class="col-md-12 txt_bold">
+                      <div class="col-md-3">Item</div>
+                      <div class="col-md-3"></div>
+                      <div class="col-md-3">Quantity</div>
+                      <div class="col-md-3">Price</div>
+                   </div>
+                  
+                  <div class="col-md-12">
+                   <div class="deliveryDetails mleft10" style="width:100%; height:auto; overflow:hidden;">
+                      <div class="col-md-3"><img src="images/product2.png" width="90" height="90" alt=""></div>
+                      <div class="col-md-3 mtop30">Maisa Bag</div>
+                      <div class="col-md-3 mtop30">2</div>
+                      <div class="col-md-3 mtop30">$500</div>
+                    </div>
+                  </div>
+
+            </div>
+            
+              <div class="row mtop20">
+                    <div class="col-md-12">
+                         <div class="col-md-12 txt_bold mbottom10">Shipping Method</div>
+                         
+                         <div class="col-md-12"> <input type="radio" name="ground" /> UPS Ground (USD) $5.00</div>
+                         
+                         <div class="col-md-12"> <input type="radio" name="ground" /> UPS Two Day (USD) $10.00 </div>
+                         
+                         <div class="col-md-12"> <input type="radio" name="ground" /> UPS One Day (USD) $15.00 </div> 
+                    </div>
+                </div>
+                
+                 <div class="row mtop20">
+                    <div class="col-md-12">
+                      
+                       <button type="submit" class="btn btn-success pull-right btn-lg">Save</button>
+                  
+                  </div>
+                  </div>
+                
+             </div>
+      
+            
+            <div class="col-md-6 event_right_block">
+            
+              <h4>Order Summary</h4>
+              <div class="row">
+                  <div class="col-md-6 txt_bold">Item Total</div>
+                  <div class="col-md-6">$1000.00</div>
+              </div>
+              
+              <div class="row">
+                  <div class="col-md-6 txt_bold">North America (5%)</div>
+                  <div class="col-md-6">$50.00</div>
+              </div>
+              
+              <div class="row text-success">
+                  <div class="col-md-6 txt_bold">Order Total</div>
+                  <div class="col-md-6">$1050.00</div>
+              </div>
+              
+             </div> 
+
+            
+            
+            
+          </div>
+          
+   
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+           
+          
           <!--payment start-->
           <div class="row" id="payment_method">
             <div class="col-md-6 event_left_block">
@@ -258,6 +366,29 @@
                   </ul>
               </div>
               </div>
+              
+              <div>
+                      <h4>Order Summary</h4>
+                  <div class="row">
+                      <div class="col-md-6 txt_bold">Item Total</div>
+                      <div class="col-md-6">$1000.00</div>
+                  </div>
+                  
+                  <div class="row">
+                      <div class="col-md-6 txt_bold">North America (5%)</div>
+                      <div class="col-md-6">$50.00</div>
+                  </div>
+                  
+                   <div class="row">
+                      <div class="col-md-6 txt_bold">Shipping Total</div>
+                      <div class="col-md-6">$10.00</div>
+                  </div>
+                  
+                  <div class="row text-success">
+                      <div class="col-md-6 txt_bold">Order Total</div>
+                      <div class="col-md-6">$1060.00</div>
+                  </div>
+              </div>
              
              
             </div>
@@ -303,12 +434,23 @@
                   </ul>
               </div>
               </div>
+              
+              <h4 class="mtop20">Shipments (Edit)</h4>
+               <div class="row">
+                 <div class="col-md-12">
+                    From default via UPS Ground (USD) 
+                 </div>
+                </div>
 
               <div class="row mtop20">
               <div class="col-md-12"><b>Using Card:</b>XXXX-XXXX-XXXX-4444<a href="#">(Edit)</a></div>
               </div>
               </div>
             </div>
+           
+           
+           
+           
             <div class="col-md-6 event_right_block">
               <div class="row">
                 <div class="place_order_right">
@@ -346,12 +488,20 @@
                   <div class="col-md-5"><b>Item Total</b></div>
                   <div class="col-md-3">RS.2000/-</div>
                   </div>
+                  
+                   <div class="row">
+                     <div class="col-md-4"></div>
+                     <div class="col-md-5 txt_bold">North America (5%)</div>
+                     <div class="col-md-3">RS.50.00</div>
+                   </div>
+              
+              
                   <div class="row">
                    <div class="col-md-4"></div>
                   <div class="col-md-5"><b>Shipping Charges</b></div>
                   <div class="col-md-3">RS.100/-</div>
                   </div>
-                  <div class="row">
+                  <div class="row text-success">
                    <div class="col-md-4"></div>
                   <div class="col-md-5"><b>Total</b></div>
                   <div class="col-md-3">RS.2100/-</div>

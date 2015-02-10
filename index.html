@@ -34,6 +34,10 @@
       <ul class="top-nav nav navbar-nav navbar-right">
         <li><a href="#" data-toggle="modal" data-target="#signup_modal">SignUp</a></li>
         <li><a href="#" data-toggle="modal" data-target="#login_modal">LogIn</a></li>
+        <li>  <select class="city_select form-control">
+             <option>Hyderabad</option>
+             <option>Hello</option>
+        </select>  </li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -359,6 +363,17 @@ $(document).ready(function(e) {
 </script>
 
 <script type="text/javascript">
+
+    $('.city_select').focus(function () {
+		   $(this).css('background-color','#9a6150')
+		});
+		
+	$('.city_select').change(function () {
+		   $(this).css('background-color','transparent')
+		});
+		
+		
+		 
   $(".event_img_rotation img:gt(0)").hide();
   
   setInterval( function() {

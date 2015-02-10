@@ -62,6 +62,7 @@
     </div>
     <div class="row">
       <div class="col-xs-6 col-md-3">
+      <div class="position_rel"> <a data-toggle="tooltip" data-placement="left" title="request to invite" class="btn btn-success btn-sm request_invite"> <span class="glyphicon glyphicon-share"></span>  </a>  </div>
         <div class="event_img"> <a href="event_preview.html" class="thumbnail"> <img src="images/event_4.jpg" alt="..."> </a> </div>
         <div class="event_name">
           <p>MAISA EVENT</p>
@@ -77,22 +78,16 @@
   </div>
                            
     <div class="pull-right text-info"> <span class="glyphicon glyphicon-lock"></span>Private only </div>
-                          </div>
+      </div>
+                          
+            <div class="clearfix"></div>                    
+                    
         </div>
+        
+          
       </div>
       <div class="col-xs-6 col-md-3">
-        <div class="event_img"> 
-        <a href="#" class="thumbnail fadein">
-        
-        
-          <img src="images/event_1.jpg" alt="...">
-          <img src="images/event_2.jpg" alt="...">
-          <img src="images/event_3.jpg" alt="..."> 
-       
-         
-         </a> 
-         
-         </div>
+        <div class="event_img"> <a href="#" class="thumbnail"> <img src="images/event_2.jpg" alt="..."> </a> </div>
         <div class="event_name">
           <p>MAISA EVENT</p>
         </div>
@@ -211,12 +206,9 @@
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.js"></script>
 <script>
-$('.fadein img:gt(0)').hide();
-
-setInterval(function () {
-    $('.fadein :first-child').fadeOut(500).next('img').fadeIn(500).end().appendTo('.fadein');
-}, 4000); // 4 seconds
-
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 </script>
 </body>
 </html>

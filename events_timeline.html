@@ -79,8 +79,14 @@
         
         <!-- added include buttons -->
         <div class="mtop10 mbottom10 pull-right">
-           <button class="btn btn-warning" id="btnIncludeMaybe"><input type="checkbox" id="checkIncludeMaybe" > include Maybe</button>  <button id="btnIncludeRejected" class="btn btn-danger"> <input type="checkbox" id="checkIncludeRejected"> include Rejected </button>
+          <label for="cb" id="nsfwbtn" class="btn btn-warning" rel="tooltip" title="Not Safe For Work (18+)" ><input id="cb" type="checkbox" name="nsfw" > include Maybe. </label> 
+           
+           <label for="cbb" id="nsfwbtn" class="btn btn-danger" rel="tooltip" title="Not Safe For Work (18+)" >  <input id="cbb" type="checkbox" name="nsfww" > include Rejected. </label> 
          </div>
+         
+        
+		<input id="cb" type="checkbox" name="nsfw" /> 
+        
          <!-- added include buttons -->
          
          
@@ -552,12 +558,15 @@
 <script src="js/bootstrap.js"></script>
 
 <script>
+
+$(document).ready(function () {
+
 $("#btnIncludeMaybe").click(function(e) {
-	  $("#checkIncludeMaybe").trigger("click");
+	 //alert("test");
+	  $("#checkIncludeMaybe ").click();
 	   $("#checkIncludeMaybe").click(function(e) {
 		      e.stopPropagation();
 		   });
-	  
  	});
 $("#btnIncludeRejected").click(function() {
 	  $("#checkIncludeRejected").trigger("click");
@@ -565,6 +574,8 @@ $("#btnIncludeRejected").click(function() {
 		      e.stopPropagation();
 		   });
 	});
+	
+});
 </script>
 
 </body>
