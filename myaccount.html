@@ -20,12 +20,12 @@
 
 <div class="modal fade in" id="changeProfilePic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
 <div class="modal-backdrop fade in"></div>
-      <div class="modal-dialog modal5">
+      <div class="modal-dialog">
         <div class="modal-content modal_wishlist_bg"> <a href="/"><span class="glyphicon glyphicon-remove pull-right modal_wishlist_x" data-dismiss="modal"></span></a> <br>
           <div class="modal-header">
               <h3 class="txt_center">Change Profile Photo</h3>
           </div>
-          <div class="modal-body">
+          <div class="modal-body light_bg">
              <form accept-charset="UTF-8" action="/account/update_avatar" class="update_avatar" enctype="multipart/form-data" id="edit_user_24" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="+ZdnrzBDauhoi3FKAL9uR3EFCdtNsxpAa+bmtPpxmVQ="></div>
             
             <div class="center-block position_rel browse_width">
@@ -35,6 +35,7 @@
   
 </div>
             <div class="picCropArea" id="img-preview">
+               <div class="profile_photo_icon"><span class="glyphicon glyphicon-picture"></span></div>
             </div>
             </form>
             
@@ -149,6 +150,13 @@
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+
+$(document).ready(function () {
+	   $('.profile_photo_icon').click(function () {
+		     $('#user_avatar').trigger("click")
+		   })
+	
+	})
 </script>
 </body>
 </html>
