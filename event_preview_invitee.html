@@ -44,7 +44,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class='navbar-header'>
       <button class='navbar-toggle collapsed' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'> <span class='sr-only'>Toggle navigation</span> <span class='icon-bar'></span> <span class='icon-bar'></span> <span class='icon-bar'></span> </button>
-      <a class='navbar-brand' href='/'> <img alt="mparty" src="images/logo-c3196482ceecd736e7a033edbb5a2102.png" /> </a> </div>
+      <a class='navbar-brand' href='/'> <img alt="mparty" src="images/logo.png" /> </a> </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
       <ul class='top-nav nav navbar-nav navbar-right'>
@@ -71,7 +71,7 @@
   </div>
 </div>
 <div class="container-fluid">
-<div class="container bg_white">
+<div class="container container_stlye">
 <!--Add more guests modal-->
 <div class="modal fade" id="add_more_guests" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal2">
@@ -183,7 +183,7 @@
 
 <div class="col-md-12 center-block">
 <div class="title_name">Bachu</div>
-  <button class="btn btn-success center-block" id="flip_btn">Check Event Details</button>
+  <button class="btn btn-success center-block" id="flip_btn">View Event Details</button>
 </div>
 
 <div class="col-md-12" id="eventDesignPreviewInvitee">
@@ -372,7 +372,7 @@
     $("#submit").click(function(){
         $("#no_comment").empty().addClass("comment_block");
     });
-	
+		
 	
 	
 	$("#flip_btn").click(function(event) {
@@ -383,7 +383,7 @@
 		}
 		
 		else {
-			$("#flip_btn").html("Check Event Details");
+			$("#flip_btn").html("View Event Details");
 		}
 	});
 	
