@@ -95,6 +95,7 @@ font-size: 20px;
 display:block;
 text-transform:uppercase;
 outline:none;
+cursor:pointer;
 }
 .btn-createevent:hover {
 background-color: #449d44;
@@ -134,7 +135,7 @@ margin: 20px auto;
 	background-size:100% 100%;
 	height:68px;
 	background-image:url(../images/menu_bg.png);
-	//background-color:#c72a3a;
+	/*background-color:#c72a3a;*/
 }
 .navbar{
 	border:none;
@@ -220,32 +221,36 @@ border:none;
 border:none;
 }
 
-.modal-title{
-	color:#fff;
+.login_and_signup_modal .modal-title{
+  color:#fff;
 }
-.modal-header{
+.login_and_signup_modal .modal-header{
   border-bottom:none;
 }
 #wrapper .modal-footer{
-	border-top:none;
+  border-top:none;
 }
-.modal-body a{
-	text-decoration:none;
-	color:#fff;
+.login_and_signup_modal .modal-body a{
+  text-decoration:none;
+  color:#fff;
 }
-.modal_box_x{
-	color:#fff;
-	margin: 6px;
+.login_and_signup_modal .modal_box_x{
+  color:#fff;
+  margin: 6px;
 }
 
-label{
-	color:#fff;
-	font-weight:normal;
+.login_and_signup_modal label{
+  color:#fff;
+  font-weight:normal;
 }
 .btn{
 	border-radius:15px;
 	-moz-border-radius:15px;
 	-webkit-border-radius:15px;
+	
+}
+.btn:focus {
+outline:none!important
 }
 .btn-primary{
 	background-color:#F7838E;
@@ -263,7 +268,7 @@ label{
   background-color: #DA515D;
   border-color: #CB4B56;
 }
-.modal-body .form-control{
+.login_and_signup_modal  .modal-body .form-control{
 	background-color:transparent;
 	border:1px solid #fff;
 	border-radius:0px;
@@ -272,7 +277,7 @@ label{
 	-moz-border-radius:15px;
 	-webkit-border-radius:15px;
 }
-.form-control{
+.login_and_signup_modal .form-control{
 	background-color:#FFFFFF;
 	border:1px solid #bbbbbb;
 	border-radius:15px;
@@ -280,10 +285,17 @@ label{
 	-webkit-border-radius:15px;
 	color:#000000;
 }
+.form-control{ 
+    border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+}
 .modal_wishlist_bg .form-control {
 	background-color:#FFFFFF;
 	border:1px solid #bbbbbb;
-	border-radius:0px;
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
 	color:#000000;}
 
 .reset_modal{
@@ -401,6 +413,8 @@ label{
 	border: 1px solid #ccc;
     width: 444px;
     margin: 0px;
+	margin-top: 5px;
+    padding-top: 5px;
 }
 .inv_wislist_right{
 	height:440px;
@@ -556,7 +570,11 @@ margin: 0 auto;
 width: 225px;
 }
 .wishlist_popup_header{
-	border-bottom:1px solid #bbbbbb;
+border-bottom:1px solid #dddddd;
+background-color: #f1f1f1;
+padding: 10px 0;
+font-weight: bold;
+border-top:1px solid #dddddd;
 }
 .wishlist_popup_center{
 	margin-top:20px;
@@ -682,8 +700,9 @@ border: 1px solid #ccc;
    
 }
 .inv_preview_bg{
-background: url("../images/event_bg.png");
 text-align: center;
+width:450px;
+margin:0 auto;
 }
 .inv_count_btn{
 	height:50px;
@@ -879,7 +898,7 @@ margin-top: 150px;
 	color:#fff;
 }
 .venue_src_icon{
-	position:absolute; left:460px; top:11px;
+	position:absolute; left:560px; top:11px;
 	background-color:	transparent;
 	border:none;
 }
@@ -945,12 +964,14 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	background:#fff;
 }
 .venue_slider{
-	width: 64%;
+	width: 48%;
 	float: left;
 }
 .venue_right{
 	float:right;
 	background:#ffffff;
+	width:50%;
+	
 }
 .venue_right h4{
 	float: left;
@@ -971,7 +992,7 @@ border: none;
 font-size: 18px;
 color: #fff;
 border-radius: 6px;
-width: 100px;
+width: 50px;
 height: 28px;
 }
 .venue_tab_margin{
@@ -1081,6 +1102,7 @@ margin: 0 auto;
 }
 .whatsup_search{
 	position:absolute;
+	margin-top:120px;
 	
 }
 .whatsup_src_icon{
@@ -1615,7 +1637,7 @@ background-color: #555;
   -ms-transform-origin: left top;
   -moz-transform: scale(0.545);
   -moz-transform-origin: left top;
-  height: 350px;
+  height: 360px;
 }
 
 #eventDesignPreviewInvitee #eventDesignPreview {
@@ -1761,6 +1783,11 @@ border:1px solid #e78f08;
 .text_6{
   width: 40%;
   height: 30px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border: 1px solid #cccccc;
+  padding: 5px;
 }
 
 
@@ -1951,6 +1978,9 @@ width:50%;
 	margin: 0 0 -37px 0;
 	width: 41px;
 	float:left;
+	border-radius:15px 0 0 15px;
+	-moz-border-radius:15px 0 0 15px;
+	-webkit-border-radius:15px 0 0 15px;
 }
 
 .fb-icon-bg:after {
@@ -1969,10 +1999,13 @@ width:50%;
 	padding:8px 12px 8px 12px;
 	color: #fff;
 	float:left;
+	border-radius: 0 15px 15px 0;
+	-moz-border-radius: 0 15px 15px 0;
+	-webkit-border-radius: 0 15px 15px 0;
 }
 
 .fb-wrap {
-	width:215px;
+	width:222px;
 	margin:20px auto;
 	height:auto;
 	overflow:hidden;
@@ -2200,7 +2233,7 @@ background-color:#F50900;
 }
 
 .city_select {
-	background-color:transparent;
+	background-color:#c5333f;
 	background-image:url(../images/select-city-arrow.png);
 	background-position:90% center;
 	background-repeat:no-repeat;
@@ -2209,6 +2242,10 @@ background-color:#F50900;
 	padding-right:30px;
 	color:#ffffff;
 	border:none;
+}
+.city_select:focus {
+	outline:none !important;
+	box-shadow:none !important;	
 }
 
 .request_invite {
@@ -2223,7 +2260,7 @@ top:5px;
 }
 
 .navbar-brand img {
-	width:220px;
+	width:221px;
 	height:53px;
 }
 .container_stlye { 
@@ -2252,6 +2289,7 @@ top:5px;
 .homepage_title {
 	margin:0px; text-align:center; padding:60px 0; color:#ffffff;
 	text-shadow:1px 1px 2px #111111;
+	padding: 80px 0;
 }
 .light_bg {
 	background-color:#f1f1f1;
@@ -2265,7 +2303,8 @@ top:5px;
     left: 80px;
 }
 .progress {
-	height:12px;	
+	height:12px;
+	margin-bottom:5px;	
 }
 .progress-box {
 	min-height:150px;	
@@ -2274,8 +2313,6 @@ top:5px;
 .upload {
 	font-size:13px;
 }
-
-/**************css for unresponsive****************/
 .modal1{
 	width:324px;
 	margin:30px auto;
@@ -2293,6 +2330,7 @@ top:5px;
 	margin:30px auto;
 }
 
+/**************start responsive css****************/
 body.unresponsive {
   min-width: 1200px;
 }
@@ -2513,3 +2551,32 @@ body.unresponsive .navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus
 }
 
 /**************end unresponsive css****************/
+
+
+.btn-createevent:focus{
+    outline:none!important
+}
+a:focus{
+    outline:none!important;
+	text-decoration:none!important
+}
+#venue_calendar_style .fc-day-grid {
+	height:330px !important;
+}
+#venue_calendar_style .fc-view-container table {
+	overflow:hidden;
+	}
+#venue_calendar_style .fc-toolbar .fc-left {
+	padding: 8px 10px;
+}
+#venue_calendar_style .fc-toolbar .fc-right {
+	padding:8px 0;
+}   
+
+#venue_calendar_style .venue_right button {
+	width:60px !important;
+}
+.form-control[readonly], .form-control {
+	background-color:#ffffff;
+	cursor:default;
+}
