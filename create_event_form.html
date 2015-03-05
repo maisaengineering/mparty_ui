@@ -20,12 +20,12 @@
 
 </head>
 <body>
-<div class="alert_wrapper">
+<!--<div class="alert_wrapper">
 <div class="alert alert-success alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
   you have <strong>successfully</strong> created an Event
 </div>
-</div>
+</div>-->
 
 <div id="wrapper">
 <nav class="navbar navbar-default" role="navigation">
@@ -377,63 +377,70 @@
                       </div>
                     </div>
                     <div class="clearfix"></div>
-                    <div class="col-md-12 mtop10">
-                    <ul id="import_contact_list">
-                      <li>
-    <input type="hidden" value="0" name="contacts[kachesagar1212@gmail.com]"></input>
-    <input id="contacts_kachesagar1212@gmail.com" type="checkbox" value="1" name="contacts[kachesagar1212@gmail.com]"></input>
-
-     sagar kache => kachesagar1212@gmail.com
-             …
- 
-     </li>
-     
-     <li>
-    <input type="hidden" value="0" name="contacts[saisagar.kache@facebook.com]"></input>
-    <input id="contacts_saisagar.kache@facebook.com" type="checkbox" value="1" name="contacts[saisagar.kache@facebook.com]"></input>
-
-     saisagar kache => saisagar.kache@facebook.com
-       …
-
-    </li>
-    <li>
-    <input type="hidden" value="0" name="contacts[kachesai1212@gmail.com]"></input>
-    <input id="contacts_kachesai1212@gmail.com" type="checkbox" value="1" name="contacts[kachesai1212@gmail.com]"></input>
-
-     kachesai1212 => kachesai1212@gmail.com
-              …
-
-    </li>
-    <li>
-    <input type="hidden" value="0" name="contacts[kachesai.1212@gmail.com]"></input>
-    <input id="contacts_kachesai.1212@gmail.com" type="checkbox" value="1" name="contacts[kachesai.1212@gmail.com]"></input>
-
-     kachesai.1212 => kachesai.1212@gmail.com
-            …
-
-    </li>
-    <li>
-    <input type="hidden" value="0" name="contacts[saisagarkache@yahoo.com]"></input>
-    <input id="contacts_saisagarkache@yahoo.com" type="checkbox" value="1" name="contacts[saisagarkache@yahoo.com]"></input>
-
-     sai sagar => saisagarkache@yahoo.com
-                …
-
-    </li>
-    <li>
-    <input type="hidden" value="0" name="contacts[s@s.com]"></input>
-    <input id="contacts_s@s.com" type="checkbox" value="1" name="contacts[s@s.com]"></input>
-
-     s => s@s.com
-
-    </li>
-    </ul>
-</div>
-
+                    
+                     <div class="col-md-12 mtop10">
+                       <table id="contcactListTwo" class="table table-bordered table-striped">
+                         <tr>
+                           <th>Name</th>
+                           <th>Contact Info</th>
+                           <th></th>
+                          </tr>
+                         <tr>
+                           <td contenteditable="true">sai sagar</td>
+                           <td>saisagarkache@gmail.com</td>
+                           <td><button class="btn btn-default btn-sm btnEdit"><span class="glyphicon glyphicon-edit"></span></button> &nbsp; <button class="btn btn-default btn-sm btnRemove"><span class="glyphicon glyphicon-remove"></span></button></td>
+                         </tr>
+                         <tr>
+                           <td>upender</td>
+                           <td>saisagarkache@gmail.com</td>
+                           <td><button class="btn btn-default btn-sm btnEdit"><span class="glyphicon glyphicon-edit"></span></button> &nbsp; <button class="btn btn-default btn-sm btnRemove"><span class="glyphicon glyphicon-remove"></span></button></td>
+                         </tr>
+                         <tr>
+                           <td>sadashiv</td>
+                           <td>saisagarkache@gmail.com</td>
+                           <td><button class="btn btn-default btn-sm btnEdit"><span class="glyphicon glyphicon-edit"></span></button> &nbsp; <button class="btn btn-default btn-sm btnRemove"><span class="glyphicon glyphicon-remove"></span></button></td>
+                         </tr>
+                         <tr>
+                           <td>dinesh</td>
+                           <td>saisagarkache@gmail.com</td>
+                           <td><button class="btn btn-default btn-sm btnEdit"><span class="glyphicon glyphicon-edit"></span></button> &nbsp; <button class="btn btn-default btn-sm btnRemove"><span class="glyphicon glyphicon-remove"></span></button></td>
+                         </tr>
+                       </table>
+                    </div>
+                    
+                    
+                  
+            
                     <div class="col-md-12 mtop10">
        
                       <a href="event_preview_v2_complete.html" class="btn btn-lg btn-success upload_btn_done pull-right" type="submit">&nbsp;INVITE&nbsp;</a>                   <a href="events.html" class="btn btn-lg btn-gray invite_btn_cancel pull-right mright10" type="submit">CANCEL</a> 
                      </div>
+                     
+                      <div class="col-md-12 mtop10">
+                       <table id="contactListOne" class="table table-bordered table-striped">
+                         <tr>
+                           <td>sai sagar</td>
+                           <td>saisagarkache@gmail.com</td>
+                           <td><button class="btn btn-default btn-add">Add Guest</button></td>
+                         </tr>
+                         <tr>
+                           <td>upender</td>
+                           <td>saisagarkache@gmail.com</td>
+                           <td><button class="btn  btn-default btn-add">Add Guest</button></td>
+                         </tr>
+                         <tr>
+                           <td>sadashiv</td>
+                           <td>saisagarkache@gmail.com</td>
+                           <td><button class="btn  btn-default btn-add">Add Guest</button></td>
+                         </tr>
+                         <tr>
+                           <td>dinesh</td>
+                           <td>saisagarkache@gmail.com</td>
+                           <td><button class="btn  btn-default btn-add">Add Guest</button></td>
+                         </tr>
+                       </table>
+                       <button id="AddingGuest" class="btn btn-success pull-right">Back to Invitation</button>
+                    </div>
                   </form>
                 </div>
               </div>
@@ -446,12 +453,15 @@
        
               
               <div class="col-md-6 event_left_block">
+              
+              
               <div class="row">
                   <div class="col-md-12">
                    <a href="event_preview_v2.html" class="btn btn-primary pull-right btn-sm mright10" type="submit">EVENT PREVIEW</a>
                    <button id="ImportContactsBtn" class="btn pull-right btn-primary btn-sm mright5" data-toggle="popover" data-placement="top"> IMPORT                    CONTACTS</button>
                 </div>
                	
+                
             
                 <div class="col-md-12">
                   <form role="form">
@@ -462,6 +472,9 @@
                       </div>
                     </div>
                     <div class="clearfix"></div>
+                    
+                   
+                    
                     <div class="col-md-12 mtop10">
                     <ul id="import_contact_list">
                       <li>
@@ -514,16 +527,22 @@
     </li>
     </ul>
 </div>
-
+                   
                    
                     <div class="col-md-12 mtop10">
        
                       <a href="event_preview_v2_complete.html" class="btn btn-lg btn-success upload_btn_done pull-right" type="submit">&nbsp;INVITE&nbsp;</a>                   <a href="events.html" class="btn btn-lg btn-gray invite_btn_cancel pull-right mright10" type="submit">CANCEL</a> 
                      </div>
                   </form>
+                  
+                 
+                    
+                    
                 </div>
               </div>
             </div>
+            
+             
               
             <div class="col-md-6 event_right_block">
               <div class="row">
@@ -572,6 +591,8 @@
 </div>
 </div>
 </div>
+
+
 
 <footer class="footer">
   <div class="container">
@@ -637,6 +658,46 @@ $("#NotificationBtn").popover({
 	  container:'body'
 	});
 
+
+
+$("document").ready(function() {
+	 $(".btn-add").val(0)
+		   
+		     $(".btn-add").click(function (e) {
+		   	    if($(this).val() == 0) {
+				  $(this).addClass("btn-success");
+			      $(this).removeClass("btn-default");
+			      $(this).val(1);
+			      e.preventDefault();
+				}
+				 
+				 else {
+				 $(this).removeClass("btn-success");
+			     $(this).addClass("btn-default");
+                 $(this).val(0);
+				 e.preventDefault();
+				 }
+			 });
+			 
+			 $("#AddingGuest").click(function (e) {
+				 
+             				 
+				 });
+				 
+				 
+				 $("#contcactListTwo .btnRemove").click(function(e) {
+					     $(this).closest('tr').remove();
+						 e.preventDefault();
+			      });
+				  
+				   $("#contcactListTwo .btnEdit").click(function(e) {
+					     //$(this).siblings('td').trigger('click');
+						 //e.preventDefault();
+						 $(this).closest('tr').children('td').eq(0).trigger('click');
+						 //$(this).closest('tr').children('td').eq(1).trigger('click');
+						 e.preventDefault();
+					 })
+	});
 </script>
 </body>
 </html>

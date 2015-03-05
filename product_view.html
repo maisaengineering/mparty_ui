@@ -15,6 +15,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 <body>
 <div id="wrapper">
@@ -54,13 +55,33 @@
 <div class="container-fluid">
   <div class="container" >
     <div class="row event_margin">
-      <div class="col-md-5">
-        <div class="product_view_big"> <img src="images/product1.png"> </div>
+      <div class="col-md-5" id="productView">
+        <div class="product_view_big" id="large-product">  </div>
         <div class="product_view_thumb">
           <div class="row">
-            <div class="col-md-4"> <img src="images/product1.png" width="90"></div>
-            <div class="col-md-4"> <img src="images/product1.png" width="90"></div>
-            <div class="col-md-4"> <img src="images/product1.png" width="90"></div>
+             <div class="col-md-12">
+                   <div class="gallery jcarousel-wrapper">
+                   
+                   <div class="jcarousel" data-jcarousel="true">
+                    <ul style="left: 0px; top: 0px;">
+                    <li class="design_template" data-design-id="7" id="design_7">
+                     <img src="images/product1.png"> </li>
+                    <li class="design_template" data-design-id="8" id="design_8">
+                      <img src="images/product2.png"> </li>
+                    </li>
+                    <li class="design_template" data-design-id="6" id="design_6">
+                     <img src="images/product1.png"> </li>
+                    </li>
+                    <li class="design_template" data-design-id="5" id="design_5">
+                      <img src="images/product2.png"> </li>
+                    </li>
+                    </ul>
+                    </div>
+                    <a class="btn btn-success jcarousel-control-prev nopaddingTotal inactive" data-jcarouselcontrol="true" data-no-turbolink="true" href="#">‹</a>
+                    <a class="btn btn-success jcarousel-control-next nopaddingTotal" data-jcarouselcontrol="true" data-no-turbolink="true" href="#">›</a>
+                  </div>
+            
+             </div>
           </div>
         </div>
       </div>
@@ -112,5 +133,26 @@
 <!--JS FILES--> 
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.js"></script>
+    <script src="js/jcarousel.min.js" type="text/javascript" language="javascript"></script>  <!-- jcarousel library  --> 
+<script src="js/jcarousel.ajax.js" type="text/javascript" language="javascript"></script> <!-- jcarousel js  --> 
+<script>
+
+$(document).ready(function(e) {
+    $("#productView #large-product").html($("#productView .jcarousel ul li").eq(0).html());
+     $("#productView .jcarousel ul li").click(function(e){
+		
+    $("#productView #large-product").html($(this).html());
+  /*$("#large-image .contentplace")*/
+  return false; // prevent default click action from happening!
+     e.preventDefault(); // same thing as above
+  
+  });
+
+  $('#myCarousel').carousel({
+  interval: 1000
+  })
+   
+});
+</script>
 </body>
 </html>

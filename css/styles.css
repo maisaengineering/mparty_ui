@@ -37,11 +37,12 @@ font-family: 'Open Sans', sans-serif;
 	border-top:4px solid #ef5323;
 }
 
-.thumbnail{
-	padding:0px;
-	border:none;
-	border-radius:0px;
-	margin-bottom:0px;
+.event_img .thumbnail{
+  padding:0px;
+  border:none;
+  border-radius:0px;
+  margin-bottom:0px;
+  min-height: 260px;
 }
 
 .event_name{
@@ -178,8 +179,7 @@ margin: 20px auto;
 
 }*/
 .modal_darktheme {
-   background-color:rgba(0,0,0,.9);
-   opacity:0.9;
+   background-color:#ffffff;
 }
 .main-nav > li > a {
  border-bottom:2px solid transparent;
@@ -2576,7 +2576,14 @@ a:focus{
 #venue_calendar_style .venue_right button {
 	width:60px !important;
 }
-.form-control[readonly], .form-control {
+.form-control[readonly]{
 	background-color:#ffffff;
 	cursor:default;
+}
+
+/*improvments*/
+.input-group-addon {
+	border-radius:15px 0 0 15px;
+	-moz-border-radius:15px 0 0 15px;
+	-webkit-border-radius:15px 0 0 15px;
 }
