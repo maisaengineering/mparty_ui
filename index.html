@@ -33,12 +33,17 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="top-nav nav navbar-nav navbar-right">
-        <li><a href="#" data-toggle="modal" data-target="#signup_modal">SignUp</a></li>
-        <li><a href="#" data-toggle="modal" data-target="#login_modal">LogIn</a></li>
+         
         <li>  <select class="city_select form-control">
              <option>Hyderabad</option>
              <option>Hello</option>
         </select>  </li>
+        <li>
+          <button class="btn btn-default btn-primary btn-cart mleft10 cart-info full" href="/cart"><span class="glyphicon glyphicon-shopping-cart glyphicon-flip"></span> CART <div class="cart-count">1</div>  <span class="amount">₹900.00</span></button>
+        </li>
+        <li><a href="#" data-toggle="modal" data-target="#signup_modal">SignUp</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#login_modal">LogIn</a></li>
+        
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -210,10 +215,10 @@
   <div class="position_rel">
     <div class="banner-image">  
     
-    <h1 class="homepage_title">Celebrate your Event with Heart Likes Gifts</h1>
-    <div class="whatsup_src_block">
     
-        <div class="create_event">
+    <div class="whatsup_src_block pt">
+    
+        <div class="create_event home-createevent">
             <a class="btn-createevent" data-toggle="modal" data-target="#login_modal" href="#" data-dismiss="modal">Create Event now</a>
           </div>
           
@@ -221,7 +226,7 @@
       <div class="form-group whatsup_search">
       
        <button class="whatsup_src_icon"><span class="glyphicon glyphicon-search pull-left"></span></button>
-        <input type="search" class="event_search" placeholder="Find Events">
+        <input type="search" class="event_search" placeholder="Find events by name or city">
       
       </div>
       
