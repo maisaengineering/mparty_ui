@@ -219,12 +219,14 @@ border:none;
  color: #333333 !important;
 border:none;
 }
-
 .login_and_signup_modal .modal-title{
   color:#fff;
 }
 .login_and_signup_modal .modal-header{
   border-bottom:none;
+}
+.modal-header {
+  toverflow:hidden;
 }
 #wrapper .modal-footer{
   border-top:none;
@@ -394,7 +396,7 @@ outline:none!important
 
 }
 #create_form{
-  display:block;
+  display:none;
 }
 #upload_photos{
 	display:none;
@@ -403,7 +405,7 @@ outline:none!important
 	display:none}
 
 #invitation_without_wishlist{
-	display:none;
+	display:block;
 }
 #invitation_with_wishlist{
 	display:none;
@@ -655,6 +657,10 @@ border: 1px solid #ccc;
 	width:90px;
 	margin-top: 12px;
 	border:1px solid #ccc;
+}
+.product_view_thumb li {
+	margin-left:5px;
+	margin-right:5px;
 }
 .product_details h4{
 	color:#bc3804;
@@ -1604,6 +1610,9 @@ background-color: #555;
 .color_white {
 	color:#FFFFFF !important;
 }
+.icon-big {
+	font-size:26px;
+}
 
 #endtime {
 	display:none
@@ -2343,6 +2352,9 @@ top:5px;
 	width:1170px;
 	margin:30px auto;
 }
+.slider_image_fix{
+  height: 90px;
+}
 
 /**************start responsive css****************/
 body.unresponsive {
@@ -2638,6 +2650,7 @@ a:focus{
 }
 .btn-cart {
 	margin-top:8px;
+	padding:7px 12px !important;
 }
 .scroll_timeline h4 {
 	margin:6px;
@@ -2648,5 +2661,17 @@ a:focus{
 .billing-steps .event_divider {
 	height:30px;
 }
+.template-middle {
+width:450px;
+margin:0 auto;
+}
+.wishlist-placeholder {
+width: 99%;
+height: 245px;
+background-color: #f1f1f1;
+border: 1px dashed #cccccc;
+}
 
-
+.top-nav>li.dropdown {
+	margin-top:4px;
+}
