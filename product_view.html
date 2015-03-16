@@ -56,7 +56,7 @@
   <div class="container" >
     <div class="row event_margin">
       <div class="col-md-5" id="productView">
-        <div class="product_view_big" id="large-product">  </div>
+        <div class="product_view_big" id="large-product"> </div>
         <div class="product_view_thumb">
           <div class="row">
              <div class="col-md-12 nopadding">
@@ -65,7 +65,9 @@
                    <div class="jcarousel" data-jcarousel="true">
                     <ul style="left: 0px; top: 0px;">
                     <li class="design_template" data-design-id="7" id="design_7">
-                     <img src="images/product1.png"> </li>
+                     <img  src="images/product1.png"> 
+                     
+                      </li>
                     <li class="design_template" data-design-id="8" id="design_8">
                       <img src="images/product2.png"> </li>
                     </li>
@@ -135,13 +137,16 @@
 <script src="js/bootstrap.js"></script>
     <script src="js/jcarousel.min.js" type="text/javascript" language="javascript"></script>  <!-- jcarousel library  --> 
 <script src="js/jcarousel.ajax.js" type="text/javascript" language="javascript"></script> <!-- jcarousel js  --> 
+<script type="text/javascript" src="js/loupe.js"></script>
 <script>
 
 $(document).ready(function(e) {
-    $("#productView #large-product").html($("#productView .jcarousel ul li").eq(0).html());
+	
+   $("#productView #large-product").html($("#productView .jcarousel ul li").eq(0).html());
      $("#productView .jcarousel ul li").click(function(e){
+		 
 		
-    $("#productView #large-product").html($(this).html());
+   $("#productView #large-product").html($(this).html());
   /*$("#large-image .contentplace")*/
   return false; // prevent default click action from happening!
      e.preventDefault(); // same thing as above
@@ -153,6 +158,10 @@ $(document).ready(function(e) {
   })
    
 });
+
+
+$('#demo-2').loupe();
 </script>
+
 </body>
 </html>
