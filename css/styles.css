@@ -1,3 +1,4 @@
+
 html {
 	height:100%;
 }
@@ -900,7 +901,7 @@ color: #fff;
 .search_bg{
 	width: 100%;
 height: 400px;
-background: url(../images/bg.jpg);
+background: url(../images/venue-banner.png);
 margin: 0px;
 }
 .venue_block{
@@ -1217,6 +1218,9 @@ cursor:pointer;
 /*v1_login_register (12-12)*/
 .t_left {
 	text-align:left;
+}
+.t_right {
+	text-align:right;
 }
 .errorExplanation {
 	padding: 15px;
@@ -2256,6 +2260,11 @@ z-index: 2;
 top: -22px;
 background-color:#F50900;
 }
+.badge-location-filter {
+	position:static;
+	background-color:#eeeeee;
+}
+
 #NotificationBtn {
 	outline:none;
 }
@@ -2705,4 +2714,42 @@ border: 1px dashed #cccccc;
   margin: 9px 0 9px 10px !important;
   padding: 7px 15px !important;
   background-color:#F7838E !important;
+}
+
+.photos_in_invite_email{
+  width: 91%;
+  margin: 0 auto;
+  float: none;
+}
+
+.location-filter-scroll {
+	height:150px;
+	overflow:auto;
+	//width:100%;
+}
+
+#venueFilter {
+}
+
+#venueResult .filter-label-panel {
+	background-color:#ffffff;
+	border:1px solid #bbbbbb;
+	height:35px;
+	padding-top:5px;
+	padding-left:7px;
+	padding-right:10px;
+}
+#venueResult .caption {
+	text-align:center;
+}
+
+.venue-thumb-details-table {
+	width:100%;
+}
+
+
+.venue-thumb-details-table td {
+	padding-top:3px;
+	padding-bottom:3px;
+	vertical-align:top;
 }
