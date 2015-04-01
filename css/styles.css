@@ -397,7 +397,7 @@ outline:none!important
 
 }
 #create_form{
-  display:none;
+  display:block;
 }
 #upload_photos{
 	display:none;
@@ -406,7 +406,7 @@ outline:none!important
 	display:none}
 
 #invitation_without_wishlist{
-	display:block;
+	display:none;
 }
 #invitation_with_wishlist{
 	display:none;
@@ -1606,6 +1606,9 @@ background-color: #555;
 .mbottom10 {
 	margin-bottom:10px;
 }
+.mbottom0 {
+	margin-bottom:0px;
+}
 .mleft10 {
 	margin-left:10px;
 }
@@ -2746,10 +2749,18 @@ border: 1px dashed #cccccc;
 .venue-thumb-details-table {
 	width:100%;
 }
-
-
 .venue-thumb-details-table td {
 	padding-top:3px;
 	padding-bottom:3px;
 	vertical-align:top;
 }
+#coupon_status.error{
+  color: red;
+}
+#coupon_status.success{
+  color: green;
+}
+#create_billing_address #shipping_options {
+	font-size:12px;
+}
+
